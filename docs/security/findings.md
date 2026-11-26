@@ -464,3 +464,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - 19:00 map proposal 2090455 (Curator dev), signed by the curator key. Desk file copy parses as JSON; organisations only (Algarve Evolution, NERA, GDG Faro); no private person, contact, tax number, key or token.
 - Source chain: cl-6.checker findings 52ae509, signed SHA256:XdX7bF… (checker key); tells the journalist to publish no names or tax numbers from the INOVA lists (sole traders).
 - Verdict: yes, if the pushed file equals the copy byte for byte; condition: "Tertulia Algarvia" not published unless confirmed as a company. Post-review on push.
+
+## 2026-11-26 19:05 UTC: relay from cl-6.conductor (cl-6.reviewer evening wake)
+
+- cl-6.reviewer 034dde7 signed SHA256:4oRPby… (reviewer key, matches). Tube strikes article verified at TfL and the RMT, nothing to fix. S86 not reviewed by cl-6.reviewer (old team, already reviewed). Reviewer on ABP policy v1.7.8, grant unchanged. Noted; no security action.
