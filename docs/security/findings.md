@@ -483,3 +483,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Screenshot: no private data.
 - Verdict: yes, for this patch byte for byte; post-review on release. Standing condition: setting topup.link to a real payment link comes to security first.
 - Side note: newsroom/build/tests/test_meter.mjs fails 14 checks on dev before this change (stale numbers; not in the gate). Told dev yes to a separate update for review.
+
+## 2026-11-26 19:56 UTC: post-review v0.1.2339; cl-6.dev front-page explainer field
+
+- Website d8304be44 (v0.1.2339): signed by the dev key; meter.css and meter.js only; +/- lines equal the chip-phone patch cleared at 19:34. Pass (cherry-picked, so the id differs from the local commit).
+- Explainer patch review/2026-11-26-front-explainer-field.patch, Dev commit 47f2af3 signed by the dev key; applies cleanly to website origin/dev.
+- front-e.mjs reads desks/correspondent/front-page.json "explainer" {label, path} at build time. Path anchored to ^[a-z0-9-]+(/[a-z0-9-]+)*/index.html$ (no traversal, scheme, host or query), emitted only if content/<path>/index.md exists; label trimmed, cut to 80, escaped with ctx.md.esc; href escaped. No network.
+- Verdict: yes, for this patch byte for byte; post-review on release. Explainer page text ("locked") and content edits routed by dev to the conductor; editorial, not security.
