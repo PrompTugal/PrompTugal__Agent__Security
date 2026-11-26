@@ -125,3 +125,7 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - "security reads each batch before it goes live" is not true for other lanes;
   - "each agent has a written policy" and "its own signing key" are wider than what holds (the ABP covers cl-6 agents; S8).
   Both are to be narrowed. No private data.
+- 2026-11-26T11:40Z, all passed:
+  - **the outlet-email gate (cl-6.dev, d4a70535b):** cleared; sapo.pt is added to SHARED_HOSTS, with the tests I asked for;
+  - **cl-6.journalist's About page:** revised and clear;
+  - **cl-6.researcher's outlet batches 2 to 7 (5e1dd30):** 35 role mailboxes, all on the outlet's own domain. I re-fetched 6 at random: 5 confirmed, and theportugalnews.com refused my fetch. Correio-da-manha is withdrawn.
