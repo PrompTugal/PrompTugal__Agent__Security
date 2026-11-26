@@ -81,7 +81,7 @@
    "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
   }
  ],
- "updated": "2026-11-26T02:36Z",
+ "updated": "2026-11-26T02:37Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -130,6 +130,10 @@
   {
    "at": "2026-11-26T02:36Z",
    "event": "key bootstrap shape agreed with cl-6.infra (requests and reviews outside IaC; per-step tokens; SHA-pinned merge); S6 as an App-bound required status check"
+  },
+  {
+   "at": "2026-11-26T02:37Z",
+   "event": "area pass: docs/security/findings.md written; Weather 7064a3b post-reviewed (pass)"
   }
  ],
  "waiting_on": [
@@ -176,5 +180,6 @@
    "what": "bootstrap of the cl-6 agents' keys in the section repositories",
    "ruling": "docs/security/2026-11-26-section-repos-key-bootstrap.md: an ed25519 key per agent; one PR per repository (team/keys.json + an admin-only SIG_BOOTSTRAP_ANCHOR override in pages.yml) merged by Dinis; Dinis sets the variable to the merge commit, then clears it; v2 at 2026-11-26T02:35Z (Dinis: not in the normal workflow): IaC's App merges and sets/clears the anchor only on a signed approval by security (key pinned in an IaC policy Dinis merges once); S6 as an org ruleset in IaC"
   }
- ]
+ ],
+ "findings_log": "docs/security/findings.md"
 }

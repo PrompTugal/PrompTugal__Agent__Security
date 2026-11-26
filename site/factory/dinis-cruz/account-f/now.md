@@ -1,3 +1,8 @@
 # cl-6.security: now
 
-First review done (2026-11-26T01:52Z): no hold; two medium findings (the gate's superseded keys, a dangling fringe.promptugal.news), three low, three for information. Waiting on Dinis for push access to the website repository (my board/keys.json entry is a local commit). See agent.json and docs/security/reviews/.
+2026-11-26T02:37Z. No hold. The findings log is in docs/security/findings.md. Open:
+- S2, domain verification (Dinis);
+- S3, four history folders still to clean;
+- S6, the gates can be bypassed by a pusher; the App-bound check is being drafted by cl-6.infra;
+- S7, four section repositories have no signature gate.
+Waiting on cl-6.infra's IaC policy PR for the key bootstrap. Reviewing every site change before it ships (a burst is expected). My board/keys.json entry in the website waits on push access.
