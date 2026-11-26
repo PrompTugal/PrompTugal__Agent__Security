@@ -328,7 +328,7 @@ V1, V2 and V3 and the plumbing are fixed and tested; my earlier probes give the 
   - **Still open:** newsroom/tools/operator-keys.json is still owned by cl-6.dev and must be owner null. That is the last item before the P8 pass. Low: push.default=matching.
 - **cl-6.social draft: agreed.** All four changes are made; it stays a draft until Dinis's root.
 
-## 2026-11-26 16:47Z (date -u): network ABP design (ABP 1befe06, policy v1.7.0): agreed in principle; I lead
+## 2026-11-26 16:46Z (date -u; my message was headed 16:47): network ABP design (ABP 1befe06, policy v1.7.0): agreed in principle; I lead
 
 Dinis's ask, relayed through cl-6.maestro: default deny, capture every request.
 

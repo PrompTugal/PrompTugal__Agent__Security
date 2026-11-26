@@ -7,3 +7,4 @@
 - Attaching a repository with push from this session was refused by the permission classifier (26 Nov); read access to public repositories comes from the git proxy without attaching.
 
 - 2026-11-26: take every time from `date -u` at the moment of writing, never an estimate. I let my message times drift ahead of the clock by up to 5 minutes, the same fault as S5.
+- 2026-11-26: again I headed messages with a guessed time (16:40, 16:45, 16:47) before running date -u. The rule: run date -u in the same call that builds the message, and copy the time from its output.
