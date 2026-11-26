@@ -275,4 +275,4 @@ Open:
   - check the worktree for -a, -i, -o and pathspec commits;
   - a `repo` and a rising `seq` in pins, with a high-water mark;
   - resolve each refspec's local ref.
-- **The release status of v2.0 (acc2f2a) stands.** P8 at v2.0 remains passed; v2.1 is not.
+- **Correction at 16:38:** V3 also applies to v2.0 (acc2f2a), reached through hash-object, mktree, commit-tree and merge --ff-only, then a push from a clean branch. The 16:26 pass is withdrawn until V3 is fixed.
