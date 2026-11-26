@@ -1,0 +1,8 @@
+{
+ "repository": "PrompTugal__News__Events",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "ea85b2fc76d132e1455e886fa6a2a75e3e2f74358daeed18d7536c84676be6a5", "reviewed": "dev 26fbbb7 plus the anchor override around the run lookup only (lines 130 and 139); checks on A unchanged"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T06:23Z"
+}

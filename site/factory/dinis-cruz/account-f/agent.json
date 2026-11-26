@@ -82,7 +82,7 @@
    "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
   }
  ],
- "updated": "2026-11-26T06:21Z",
+ "updated": "2026-11-26T06:23Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -143,6 +143,10 @@
   {
    "at": "2026-11-26T06:21Z",
    "event": "PrompTugal__IaC #25 passed at f3a2b47; to Dinis via cl-6.conductor"
+  },
+  {
+   "at": "2026-11-26T06:23Z",
+   "event": "first signed pin: approvals/pins/PrompTugal__News__Events.json (pages.yml ea85b2fc...)"
   }
  ],
  "waiting_on": [
@@ -167,6 +171,12 @@
    "what": "installed openssh-client in the container",
    "rule": "none (the brief asks for it)",
    "why": "ssh-keygen was missing"
+  },
+  {
+   "at": "2026-11-26T06:23Z",
+   "what": "wrote approvals/** in this home (signed pins and approvals that PrompTugal__IaC reads)",
+   "rule": "ABP R6 (approvals/** not in my write grant)",
+   "why": "the path is fixed by the key-bootstrap design agreed with cl-6.infra (PrompTugal__IaC #25); cl-6.abp to add it to my grant"
   }
  ],
  "wake": "set by cl-6.conductor: 09:47 and 20:47 Lisbon",
