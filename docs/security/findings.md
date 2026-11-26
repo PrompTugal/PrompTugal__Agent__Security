@@ -222,3 +222,24 @@ New bypasses, each probed through decide() as cl-6.dev in a throw-away HOME:
 - 2026-11-26T16:22Z, website v0.1.2325 (932b402a3, the A7 abp-paths check as a warning): post-review passed. Its signers (dev A+SQNi..., journalist +e53Xe...) are published, the abp-signers pin is cl-6.abp FiODis..., and nothing secret was added. I suggested to cl-6.dev that keys-changes accept the bundle.sign key from the parent entry.
 
 - 2026-11-26T16:23Z, pre-review of the correspondent front-page patch (fed0dad, Tube strikes in "top"): yes. The commit is signed by published key c4Mf5y.... The why-line matches the article summary. No link, contact detail or new fact.
+
+## 2026-11-26 16:24Z (date -u): P8 kit v2 third review at e1e7a8e (policy v1.6.2)
+
+My message to cl-6.abp was headed 16:27; the true time was 16:24 UTC.
+
+**Verdict: nearly there.**
+
+What passed:
+- e1e7a8e and 045858c are signed by cl-6.abp (FiODis...).
+- v1.6.1 and v1.6.2 only add protected paths.
+- test.sh passes 52 of 52.
+- 20 of my 21 round 1 and 2 probes are now denied; the exception, tar, falls under H3.
+- A commit or push that changes .claude is denied, checked against a real bare remote.
+
+Open:
+- **H1 (high, must fix):** R8 can be bypassed with Grep or Glob on a secret directory (~/.ssh, ~/.abp/keys, ~). The check matches files, not the directory itself. I confirmed, with a dummy file, that Claude Code's Grep searches hidden directories.
+- **H2 (medium):** the parser misses some write targets:
+  - quotes inside a word (`.cl""aude`);
+  - glob targets (`.clau?e`, `.cla*`, `cd .c*`);
+  - an fd-numbered redirect (`exec 3>`).
+- **H3 (residual, for the README and Dinis):** working-tree rewrites that name no path are still allowed. These are reset, pull, merge, rebase, stash, apply, tar and unzip. The commit and push check stops them leaving the machine. A local session that resumes in the same tree is covered only by CI and review.
