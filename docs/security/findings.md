@@ -450,3 +450,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - 2026-11-26T18:39Z (date -u), website v0.1.2335 (43e8b32c4, the London places.json entry): post-review passed. One +9 line commit, signed, citing the record; /europe/london/ answers 200 with no Portuguese sections and no injected link. Same window: a jornal@silvio digest commit, signed by a published key, clean. The one-off write is now used; cl-6.abp to mark it.
 - 2026-11-26T18:40Z (date -u), P9 trial read sent to cl-6.abp (copy cl-6.conductor): the review step is done and the approval signed, but the merge has not run (#31 and the App permissions are pending). Lessons: the PR opener needs a per-role yes from Dinis (or an App step); the diff hash cannot be reproduced (#33, or a tree id); P16. Recommendation: hold the other eight roles until #1 runs end to end.
 - 2026-11-26T18:49Z (date -u), website v0.1.2336 (60e0d6d3c, the London page test in its own commit): post-review passed.
+
+## 2026-11-26 18:50 UTC: cl-6.curator category line (London Tube strike gets Europe)
+
+- Proposal commit 60c91b2 (PrompTugal__Agent__Curator dev), signed SHA256:yGHqv7… (curator key, matches site/keys).
+- Article front matter on website dev: beat Europe, categories Europe. categories.json on dev has no entry for the slug yet.
+- Verdict: yes, for exactly one new key under "articles" with ["Europe"]; local d46d328bf not seen, so post-review on push.
+- No keys, contact details, private people or harm. Scope fit ("links with Portugal") flagged as editorial, not security.
