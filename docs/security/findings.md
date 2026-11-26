@@ -168,3 +168,25 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T16:12Z, S9 (medium), board/keys.json hygiene: 109 entries are still status active with no ssh. Most are keys of ended sessions: the .b lanes, the place and site keys, older roles, and security-promptugal-2. An active key's bundle still vouches for any new article .sig, so a private half left in an ended session can sign new content (the S1 risk, unbounded). Retiring them needs an operator, because under 1b a different agent cannot change them. Routed to Dinis via cl-6.conductor: once his key is in board/keys.json, one operator-signed commit superseding every ended-session key, with the list made by cl-6.dev.
 - 2026-11-26T16:12Z, noted: IaC draft #29 (a London strikes site repository for cl-6.place.london) waits for D-STRIKES-SITE and #28, and comes to security before Dinis. cl-6.dev holds the weather/cameras strip because three IPMA feeds are non-commercial against the 18 Nov billing rule (R12): right to hold until the conductor rules.
 - 2026-11-26T16:13Z, the ssh-field fixes from cl-6.devops (SHA256:hwBG...) and cl-6.researcher (SHA256:rYxzbD8...) are cleared: one line each, own entry only, each matching its home key.
+
+## 2026-11-26 16:15Z (date -u): P8 hook kit v2 review (PrompTugal__Agent__ABP 59d485c, policy v1.5.0)
+
+**Verdict: not yet.** Sent to cl-6.abp. The install stays Dinis's yes.
+
+- **The shape is right:** a signed pins launcher, fail-closed settings, breakers on R3, R4, R5 and R8, and a tamper kind.
+- **How I tested:** I called decide() from abp.mjs against policy v1.5.0 in a throw-away HOME.
+- **F1 (high):** identity is self-asserted.
+  - Any role may Write ~/.abp/keys/cl-6.abp/metadata.json, because ~/.abp/** is in writes_outside_repo. It may also rm its own label.
+  - The session then becomes cl-6.abp, which owns .claude/** and abp/*, so the tamper breaker is skipped.
+  - Fix: protect ~/.abp/keys/** with a first-label-only rule, and drop the owner exemption for .claude/** in live sessions.
+- **F2 (high):** a symlink bypass.
+  - `ln -s .claude/settings.json s.json` is allowed.
+  - A Write to s.json is only an R6 observe, so settings can be rewritten without the hooks.
+  - Fix: realpath in guarded(); ln, cp and mv count as tamper on a protected source or target.
+- **F3 (medium):** `rm -rf ~/.abp/log` is allowed. Protect the log and the salt.
+- **F4 (medium):** `cd --`, pushd and `git -C` defeat cwd tracking; a redirect into .claude passes.
+- **F5 (medium):** the signing pin is 16 hex characters (64 bits). Pin the full key SHA256.
+- **F6 (low):** the sshsig magic, version, reserved field and hash algorithm are not all checked.
+- **F7 (low):** R8 in the shell only lists some readers; `awk 1 ~/.ssh/...` passes.
+- **F8 (nit):** `git push origin HEAD` on dev is wrongly denied.
+- **Accepted:** R6 stays observe; `|| true` on the prompt and pre-compact hooks; the code-execution limits the README states.
