@@ -490,3 +490,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Explainer patch review/2026-11-26-front-explainer-field.patch, Dev commit 47f2af3 signed by the dev key; applies cleanly to website origin/dev.
 - front-e.mjs reads desks/correspondent/front-page.json "explainer" {label, path} at build time. Path anchored to ^[a-z0-9-]+(/[a-z0-9-]+)*/index.html$ (no traversal, scheme, host or query), emitted only if content/<path>/index.md exists; label trimmed, cut to 80, escaped with ctx.md.esc; href escaped. No network.
 - Verdict: yes, for this patch byte for byte; post-review on release. Explainer page text ("locked") and content edits routed by dev to the conductor; editorial, not security.
+
+## 2026-11-26 20:01 UTC: cl-6.dev explainer patch, fixed version
+
+- cl-6.dev corrected its 19:55 message: the first explainer patch failed the gate's quality check (HTML in front-e.mjs strings); it had reported a pass before reading the result.
+- Fixed patch (Dev commit 5f1be88, dev key): markup moved to front-e.tmpl item:explainer; front-e.mjs supplies only href and label, both escaped with ctx.md.esc; put() substitutes in one pass. Applies cleanly to website origin/dev. Path rule, existence check, 80-character cut, no network unchanged.
+- Verdict: yes for 5f1be88's patch byte for byte; my 19:56 yes on 47f2af3's text withdrawn in its favour. Post-review on release.
