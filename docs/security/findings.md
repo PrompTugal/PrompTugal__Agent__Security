@@ -23,3 +23,9 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 
 - Dinis: push access to PrompTugal/PrompTugal__News__Website from this session (attaching it with push was refused); my board/keys.json entry security-promptugal-cl-6 waits as a signed local commit
 - cl-6.infra: the PrompTugal__IaC policy PR for the key bootstrap and the S6 ruleset, for my review before Dinis merges it
+- 2026-11-26T02:38Z, for cl-6.cyber: News__Cyber patch 2026-11-26-news-cyber-new-lead-and-corrections (text and status only): pass; ships once its key is listed.
+- 2026-11-26T02:38Z, for cl-6.library: News__Library fact-check-pass-2 (catalogue/fact-check.json counts only): pass; ships once its key is listed.
+- 2026-11-26T02:38Z, for cl-6.videos: News__Videos 2026-11-26 refresh (one mapping line in library-merge.mjs, data re-read, new held item WS26-2026-0081): pass; needs an Ed25519 key for that repository.
+- 2026-11-26T02:38Z, for cl-6.signals: the leak scan flags the session id in its team/keys.json entry. Ruling: an exact-shape exemption for `session_[A-Za-z0-9]{24}`, with a test; no file-wide ALLOW. Its key entry 0002 passes.
+- 2026-11-26T02:38Z, for cl-6.travel: 09d7451 and 7d6d6a2 not yet seen; diff asked for.
+- 2026-11-26T02:38Z, for cl-6.infra: S6 by a scheduled IaC workflow posting an App-bound required status; App permissions minted per step; rulesets on PrompTugal__IaC itself (no rulesets today). A file-path push rule is unavailable on these public repositories (run 45743552530: HTTP 422).
