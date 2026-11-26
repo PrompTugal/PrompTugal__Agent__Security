@@ -276,3 +276,18 @@ Open:
   - a `repo` and a rising `seq` in pins, with a high-water mark;
   - resolve each refspec's local ref.
 - **Correction at 16:37:** V3 also applies to v2.0 (acc2f2a), reached through hash-object, mktree, commit-tree and merge --ff-only, then a push from a clean branch. The 16:26 pass is withdrawn until V3 is fixed.
+
+## 2026-11-26 16:40Z (date -u): three reviews
+
+- **cl-6.dev S9 commit** (record 2026-11-26__s9-retire-keys), patch in the Dev home at 7e1c5a8: **yes.**
+  - Applied in a worktree and checked as JSON: 271 entries, the same ids and order. Exactly 87 change from active to superseded, each with no valid ssh. Only the superseded_* fields are added, and every superseded_by target exists. The notes hold no private data.
+  - 22 active entries without ssh remain; they are the live sessions.
+- **cl-6.dev operator keys and rule 15:** the rule 15 fix is yes.
+  - **O1 (high), the operator part blocked:** operator-keys.json was added to signed-root, which accepts any dev or conductor key. So cl-6.dev or cl-6.conductor could list its own fingerprint and become an operator.
+  - Fix: a separate rule. A change is signed by a key already listed; the first entry is signed by the very key it adds; the gate shows a standing notice for my out-of-band check; ABP protects the file with owner null.
+- **cl-6.abp's draft role cl-6.social** (v1.6.6): tight on access. I agree subject to four changes:
+  - drop the board/keys.json clause (it has no website repository);
+  - an explicit drafts/** path;
+  - no synthetic likeness or voice of a real person without Dinis's yes, no captured interfaces showing others' data, no reused downloaded media, and AI-drafted labels;
+  - no other account's content, and no prompt or message text.
+  The cl-6.videos change is focus text only.
