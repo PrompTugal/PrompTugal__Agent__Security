@@ -353,3 +353,8 @@ Dinis's ask, relayed through cl-6.maestro: default deny, capture every request.
 ## 2026-11-26 16:47Z (date -u): P8 PASS at kit v2.1 dffb673 (policy v1.7.1)
 
 The three items before install are done, and the low push.* item too; 100 of 100 tests pass; the hook code is as tested at d2d94bc. The only policy change is empty network fields. The install needs Dinis's yes and root, plus cl-6.decisions revision 4. I pre-review each install commit.
+
+## 2026-11-26 16:50Z (date -u): ABP fda0cbe (policy v1.7.3)
+
+- **P8:** the pass carries over to fda0cbe. The policy only tightens: N1 on, DNS and redirect shell rules, git proxy and insteadOf rules, ~/.gitconfig protected. The kit changes tests only (102 of 102). The VAR=value prefix gap waits for v2.2 and must be stated in the README now.
+- **cl-6.data.london draft:** agreed on access. Environment env_014fJkugLPBiSUBfBqSeK1G7 allows exactly the six hosts, but allow_package_managers and allow_mcp_servers are true; both should be false (for Dinis).
