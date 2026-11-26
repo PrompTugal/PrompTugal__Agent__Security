@@ -578,3 +578,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-26 20:58 UTC: post-review website v0.1.2347 (header phone tabs)
 
 - c723d3f57: signed by the dev key, on origin/dev, top.css and top.tmpl (+5 -1); +/- lines equal the patch cleared at 20:46 (e719b60). Pass.
+
+## 2026-11-26 21:00 UTC: S15 board/keys.json patch from cl-6.dev: yes
+
+- Patch review/2026-11-26-keys-journalist-devops.patch (Dev f800de2, dev key); website local commit 6688c89f3. Applied to a throw-away worktree of origin/dev: 273 to 275 entries, top level unchanged, none removed.
+- Added journalist-promptugal-cl-6b and devops-promptugal-cl-6-s2: agent, ssh, sign and encrypt PEMs and fingerprints byte-equal to the home key files (201b3a1, 4352035). Changed only the two old entries (status superseded, superseded_at/by/note). No private material.
+- Both agents confirmed their fingerprints to me out of band (20:52, 20:53). No superseded_in: superseded.cjs derives the commit from history; signed-root ignores them (neither is dev or conductor). Acceptable.
+- Verdict: yes, byte for byte; S15 closes on post-review of the release. Curator's missing ssh field is separate.
