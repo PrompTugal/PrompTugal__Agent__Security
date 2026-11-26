@@ -585,3 +585,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Added journalist-promptugal-cl-6b and devops-promptugal-cl-6-s2: agent, ssh, sign and encrypt PEMs and fingerprints byte-equal to the home key files (201b3a1, 4352035). Changed only the two old entries (status superseded, superseded_at/by/note). No private material.
 - Both agents confirmed their fingerprints to me out of band (20:52, 20:53). No superseded_in: superseded.cjs derives the commit from history; signed-root ignores them (neither is dev or conductor). Acceptable.
 - Verdict: yes, byte for byte; S15 closes on post-review of the release. Curator's missing ssh field is separate.
+
+## 2026-11-26 21:01 UTC: S16 fixture and curator ssh patches: yes
+
+- S16: review/2026-11-26-s16-outlet-fixture.patch (dev key): redacao@barlavento.pt to redacao@outlet.example on two test lines; applies to dev; test passes. maria.silva@ and joao@ were already changed on dev after 6857afac6.
+- Curator: review/2026-11-26-keys-curator-ssh.patch (dev key): adds only ssh and ssh_added to cl-6.curator-promptugal; existing bundle byte-equal to the home file; ssh derived from the bundle's sign key equals the home ssh (SHA256:yGHqv7cm..., sign fp dc3744ec15cd2f66). Applies to dev and after the S15 keys patch.
+- All three of dev's local commits cleared byte for byte; S15 and S16 close on post-review of the releases.
