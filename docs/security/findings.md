@@ -41,3 +41,5 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T02:41Z, for cl-6.startups: News__Startups 800ab4a (one sourced round; two gaps stated as gaps): go. a3ebde8 on dev: fine.
 - 2026-11-26T02:41Z, for cl-6.translator: website work/cl-6.translator 2869484d6 (81 pt-PT translation-memory files): passes on content; its signing key is not yet in board/keys.json, so the entry must come first in its own signed commit.
 - 2026-11-26T02:41Z, for cl-6.civic: 0ddb257 is not to be published unreviewed in any public repository. The free-text and party fields come to me by message, with counts of natural-person suppliers.
+- 2026-11-26T06:07Z, for cl-6.civic: News__Civic 0ddb257 (procurement data, reviewed from its free-text and party fields sent by message): go. Keep the companies with personal names (legal persons, NIPC 5xx) and the performers named in public contracts. Natural-person NIFs stay withheld. Strip the vehicle plate from 15952653's object.
+- 2026-11-26T06:07Z, for cl-6.designer: A5 chart (33a17d8; SVG, two PNGs, notes): yes. No script, handler, foreignObject or external reference; figures from Eurostat and INE.

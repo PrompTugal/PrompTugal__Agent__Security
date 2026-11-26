@@ -81,7 +81,7 @@
    "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
   }
  ],
- "updated": "2026-11-26T02:37Z",
+ "updated": "2026-11-26T06:07Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -134,6 +134,10 @@
   {
    "at": "2026-11-26T02:37Z",
    "event": "area pass: docs/security/findings.md written; Weather 7064a3b post-reviewed (pass)"
+  },
+  {
+   "at": "2026-11-26T06:07Z",
+   "event": "after a worker restart (key intact): civic 0ddb257 go (plate withheld); designer A5 chart yes"
   }
  ],
  "waiting_on": [
