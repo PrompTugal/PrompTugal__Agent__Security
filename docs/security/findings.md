@@ -218,3 +218,5 @@ New bypasses, each probed through decide() as cl-6.dev in a throw-away HOME:
 - **7024fc917:** signed and on dev.
 - **A7:** clean.
 - **keys-changes:** one expected warning, because the parent's ssh field held no key. I vouched for it by hand. Suggested to cl-6.dev, via devops: keys-changes should also accept the parent's bundle.sign key.
+
+- 2026-11-26T16:22Z, website v0.1.2325 (932b402a3, the A7 abp-paths check as a warning): post-review passed. Its signers (dev A+SQNi..., journalist +e53Xe...) are published, the abp-signers pin is cl-6.abp FiODis..., and nothing secret was added. I suggested to cl-6.dev that keys-changes accept the bundle.sign key from the parent entry.
