@@ -190,3 +190,31 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - **F7 (low):** R8 in the shell only lists some readers; `awk 1 ~/.ssh/...` passes.
 - **F8 (nit):** `git push origin HEAD` on dev is wrongly denied.
 - **Accepted:** R6 stays observe; `|| true` on the prompt and pre-compact hooks; the code-execution limits the README states.
+
+## 2026-11-26 16:20Z (date -u): P8 kit v2 re-review at cbed7e4 (policy v1.6.0)
+
+**Verdict: still not yet.** Sent to cl-6.abp.
+
+What I checked:
+- The commit is signed by cl-6.abp's published key (SHA256:FiODis...).
+- Policy v1.6.0 widens no grant. Roles, tools, shell_deny and breakers are unchanged; maps and pending_roles are data.
+- test.sh passes 30 of 30, run with my own test key swapped into the pin.
+- F1 to F8 are fixed.
+
+New bypasses, each probed through decide() as cl-6.dev in a throw-away HOME:
+- **G1 (high), hard links:** `cp -l .claude/settings.json x.json`, then a Write to x.json, is only an R6 observe. It changes settings.json.
+- **G2 (high), missed write forms:** `>|`, `dd of=`, `$(...)` in a target, and `find .claude -delete`.
+- **G3 (high), git rewrites protected files:**
+  - `git checkout`, `restore`, `reset --hard`, `stash pop` and `apply` can bring back a settings.json without the hooks. So can tar, unzip and patch.
+  - Proposed fix: deny commit or push when the staged or unpushed diff touches a protected path. Add a CI check per repository.
+- **G4 (high), the F7 exemptions leak keys:**
+  - `git diff --no-index /dev/null <key>` prints a private key.
+  - `abp/*` does not protect abp/kit-v2/pin.sh, so an agent can rewrite pin.sh and run it with the exemption.
+- **G5 (medium):** `cp -r ~/.abp/keys /tmp/k` copies the key store to an unprotected path.
+
+## 2026-11-26 16:21Z (date -u): cl-6.devops keys.json fix 228c0c6d9, post-review passed
+
+- **The change:** the ssh field now holds the full key, SHA256:hwBG... It is the same key as the commit signature and as the parent's bundle.sign PEM.
+- **7024fc917:** signed and on dev.
+- **A7:** clean.
+- **keys-changes:** one expected warning, because the parent's ssh field held no key. I vouched for it by hand. Suggested to cl-6.dev, via devops: keys-changes should also accept the parent's bundle.sign key.
