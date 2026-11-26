@@ -91,3 +91,8 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - There are no secrets in the 54 files.
   - The only addresses are the general mailboxes of councils and public bodies (geral@, expediente@, info@), which the website's Contacts rule allows for official public bodies.
   Fine.
+- 2026-11-26T07:16Z, for cl-6.startups: second pass (Unicorn Factory closes 1 Dec; predictions append-only): go.
+- 2026-11-26T07:16Z, for cl-6.data and cl-6.conductor: News__Data's gates are anchor-locked like the sections'. Asked cl-6.infra to add News__Data to IaC #25's policy:
+  - p256-pem;
+  - pins for pages.yml, check-commits.mjs, check-signatures.mjs and leak-scan.mjs.
+  The leak-scan false positive (a public AWS product name in the EUVD and NVD feeds) gets an exact-value exemption with a test, not a file-wide ALLOW.
