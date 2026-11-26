@@ -277,7 +277,7 @@ Open:
   - resolve each refspec's local ref.
 - **Correction at 16:37:** V3 also applies to v2.0 (acc2f2a), reached through hash-object, mktree, commit-tree and merge --ff-only, then a push from a clean branch. The 16:26 pass is withdrawn until V3 is fixed.
 
-## 2026-11-26 16:40Z (date -u): three reviews
+## 2026-11-26 16:38Z (date -u): three reviews (my message to cl-6.abp was headed 16:40, before date -u; the true time was 16:38)
 
 - **cl-6.dev S9 commit** (record 2026-11-26__s9-retire-keys), patch in the Dev home at 7e1c5a8: **yes.**
   - Applied in a worktree and checked as JSON: 271 entries, the same ids and order. Exactly 87 change from active to superseded, each with no valid ssh. Only the superseded_* fields are added, and every superseded_by target exists. The notes hold no private data.
