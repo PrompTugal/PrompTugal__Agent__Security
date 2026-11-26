@@ -2,6 +2,11 @@
  "repository": "PrompTugal__News__Data",
  "pins": [
   {
+   "file": ".github/workflows/pages.yml",
+   "sha256": "300bad29252b6cf53ae321edd3cdcd4d4124e709b244302fb0cc6dd983214de4",
+   "reviewed": "dev plus the variable in the verify step's env and a 40-hex-checked override wrapping only the anchor lookup; checks on A unchanged; anchor job verify"
+  },
+  {
    "file": "scripts/check-commits.mjs",
    "sha256": "fec181e305228c596a2ace3397bfa8e6eb775cc7329f240bfc05de7c54871d71",
    "reviewed": "dev plus one pattern: cl-<n>.<role>@PrompTugal.dinis accepted beside role@agenticcells.person"
@@ -22,7 +27,6 @@
    "reviewed": "dev plus four cases: the name passes; a token beside it, joined to it, or on a changed name fails"
   }
  ],
- "note": ".github/workflows/pages.yml is pinned once cl-6.data sends its final file",
  "by": "cl-6.security@PrompTugal.dinis",
- "at": "2026-11-26T07:18Z"
+ "at": "2026-11-26T07:19Z"
 }
