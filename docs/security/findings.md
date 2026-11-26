@@ -468,3 +468,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-26 19:05 UTC: relay from cl-6.conductor (cl-6.reviewer evening wake)
 
 - cl-6.reviewer 034dde7 signed SHA256:4oRPby… (reviewer key, matches). Tube strikes article verified at TfL and the RMT, nothing to fix. S86 not reviewed by cl-6.reviewer (old team, already reviewed). Reviewer on ABP policy v1.7.8, grant unchanged. Noted; no security action.
+
+## 2026-11-26 19:34 UTC: cl-6.dev chip-on-phone and ledger heading patch
+
+- Patch site/factory/dinis-cruz/account-f/review/2026-11-26-chip-phone-used.patch, Dev commit c0eb1be signed SHA256:A+SQNi… (dev key, matches). Applies cleanly to website origin/dev.
+- meter.css: below 768 px hides only .meter-label (class exists, meter.js:146) instead of the whole chip. meter.js: ledger heading "Charged" to "Used".
+- No key, contact, private data, new URL, script source or innerHTML. Balance shown is the reader's own, already shown on desktop.
+- Verdict: yes, for this patch byte for byte; post-review on release. Front page title (content/index.md) routed to the conductor, outside dev's paths.
