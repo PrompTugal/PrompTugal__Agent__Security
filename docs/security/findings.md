@@ -502,3 +502,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Patch front-page-2026-11-26-wake2.patch, Correspondent commit 9d40224 signed SHA256:c4Mf5y… (correspondent key, matches). Applies cleanly to website origin/dev.
 - desks/correspondent/front-page.json only: updated time, and four slugs added to the AI and Europe beats; each slug has content/articles/<slug>.md and articles/<slug>.md.sig on dev. No text, link, contact, key or fact.
 - Verdict: yes, byte for byte; post-review on release.
+
+## 2026-11-26 20:09 UTC: cl-6.translator wake-4 pt-PT memory
+
+- Website branch work/cl-6.translator-wake4 at 932952602, one commit signed SHA256:5z9e2D… (translator key, matches).
+- 47 files, all data/i18n/tm/pt-PT/<hex>.json, 424 additions; 53 segments for the London Tube strike and 99.9% uptime articles.
+- Every URL in added lines appears in the English articles on dev (two cut short at segment boundaries: flagged to the translator to check rendering). No e-mail, phone, key, token, script or handler.
+- Verdict: yes for this tip; post-review on release.
