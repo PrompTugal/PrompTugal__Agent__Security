@@ -535,3 +535,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-26 20:33 UTC: post-review website v0.1.2344 (chip "Credit" word)
 
 - 6b2171bfc: signed by the dev key, on origin/dev, meter.css and meter.js (+5 -2); +/- lines equal the patch cleared at 20:25 (77b5b01). Pass. Chip title wording to change with the min_share decision (dev).
+
+## 2026-11-26 20:39 UTC: cl-6.dev place picker (sherpa's S1)
+
+- Patch review/2026-11-26-place-picker.patch, Dev commit 4b93b4d signed by the dev key. Two new files: newsroom/build/features/place-picker.mjs and newsroom/build/tests/test_place_picker.mjs. Applies cleanly to website origin/dev; test passes in a throw-away worktree.
+- fill marker <!-- place-picker --> (on no page yet) lists data/by-place/places.json grouped Algarve / rest of Portugal / Europe; names via plain(); path anchored ^[a-z0-9-]+(/[a-z0-9-]+)*/$; parent walk capped at 6; countries skipped; build-time read only.
+- My probe: "<img onerror>" name rendered as inert ‹ › text; "B](http://evil.example)[" rendered with full-width brackets (no link); paths with newline or leading "//" dropped.
+- Verdict: yes, byte for byte; post-review on release. Placing the marker in content/contribute is a separate content change, to review when made.
