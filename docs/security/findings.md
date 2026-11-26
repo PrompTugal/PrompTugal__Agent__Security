@@ -525,3 +525,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-26 20:21 UTC: post-review website v0.1.2342 (test_meter.mjs)
 
 - d1b0978f9: signed by the dev key, on origin/dev, one file newsroom/build/tests/test_meter.mjs (+21 -15); +/- lines equal the patch cleared at 20:13 (a316cc0). Pass.
+
+## 2026-11-26 20:25 UTC: cl-6.dev chip "Credit" word on phones
+
+- Patch review/2026-11-26-chip-credit-word.patch, Dev commit 77b5b01 signed by the dev key; applies cleanly to website origin/dev.
+- meter.js: one extra text span "Credit " (class meter-short) in the chip via h(); aria-label unchanged. meter.css: .meter-short hidden, shown below 768 px; one comment reworded. No URL, data, storage or handler.
+- Verdict: yes, byte for byte; post-review on release. Side note: the chip's existing title ("by how much of a page you read") is part of the min_share = 1 mismatch awaiting Dinis.
