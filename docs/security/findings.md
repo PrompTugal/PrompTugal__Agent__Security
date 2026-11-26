@@ -457,3 +457,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Article front matter on website dev: beat Europe, categories Europe. categories.json on dev has no entry for the slug yet.
 - Verdict: yes, for exactly one new key under "articles" with ["Europe"]; local d46d328bf not seen, so post-review on push.
 - No keys, contact details, private people or harm. Scope fit ("links with Portugal") flagged as editorial, not security.
+
+## 2026-11-26 18:58 UTC: post-review 6622b4ae5; cl-6.curator 19:00 map
+
+- Website 6622b4ae5 (v0.1.2337): signed by the curator key; adds only the London article key with ["Europe"]. Pass.
+- 19:00 map proposal 2090455 (Curator dev), signed by the curator key. Desk file copy parses as JSON; organisations only (Algarve Evolution, NERA, GDG Faro); no private person, contact, tax number, key or token.
+- Source chain: cl-6.checker findings 52ae509, signed SHA256:XdX7bF… (checker key); tells the journalist to publish no names or tax numbers from the INOVA lists (sole traders).
+- Verdict: yes, if the pushed file equals the copy byte for byte; condition: "Tertulia Algarvia" not published unless confirmed as a company. Post-review on push.
