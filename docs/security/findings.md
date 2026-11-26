@@ -98,3 +98,10 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   The leak-scan false positive (a public AWS product name in the EUVD and NVD feeds) gets an exact-value exemption with a test, not a file-wide ALLOW.
 - 2026-11-26T07:18Z, for cl-6.data: the News__Data gate drafts (check-commits, check-signatures P-256, leak-scan PUBLIC_VALUES, test-leak-scan) are reviewed and pinned (approvals/pins/PrompTugal__News__Data.json). pages.yml follows.
 - 2026-11-26T07:19Z, for cl-6.data: News__Data pages.yml pinned (300bad29...). All five News__Data gate files are pinned.
+- 2026-11-26T11:14Z, for cl-6.infra, cl-6.conductor and cl-6.data: IaC #25 passes at 9c5dc25. This replaces ddc867b. News__Data's test-leak-scan.mjs is pinnable, and a P-256 PEM is tested. cl-6.data was told:
+  - its entry dialect (ssh.public_key_pem, principals, no status field);
+  - to push the pinned check-signatures.mjs (530aaece), which is not yet pushed.
+- 2026-11-26T11:30Z, wake review (docs/security/reviews/2026-11-26-1130-wake-review.md): 860 commits from 01:51 to 11:14Z, no hold.
+  - S3 is closed.
+  - S8 is opened (low): the PrompTugal.vicky lane's commit key is not in board/keys.json, routed via cl-6.conductor.
+  - IaC #19 to #24 were read; nothing found.

@@ -17,21 +17,7 @@
  "model": "opus",
  "state": "first review done; no hold",
  "hold": false,
- "last_review": {
-  "at": "2026-11-26T01:52Z",
-  "file": "docs/security/reviews/2026-11-26-0152-first-review.md",
-  "window_from": "2026-11-25T22:00Z",
-  "window_to": "2026-11-26T01:51Z",
-  "findings": {
-   "medium": 2,
-   "low": 3,
-   "info": 3
-  },
-  "post_reviewed_since": [
-   "87f6bc325 (cl-6.dev, twin rule as a pure function: fine)",
-   "d0d13382e (c.maestro, a board note naming a public author site: no contact detail)"
-  ]
- },
+ "last_review": "2026-11-26T11:30Z: docs/security/reviews/2026-11-26-1130-wake-review.md (860 commits, 01:51 to 11:14Z, no hold)",
  "open_findings": [
   {
    "id": "S1",
@@ -52,7 +38,7 @@
    "severity": "low",
    "owner": "cl-6.fringe, cl-6.swarm, cl-6.library, cl-6.weather",
    "what": "inbox tokens and sealed credentials copied into history/",
-   "status": "conductor part fixed (ab74bff, checked 2026-11-26T01:55Z); fringe, swarm, library, weather open"
+   "status": "closed 2026-11-26T11:30Z: fringe, swarm, library and weather history folders now carry a note in place of every value (checked on each dev)"
   },
   {
    "id": "S4",
@@ -80,9 +66,16 @@
    "severity": "low",
    "owner": "cl-6.civic, cl-6.travel, cl-6.weather, cl-6.startups",
    "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
+  },
+  {
+   "id": "S8",
+   "severity": "low",
+   "owner": "the PrompTugal.vicky lane (conductor-vicky-3), via cl-6.conductor",
+   "what": "10 website commits (07:38 to 10:16Z, curator, journalist-ai, reviewer and checker @PrompTugal.vicky) are signed by ED25519 SHA256:32dP45eSMmVSt/G/CGvcxl/P+MO3Nwj9xeTh/GSA2wc, which is not in board/keys.json; the article .sig files pass the gate",
+   "status": "open"
   }
  ],
- "updated": "2026-11-26T06:23Z",
+ "updated": "2026-11-26T11:30Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -147,6 +140,14 @@
   {
    "at": "2026-11-26T06:23Z",
    "event": "first signed pin: approvals/pins/PrompTugal__News__Events.json (pages.yml ea85b2fc...)"
+  },
+  {
+   "at": "2026-11-26T11:14Z",
+   "event": "PrompTugal__IaC #25 passed at 9c5dc25 (News__Data covered, test-leak-scan.mjs pinnable); replaces ddc867b; to Dinis via cl-6.conductor"
+  },
+  {
+   "at": "2026-11-26T11:30Z",
+   "event": "wake review: 860 commits since 01:51Z, no hold; S3 closed; S8 opened"
   }
  ],
  "waiting_on": [
