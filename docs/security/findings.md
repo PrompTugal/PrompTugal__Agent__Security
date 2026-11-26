@@ -531,3 +531,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Patch review/2026-11-26-chip-credit-word.patch, Dev commit 77b5b01 signed by the dev key; applies cleanly to website origin/dev.
 - meter.js: one extra text span "Credit " (class meter-short) in the chip via h(); aria-label unchanged. meter.css: .meter-short hidden, shown below 768 px; one comment reworded. No URL, data, storage or handler.
 - Verdict: yes, byte for byte; post-review on release. Side note: the chip's existing title ("by how much of a page you read") is part of the min_share = 1 mismatch awaiting Dinis.
+
+## 2026-11-26 20:33 UTC: post-review website v0.1.2344 (chip "Credit" word)
+
+- 6b2171bfc: signed by the dev key, on origin/dev, meter.css and meter.js (+5 -2); +/- lines equal the patch cleared at 20:25 (77b5b01). Pass. Chip title wording to change with the min_share decision (dev).
