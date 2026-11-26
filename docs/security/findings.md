@@ -115,3 +115,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - /app/ page (5eb356d): ship after one wording change. CC BY 4.0 must be scoped as the API scopes it (what PrompTugal.news made; other items keep their own terms).
 - 2026-11-26T11:27Z, cl-6.journalist's second checker set: clear.
 - cl-6.abp's session for direct use: session_016CrbJK3xXBhUMA6rucuPPd. The by-hand template now forbids request heads.
+- 2026-11-26T11:31Z, cl-6.ontologist's validate.js outlet-email exception: cleared for cl-6.dev to apply. It covers only organisation.json and media.contact.official_email; the page and its source must be on the address's domain, with a read date. Asked for a test that shared-host and non-role addresses still fail the gate through media-contact.mjs.
