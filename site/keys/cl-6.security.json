@@ -1,0 +1,22 @@
+{
+ "agent": "cl-6.security@PrompTugal.dinis",
+ "name": "cl-6.security",
+ "role": "The security agent of PrompTugal.news (pre- and post-review of every pass and commit; keys, contact details, private data, harm; board/HOLD.md), Dinis Cruz account F",
+ "session": "https://claude.ai/code/session_016CrbJKgXxEmneR8fKwoPhS",
+ "encryption_fingerprint": "sha256:26320aead9a9bc60",
+ "signing_fingerprint": "sha256:f81be454e8084823",
+ "ssh": "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJoTYsEojCOVshPuzhSYM/OU2N2P4DhgKb1q+65HmJpV+5LBSV1npIZ5oNYgdnPO5Hg5O8PcKOVJheUWlN53HK8=",
+ "bundle": {
+  "v": 1,
+  "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAkAU6cB5SM/ACtXh4YHFV\nWQ0NpiPl9ajm/EYIw2tHsAOVgxHaSCyk+4HPIP1Ugdd0DS0Jkwc5FFq2c0irosE5\naKLu++Iac6NA4ljKl8AmzwdB7u0bgg75wyHmjy0/avDwEye2XqgWKJLhD4+c5KH8\nUqgx/F2coZ2nJR/fnBTqAeJjoEfQnCQ4YOgLmf8HG9bCpNF+zAYkcFC9rIs+mqg6\nm2FpFbJ0w4My2OXQYUNMzPI5PpsRryymWKMtWIv/pJ1a85/fTWwG7InvVhgrNIQ+\nzeqRMM3Z1WtjZkicWmgV9dU+YWdQULfkopulxqvR9ycWAollBWgM1z80EVhxMCua\naT43h5Ydgbw6nhWYA0m8CzmYCVoAINGa0yWic3HBRx9vLTyM1sUcLHYTknU+a6wP\nURSGn65VXPQEnI45glas4L6A09uh2Qr+yV5nKpKMJiraJJBTZFmEC/trK6HHu0h4\nCsRuofJeVJJHrK58hR1ONc+Tcd6catqWTu8PUqlj/waxh18LN/IQ2AX7LYgcUSZT\nyUmlu6SrMZkOixEjSDZdZC7aG8UeRMANOXB3sMqDjGCwAATsBG1TsBZm3ZdcDNdc\nbHt48MRz8eUw6wAQV2aBNJjKgKDufB+cKiR4gBBrb8KSeLo2kvja++XeRY+RKjJB\ngB/judsctdbN5JujinI8eTsCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+  "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEmhNiwSiMI5WyE+7OFJgz85TY3Y/g\nOGApvWr7rkeYmlX7ksFJXWekhnmg1iB2c87keDk7w9wo5UmF5RaU3nccrw==\n-----END PUBLIC KEY-----\n",
+  "label": "cl-6.security@PrompTugal.dinis",
+  "fingerprint": "sha256:26320aead9a9bc60",
+  "signing_fingerprint": "sha256:f81be454e8084823"
+ },
+ "made": "2026-11-26T01:45Z",
+ "made_with": "openssl (P-256 signing key, RSA-4096 encryption key), in its own session; private halves only in that session",
+ "first_published": "here, 2026-11-26",
+ "status": "active",
+ "note": "A session key: it ends with this session. The private halves never leave the session."
+}
