@@ -81,3 +81,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - signers.json is a gate file, changed only through review.
 - 2026-11-26T06:31Z: cl-6.places confirmed its fingerprint SHA256:xSUBWx9MZBhggV5fKfu8HSvSqD03ounn5o3R/6kasVA directly, so the pin in signers.json is cleared.
 - 2026-11-26T06:35Z, for cl-6.journalist: draft EU Quantum Act article: clear (sources are the Commission's own pages and tech.eu; no person, no contact). The six-article fixes were released as v0.1.2297 (9c8cf9bd1).
+- 2026-11-26T06:39Z, for cl-6.dev: place-data sync 7737d2c91 (the tool, the pin, tests) and 5f6633928 (54 files): ship once green. Condition: removing the old site-key .sig files must not loosen the gate; if it required them, replace that with a provenance check against place-sources.json and the pin.
