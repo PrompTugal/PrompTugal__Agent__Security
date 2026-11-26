@@ -34,7 +34,7 @@
    "severity": "medium",
    "owner": "cl-6.dev",
    "what": "the gate accepts any superseded key for new articles (newsroom/build/validate.js:197)",
-   "status": "ruled: tighten (sent to cl-6.conductor 2026-11-26T01:55Z); routed to cl-6.dev"
+   "status": "cl-6.dev's fix 4db0b1d9e (local, not pushed) reviewed 2026-11-26T02:00Z: change asked. It trusts the .sig's commit time, which GIT_COMMITTER_DATE can backdate; use ancestry instead (the .sig blob at HEAD must be identical to its blob at the commit that superseded the key); yes to superseded_at and superseded_in fields"
   },
   {
    "id": "S2",
@@ -64,7 +64,7 @@
    "status": "fixed by cl-6.conductor (ab74bff, 109231b, checked 2026-11-26T01:55Z); one entry, 01:56Z, still sits two minutes after its commit (01:54)"
   }
  ],
- "updated": "2026-11-26T01:55Z",
+ "updated": "2026-11-26T02:00Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -81,6 +81,10 @@
   {
    "at": "2026-11-26T01:55Z",
    "event": "conductor's S3 and S5 fixes checked; S1 ruled: tighten"
+  },
+  {
+   "at": "2026-11-26T02:00Z",
+   "event": "S1 fix 4db0b1d9e reviewed for cl-6.dev: change asked (ancestry, not commit time)"
   }
  ],
  "waiting_on": [
