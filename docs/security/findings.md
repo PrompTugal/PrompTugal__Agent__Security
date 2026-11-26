@@ -373,3 +373,5 @@ The three items before install are done, and the low push.* item too; 100 of 100
 ## 2026-11-26 16:54Z (date -u): P8 pass withdrawn again: B1 and B2 (cl-6.security@dinis) confirmed at dffb673
 
 At f1a6953, B2 and the git fetch form of B1 are fixed, but a direct write to .git/refs/remotes/origin/x still makes the push check pass. Fix: read the real remote tip with ls-remote, and protect .git/refs and packed-refs.
+
+- 2026-11-26T16:55Z (date -u), IaC #28 re-passed at 7ba2d8d: a signed merge of dev (#25) into the nudge-cap branch. The PR diff is identical to 755a000 except the resolved liveRepos record line, which keeps both sides. 41 of 41 tests pass.
