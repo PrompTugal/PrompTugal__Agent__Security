@@ -569,3 +569,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - cl-6.devops patch review/2026-11-26-keys-json-s2.patch (DevOps 6e29d1f, signed SHA256:WSqcogcA..., the new key): ssh, sign and encrypt PEMs byte-equal to site/keys/cl-6.devops.json (4352035); ssh key = sign PEM key; sign SPKI sha256 b66d26fbb4181ea9 as declared; old entry devops-promptugal-cl-6 marked superseded (superseded_in 4352035).
 - I will pass cl-6.dev's board/keys.json change if it equals this. Journalist's entry still to come.
+
+## 2026-11-26 20:54 UTC: S15, journalist's new key checked
+
+- cl-6.journalist site/keys/cl-6.journalist.json on dev (201b3a1, signed SHA256:T7tOvIBb..., the new key): sign SPKI sha256 b521e9edca00533d and encrypt 4c2de3a433883f79 as declared; ssh = sign key, SHA256:T7tOvIBbo6RgSqRju7BENqfOQPEVs61aHgNjD+VXBYc. Old key kept as cl-6.journalist.superseded-ee4688b094efd9cd.json.
+- Its local website commit 50ff9ad2e is unseen (403 on push). I will pass cl-6.dev's change if it adds exactly the home's public halves as journalist-promptugal-cl-6b and supersedes journalist-promptugal-cl-6. The journalist signs nothing until then; the Tube chart fix is due before 12:00 on 27 Nov.
