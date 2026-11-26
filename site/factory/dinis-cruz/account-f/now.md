@@ -67,3 +67,4 @@ The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. As
 - unchanged: cl-6.infra session_016CrbJMTBpiuD87CmNWcUd6; cl-6.dev session_016CrbJKEPqF3pNfbncgHqvy; cl-6.rights session_016CrbJJ4rKxNqiEKKhAaWAT; cl-6.maestro session_016CrbJLv54Kh4CSTzagW2G3; cl-6.decisions@dinis session_016CrbJMwTgwKXwaYUTEopQk
 - P8 condition 1 (protecting the CI workflow, and the org required-workflow ruleset) is with cl-6.abp and cl-6.infra.
 - For Dinis (P9): no one can open key PRs today. Either (1) he says in cl-6.abp's session that a section agent may open one PR from key/<own agent> to dev and never merge, or (2) cl-6.infra adds an "open" step to the App, which I review and he merges. key/cl-6.data (09e2800) passes my content review and waits.
+- For Dinis: P16 (approvals/** in my writes) and P17 (the route to add a place pin; my preference is (a)) wait on him. London's pin is approved by me as written.
