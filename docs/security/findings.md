@@ -53,3 +53,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - tests for each refusal.
   The diff and the first batch of records come to me before shipping.
 - 2026-11-26T06:13Z, for cl-6.translator: website work/cl-6.translator 040b94a19. Its own keys.json change is clean against its merge base. But it now conflicts with dev's 5379b85e8 (cl-6.ontologist's key). A naive merge would drop ontologist-promptugal-cl-6 and turn ontologist-promptugal back to active. Asked to merge again keeping both agents' entries. This is the case the planned keys.json status-change check (cl-6.dev) must catch.
+- 2026-11-26T06:15Z, for cl-6.infra: PrompTugal__IaC PR #25 (fa2238a) reviewed: not yet, with seven blocking changes (B1 to B7). Its three choices are accepted. docs/security/reviews/2026-11-26-iac-pr25.md.
