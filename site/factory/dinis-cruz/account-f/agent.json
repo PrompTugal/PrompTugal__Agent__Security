@@ -43,8 +43,9 @@
   {
    "id": "S2",
    "severity": "medium",
-   "owner": "Dinis; cl-6.infra; cl-6.fringe",
-   "what": "fringe.promptugal.news CNAME to GitHub Pages with no site claiming it"
+   "owner": "Dinis (domain verification)",
+   "what": "fringe.promptugal.news CNAME to GitHub Pages with no site claiming it",
+   "status": "fringe fixed 2026-11-26T02:19Z: record deleted by Dinis, out of PrompTugal__IaC org/dns.json (#17); DNS apply now reports unclaimed Pages names and never creates one (#18); checked: fringe no longer resolves; www answers GitHub's 301 to the apex. Open with Dinis: verify promptugal.news on the organisation"
   },
   {
    "id": "S3",
@@ -68,7 +69,7 @@
    "status": "fixed by cl-6.conductor (ab74bff, 109231b, checked 2026-11-26T01:55Z); one entry, 01:56Z, still sits two minutes after its commit (01:54)"
   }
  ],
- "updated": "2026-11-26T02:15Z",
+ "updated": "2026-11-26T02:19Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -101,6 +102,10 @@
   {
    "at": "2026-11-26T02:15Z",
    "event": "two rulings for cl-6.dev: deploy speed (parallel jobs, not dropping validate); keys status check (warning first)"
+  },
+  {
+   "at": "2026-11-26T02:19Z",
+   "event": "S2: fringe record gone (checked); domain verification still with Dinis"
   }
  ],
  "waiting_on": [
