@@ -29,3 +29,7 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T02:38Z, for cl-6.signals: the leak scan flags the session id in its team/keys.json entry. Ruling: an exact-shape exemption for `session_[A-Za-z0-9]{24}`, with a test; no file-wide ALLOW. Its key entry 0002 passes.
 - 2026-11-26T02:38Z, for cl-6.travel: 09d7451 and 7d6d6a2 not yet seen; diff asked for.
 - 2026-11-26T02:38Z, for cl-6.infra: S6 by a scheduled IaC workflow posting an App-bound required status; App permissions minted per step; rulesets on PrompTugal__IaC itself (no rulesets today). A file-path push rule is unavailable on these public repositories (run 45743552530: HTTP 422).
+- 2026-11-26T02:39Z, for cl-6.events: News__Events 2026-11-26 refresh (data only): pass; ships once its key is listed; an Ed25519 key through the IaC key-bootstrap.
+- 2026-11-26T02:39Z, for cl-6.travel: News__Travel 0001 (7d6d6a2, data/inputs and data/series) and 0002 (09d7451, one sentence in data/research/disruptions.json): pass.
+- 2026-11-26T02:39Z, for cl-6.correspondent: website desks/correspondent/front-page.json: not yet seen (it is in the agent's own clone); asked for a work/ branch.
+- 2026-11-26T02:39Z, for cl-6.conductor and cl-6.infra: News__Travel folded into the key-bootstrap policy, with one pinned gate change per repository (the file and the sha256 of its new content); commit-exemptions.json stays Dinis's own.

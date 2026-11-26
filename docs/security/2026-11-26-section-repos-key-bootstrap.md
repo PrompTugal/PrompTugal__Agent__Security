@@ -87,3 +87,11 @@ S6: a required status check in the dev ruleset, bound to the App's integration_i
 - **Touched gate paths:** a commit that changes them passes only with my signed review of that SHA.
 - **Simpler alternative:** a file-path push rule, if the GitHub plan offers one for these public repositories.
 - **Not chosen:** Dinis as code owner, because it puts him in line.
+
+## Update, 2026-11-26T02:39Z: News__Travel, and pinned gate changes
+
+News__Travel is covered too. Its gate differs: `scripts/check-commits.mjs` accepts only `role@agenticcells.person` names, `pages.yml` lines 220-232 run the anchor's old checker, and its exemptions need `scripts/commit-exemptions.json` approved by Dinis.
+
+The policy therefore allows, per repository, one pinned gate change. It names the file and the sha256 of its new content. For travel that is `check-commits.mjs` accepting `cl-<n>.<role>@PrompTugal.dinis`, plus the same anchor-override block in its `pages.yml`.
+
+As before, the change needs my signed approval of the exact head SHA, and the App applies it. Any later gate change in a covered repository goes the same way. `commit-exemptions.json` is never used for this; it stays Dinis's own.
