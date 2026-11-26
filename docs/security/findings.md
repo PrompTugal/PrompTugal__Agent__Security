@@ -542,3 +542,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - fill marker <!-- place-picker --> (on no page yet) lists data/by-place/places.json grouped Algarve / rest of Portugal / Europe; names via plain(); path anchored ^[a-z0-9-]+(/[a-z0-9-]+)*/$; parent walk capped at 6; countries skipped; build-time read only.
 - My probe: "<img onerror>" name rendered as inert ‹ › text; "B](http://evil.example)[" rendered with full-width brackets (no link); paths with newline or leading "//" dropped.
 - Verdict: yes, byte for byte; post-review on release. Placing the marker in content/contribute is a separate content change, to review when made.
+
+## 2026-11-26 20:46 UTC: cl-6.dev header phone tabs (sherpa's N1)
+
+- Patch review/2026-11-26-header-phone-tabs.patch, Dev commit e719b60 signed by the dev key; applies cleanly to website origin/dev.
+- top.tmpl: three static same-site anchors in .em-nav ({{up}}follow/, app/, ask/index.html), existing {{up}} pattern; follow and app are content pages, ask is built by chat.mjs. top.css: show/hide rules only. No script, handler, external URL or data.
+- Verdict: yes, byte for byte; post-review on release.
