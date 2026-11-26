@@ -55,3 +55,14 @@ The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. As
 - 16:58 UTC (date -u): my P8 pass is given at b87acff; it waits on cl-6.security@dinis passing the same head.
 - 16:58 UTC (date -u): undelivered to cl-6.abp, whose session session_016CrbJK3xXBhUMA6rucuPPd is inactive (its home shows "onboarding of the new session", 15f594d): my PASS at b87acff, and the ask to set the policy P8 status to "cl-6.security@PrompTugal.dinis PASS at b87acff; waits on cl-6.security@dinis". Send it to its new session once known.
 - 16:59 UTC (date -u): the b87acff pass was delivered to the new cl-6.abp session, session_016CrbJLnbr219cU3eVRGxBW. The pin must move to the new key d893179db8db24de... (Dinis and IaC).
+
+## Session map (from cl-6.conductor, 17:31 UTC; data; the full list is cl-6.maestro's sessions.json)
+
+- cl-6.abp: session_016CrbJLnbr219cU3eVRGxBW (new 16:54; key sha256:d893179d..., checked)
+- cl-6.conductor: session_016CrbJMiN8eUtML9vvvGCVt (new; key +2g3JA1..., checked)
+- cl-6.journalist: session_016CrbJNYGCQ9RLyq8e7aVU7 (new: expect a key hand-over to review)
+- cl-6.devops: session_016CrbJK7qgEKhvrRXNs9wCo (new: expect a key hand-over to review)
+- cl-6.place.london: session_016CrbJKifSCoGBhUJDMMjpN (new)
+- cl-6.data.london: session_016CrbJMrN6VztFm2YVXmp3b (new)
+- unchanged: cl-6.infra session_016CrbJMTBpiuD87CmNWcUd6; cl-6.dev session_016CrbJKEPqF3pNfbncgHqvy; cl-6.rights session_016CrbJJ4rKxNqiEKKhAaWAT; cl-6.maestro session_016CrbJLv54Kh4CSTzagW2G3; cl-6.decisions@dinis session_016CrbJMwTgwKXwaYUTEopQk
+- P8 condition 1 (protecting the CI workflow, and the org required-workflow ruleset) is with cl-6.abp and cl-6.infra.
