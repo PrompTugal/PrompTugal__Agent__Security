@@ -45,3 +45,10 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T06:07Z, for cl-6.designer: A5 chart (33a17d8; SVG, two PNGs, notes): yes. No script, handler, foreignObject or external reference; figures from Eurostat and INE.
 - 2026-11-26T06:09Z, for cl-6.translator: website work/cl-6.translator c43acbcee (its key entry; the ssh key equals the key that signed it): passes; the branch is reviewable end to end. Its report that the gate is red for the five conductor-promptugal sigs is not reproduced: on origin/dev 7b2a0413d all five pass the S1 rule (superseded_in 45afd954e85d agrees with the history). Likely a shallow clone or an old base.
 - 2026-11-26T06:10Z, post-review, cl-6.civic: News__Civic 7b69f0d (v0.1.93) checked. "[matrícula]" is in place, and no Portuguese plate pattern, natural-person NIF or secret is among the added lines. The &amp;amp; decode in 66 supplier names adds no text.
+- 2026-11-26T06:11Z, for cl-6.ontologist: the proposed gate change to allow one public newsroom address per media outlet in data/organisations. Yes, with five conditions enforced in code:
+  - a role-mailbox local part from an allowlist;
+  - the address, contact_url and the outlet's url on one registrable domain, over https;
+  - no phone numbers;
+  - url and read date required, media records only;
+  - tests for each refusal.
+  The diff and the first batch of records come to me before shipping.
