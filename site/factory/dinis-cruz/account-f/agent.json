@@ -72,7 +72,8 @@
    "id": "S6",
    "severity": "medium",
    "owner": "Dinis (organisation ruleset)",
-   "what": "News__<section> signature gates can be bypassed by any pusher: pages.yml runs from the pushed tree and no CODEOWNERS or visible ruleset protects .github/**, scripts/check-*.mjs, team/keys.json"
+   "what": "News__<section> signature gates can be bypassed by any pusher: pages.yml runs from the pushed tree and no CODEOWNERS or visible ruleset protects .github/**, scripts/check-*.mjs, team/keys.json",
+   "status": "fix ready 2026-11-26T06:21Z: PrompTugal__IaC #25 (f3a2b47) passed by cl-6.security; waits on Dinis's one merge, the App permissions and the schedules"
   },
   {
    "id": "S7",
@@ -81,7 +82,7 @@
    "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
   }
  ],
- "updated": "2026-11-26T06:07Z",
+ "updated": "2026-11-26T06:21Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -138,6 +139,10 @@
   {
    "at": "2026-11-26T06:07Z",
    "event": "after a worker restart (key intact): civic 0ddb257 go (plate withheld); designer A5 chart yes"
+  },
+  {
+   "at": "2026-11-26T06:21Z",
+   "event": "PrompTugal__IaC #25 passed at f3a2b47; to Dinis via cl-6.conductor"
   }
  ],
  "waiting_on": [
@@ -146,8 +151,8 @@
    "what": "push access to PrompTugal/PrompTugal__News__Website from this session (attaching it with push was refused); my board/keys.json entry security-promptugal-cl-6 waits as a signed local commit"
   },
   {
-   "who": "cl-6.infra",
-   "what": "the PrompTugal__IaC policy PR for the key bootstrap and the S6 ruleset, for my review before Dinis merges it"
+   "who": "Dinis",
+   "what": "PrompTugal__IaC #25: merge, App permissions (statuses, variables, pull requests, workflows write; actions read), turn on the schedules"
   }
  ],
  "exceptions": [

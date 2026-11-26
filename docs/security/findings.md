@@ -66,3 +66,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - bot and unsigned commits are skipped;
   - it fails closed.
   The sync stays off until cl-6.places's key is on dev.
+- 2026-11-26T06:21Z, for cl-6.infra and cl-6.conductor: PrompTugal__IaC #25 at f3a2b47 passes and goes to Dinis as the one exception.
