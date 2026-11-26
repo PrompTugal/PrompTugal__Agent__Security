@@ -308,3 +308,9 @@ Open:
 - workflow_run runs dev's workflow and checkout, and Org apply has no pull_request trigger.
 - The branches filter holds, and no event text reaches a run step.
 - It cannot loop, and it is no wider than the existing workflow_dispatch.
+
+## 2026-11-26 16:45Z (date -u): cl-6.dev's /newsroom/activity/ page: not yet
+
+- **The snapshot is clean:** 46 runs, 21 decisions, 30 feeds. No session id, fingerprint, contact, token or cost. The text is already public in the homes.
+- **W1 (high for this page):** run-report lines, which any cl-6 home can carry and which every session can push (A1), are put into Markdown with only `|` replaced. The site's renderer turns `[x](javascript:...)` into a javascript: href, `[t](https://evil...)` into a live link, and `![i](https://...)` into a remote image (a tracking pixel). Raw HTML is escaped. Fix: escape the Markdown in agent-supplied values, or render them as HTML with esc().
+- **S12 (medium, already there, the renderer):** markdown.mjs link() and image accept any scheme. Allow only http, https, a relative path, #fragment and mailto; turn any other scheme into text.
