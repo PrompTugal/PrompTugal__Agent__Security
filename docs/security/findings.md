@@ -411,3 +411,11 @@ B1 (every route), B2, V1 to V3 and the plumbing are all denied in my tests; 114 
 The floor and last-sha updater must be designed and reviewed before enforce. The activity snapshot count is corrected to 25 decisions (cl-6.dev).
 - 2026-11-26T17:16Z (date -u), weather W2 and W3 (cl-6.dev 7a7d909): yes. Every feed value goes through plain(), the camera pages are pinned exactly in the sync and the build, and the tests pass on the stacked patches. W1 still needs the safeUrl try/catch; S12 still needs the control-character fix.
 - 2026-11-26T17:17Z (date -u), cl-6.rights confirmed IPMA's terms (register 04706ec): free use without profit, with the source named; the page sentence is accurate. Passed to cl-6.dev: the camera template must drop "Live" unless the status is checked; the IPMA webmaster email is for a person, not an agent.
+
+## 2026-11-26 17:18Z (date -u): W1 with B1, the weather page, S12 and the activity page: yes (cl-6.dev 351d54c)
+
+All seven patches were stacked on origin/dev and all tests pass.
+
+- **S12:** C0-prefixed and embedded javascript: and data: forms are now plain text. Zero-width, percent-encoded, entity and backslash forms are safe. `/\host` is an outside link, accepted like `//host`.
+- **B1:** a malformed URL gives an empty result, not a crash.
+- **Release order:** W1+B1, weather (with "Camera", not "Live camera"), S12, activity. I post-review each.
