@@ -1,0 +1,28 @@
+{
+ "repository": "PrompTugal__News__Data",
+ "pins": [
+  {
+   "file": "scripts/check-commits.mjs",
+   "sha256": "fec181e305228c596a2ace3397bfa8e6eb775cc7329f240bfc05de7c54871d71",
+   "reviewed": "dev plus one pattern: cl-<n>.<role>@PrompTugal.dinis accepted beside role@agenticcells.person"
+  },
+  {
+   "file": "scripts/check-signatures.mjs",
+   "sha256": "530aaece6c2a3860aa37bb9611e651681dd0b631adc4e8a04d2d0c46d2af5d3e",
+   "reviewed": "dev plus P-256 PEM converted to ecdsa-sha2-nistp256; Ed25519 as before; any other curve refused"
+  },
+  {
+   "file": "scripts/leak-scan.mjs",
+   "sha256": "262596ea803315fef23aa4717c2dc07d3f376838dc379e5a31c1c3fe2302fbd3",
+   "reviewed": "dev plus an exact-value PUBLIC_VALUES list (one AWS runbook name) removed before the entropy test"
+  },
+  {
+   "file": "scripts/test-leak-scan.mjs",
+   "sha256": "3c519ea42781313e355b17eeaf9caff61ed1e687fae4795e8987e68b8eb73884",
+   "reviewed": "dev plus four cases: the name passes; a token beside it, joined to it, or on a changed name fails"
+  }
+ ],
+ "note": ".github/workflows/pages.yml is pinned once cl-6.data sends its final file",
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T07:18Z"
+}

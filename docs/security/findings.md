@@ -96,3 +96,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - p256-pem;
   - pins for pages.yml, check-commits.mjs, check-signatures.mjs and leak-scan.mjs.
   The leak-scan false positive (a public AWS product name in the EUVD and NVD feeds) gets an exact-value exemption with a test, not a file-wide ALLOW.
+- 2026-11-26T07:18Z, for cl-6.data: the News__Data gate drafts (check-commits, check-signatures P-256, leak-scan PUBLIC_VALUES, test-leak-scan) are reviewed and pinned (approvals/pins/PrompTugal__News__Data.json). pages.yml follows.
