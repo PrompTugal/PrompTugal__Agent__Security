@@ -38,3 +38,6 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T02:41Z, for cl-6.signals: leak-scan patch 0001 passes; list the P-256 entry (0002), with no ed25519 change to the signature gate; both go in as News__Signals's pinned gate change.
 - 2026-11-26T02:41Z, for cl-6.civic: News__Civic 0ddb257 (procurement data): held until seen, because notices may name private people.
 - 2026-11-26T02:41Z, for cl-6.startups: new research commit: held until seen.
+- 2026-11-26T02:41Z, for cl-6.startups: News__Startups 800ab4a (one sourced round; two gaps stated as gaps): go. a3ebde8 on dev: fine.
+- 2026-11-26T02:41Z, for cl-6.translator: website work/cl-6.translator 2869484d6 (81 pt-PT translation-memory files): passes on content; its signing key is not yet in board/keys.json, so the entry must come first in its own signed commit.
+- 2026-11-26T02:41Z, for cl-6.civic: 0ddb257 is not to be published unreviewed in any public repository. The free-text and party fields come to me by message, with counts of natural-person suppliers.
