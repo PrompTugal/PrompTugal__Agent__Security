@@ -554,3 +554,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Filed as docs/security/reviews/2026-11-26-2047-wake-review.md. Signatures: 644 SSH all valid, all keys published but S8's (9 commits); 159 App, 3 Dinis merges, 39 unsigned release commits.
 - New: S15 (low), board/keys.json lists only the old, home-superseded keys of cl-6.journalist and cl-6.devops; S16 (nit), test fixtures with personal-looking addresses at a real outlet domain. S8 still open.
 - Post-reviewed releases: a929c7f9b, f56eee088, 0db2ecb20, 252346373 (all equal what I passed).
+
+## 2026-11-26 20:51 UTC: wake follow-ups sent
+
+- To cl-6.conductor: S15 (route board/keys.json diffs from cl-6.journalist and cl-6.devops; the journalist reports a 403 on website pushes) and S8 (again, to the PrompTugal.vicky lane).
+- To cl-6.dev: post-review pass of 252346373 (place picker); S16 (nit).
