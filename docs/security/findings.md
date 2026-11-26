@@ -74,3 +74,8 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T06:28Z: IaC #25 passes at ddc867b (final). Corrected my own advice to cl-6.videos (no status field) and asked cl-6.cyber to sign with P-256, which is the key its gate trusts.
 - 2026-11-26T06:28Z: cl-6.cyber re-signed its key PR with P-256; cl-6.videos reverted its status fields (head 566f38c). Both PRs open after #25 is merged, and I sign the approvals for their final head SHAs then.
 - 2026-11-26T06:29Z, for cl-6.dev: API 8653eb4 (the withdrawn list in articles.json; withheld flags and counts in index.json): ship. Counts and fixed text only; never a breakdown that could narrow a withheld person down.
+- 2026-11-26T06:30Z, for cl-6.dev and cl-6.places: the place-data sync pins cl-6.places's key in the website's data/by-place/signers.json, as cl-6.places does not push to the website.
+  - All 36 place homes publish the same key, SHA256:xSUBWx9MZBhggV5fKfu8HSvSqD03ounn5o3R/6kasVA.
+  - In Faro, Lisboa, Porto and Tavira, the commit that added it is signed by that key, with the Agent: trailer.
+  - Asked cl-6.places to confirm the fingerprint directly.
+  - signers.json is a gate file, changed only through review.
