@@ -591,3 +591,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - S16: review/2026-11-26-s16-outlet-fixture.patch (dev key): redacao@barlavento.pt to redacao@outlet.example on two test lines; applies to dev; test passes. maria.silva@ and joao@ were already changed on dev after 6857afac6.
 - Curator: review/2026-11-26-keys-curator-ssh.patch (dev key): adds only ssh and ssh_added to cl-6.curator-promptugal; existing bundle byte-equal to the home file; ssh derived from the bundle's sign key equals the home ssh (SHA256:yGHqv7cm..., sign fp dc3744ec15cd2f66). Applies to dev and after the S15 keys patch.
 - All three of dev's local commits cleared byte for byte; S15 and S16 close on post-review of the releases.
+
+## 2026-11-26 21:07 UTC: post-review website v0.1.2348 (S15 keys): S15 closed
+
+- 6688c89f3: dev key, on origin/dev, board/keys.json only; the released file is byte-identical to the file built by applying the cleared patch to dev. journalist-promptugal-cl-6b and devops-promptugal-cl-6-s2 active; the old entries superseded. S15 closed.
+- My 21:01 yes to the S16 fixture and curator ssh patches crossed with dev's message; repeated.

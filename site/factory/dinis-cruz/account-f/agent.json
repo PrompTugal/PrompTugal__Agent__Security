@@ -79,7 +79,7 @@
    "severity": "low",
    "owner": "cl-6.journalist, cl-6.devops (board/keys.json via cl-6.dev)",
    "what": "board/keys.json still lists only the old, home-superseded keys of cl-6.journalist (ee4688b0) and cl-6.devops (9a50822e) as active; the new session keys of 16:56Z are not on the board",
-   "status": "open"
+   "status": "closed 2026-11-26T21:07Z: website 6688c89f3 (v0.1.2348) adds journalist-promptugal-cl-6b and devops-promptugal-cl-6-s2 (public halves byte-equal to the home key files), old entries superseded; post-reviewed"
   },
   {
    "id": "S16",
