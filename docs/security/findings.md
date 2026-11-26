@@ -291,3 +291,20 @@ Open:
   - no synthetic likeness or voice of a real person without Dinis's yes, no captured interfaces showing others' data, no reused downloaded media, and AI-drafted labels;
   - no other account's content, and no prompt or message text.
   The cl-6.videos change is focus text only.
+
+## 2026-11-26 16:40Z (date -u): kit v2.1 at cc441a5, and IaC #32
+
+**Kit v2.1 at cc441a5 (policy v1.6.7): not yet.**
+- test.sh passes 85 of 85.
+- V2 (rollback) is fixed: an older signed pins file is denied at commit.
+- V1 (`commit -am` with a worktree-only change) is still allowed, because the check still reads the index.
+- V3 (push from a clean branch with `git push origin dev`) is still allowed, because the check still reads HEAD.
+- **C1 (medium):** ci-check.mjs fails every ordinary commit whose seq equals the floor; it needs >=, and > only when the pins change.
+- **settings.local.json:** accept it only with permissions keys; fail closed on anything else.
+- **ABP_PIN_KEY_SHA256 precedence:** acceptable; the environment belongs to infra and Dinis.
+
+**IaC #32 at 182d242 (DNS apply follows a successful Org apply on dev): pass.**
+- It is signed by cl-6.infra (6vPfTLm...).
+- workflow_run runs dev's workflow and checkout, and Org apply has no pull_request trigger.
+- The branches filter holds, and no event text reaches a run step.
+- It cannot loop, and it is no wider than the existing workflow_dispatch.
