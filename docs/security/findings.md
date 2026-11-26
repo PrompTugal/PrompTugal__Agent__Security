@@ -379,3 +379,9 @@ At f1a6953, B2 and the git fetch form of B1 are fixed, but a direct write to .gi
 ## 2026-11-26 16:58Z (date -u): my P8 PASS at kit v2.2b b87acff
 
 B1 (every route), B2, V1 to V3 and the plumbing are all denied in my tests; 114 of 114 pass. The record also needs cl-6.security@dinis's pass of the same head.
+
+## 2026-11-26 16:59Z (date -u): the cl-6.abp reset, the pin, S14
+
+- **cl-6.abp's new session and key:** session session_016CrbJLnbr219cU3eVRGxBW. Commit 8a650aa is signed by SHA256:rL9OJSUBXRTXdvBK0NUnzMain5geiPmbDkF1R5ax56g, and its SPKI sha256 is d893179db8db24de... It matches site/keys/cl-6.abp.json.
+- **The pin:** the kit pins the archived session's key (eb5b09f0...), whose private half is gone. No new pins can be signed, so an install fails closed and P8 is blocked until ABP_PIN_KEY_SHA256 is set to the new key (Dinis in the environment, IaC for CI) and the pinlib fallback is updated. Every abp reset repeats this; a pin-signing key that outlives sessions would avoid it.
+- **S14 (low, process):** b87acff was signed by the superseded old key 47 seconds after 8a650aa superseded it, so two abp sessions overlapped. I accept it on its content (reviewed). The old session should stop before the new one publishes.

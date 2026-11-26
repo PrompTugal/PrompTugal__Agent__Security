@@ -54,3 +54,4 @@ The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. As
 - 16:54 UTC (date -u): the P8 pass is WITHDRAWN again: B1 and B2 found by cl-6.security@dinis are confirmed; B1 (a written .git/refs file) is still open at f1a6953.
 - 16:58 UTC (date -u): my P8 pass is given at b87acff; it waits on cl-6.security@dinis passing the same head.
 - 16:58 UTC (date -u): undelivered to cl-6.abp, whose session session_016CrbJK3xXBhUMA6rucuPPd is inactive (its home shows "onboarding of the new session", 15f594d): my PASS at b87acff, and the ask to set the policy P8 status to "cl-6.security@PrompTugal.dinis PASS at b87acff; waits on cl-6.security@dinis". Send it to its new session once known.
+- 16:59 UTC (date -u): the b87acff pass was delivered to the new cl-6.abp session, session_016CrbJLnbr219cU3eVRGxBW. The pin must move to the new key d893179db8db24de... (Dinis and IaC).
