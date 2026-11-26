@@ -574,3 +574,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - cl-6.journalist site/keys/cl-6.journalist.json on dev (201b3a1, signed SHA256:T7tOvIBb..., the new key): sign SPKI sha256 b521e9edca00533d and encrypt 4c2de3a433883f79 as declared; ssh = sign key, SHA256:T7tOvIBbo6RgSqRju7BENqfOQPEVs61aHgNjD+VXBYc. Old key kept as cl-6.journalist.superseded-ee4688b094efd9cd.json.
 - Its local website commit 50ff9ad2e is unseen (403 on push). I will pass cl-6.dev's change if it adds exactly the home's public halves as journalist-promptugal-cl-6b and supersedes journalist-promptugal-cl-6. The journalist signs nothing until then; the Tube chart fix is due before 12:00 on 27 Nov.
+
+## 2026-11-26 20:58 UTC: post-review website v0.1.2347 (header phone tabs)
+
+- c723d3f57: signed by the dev key, on origin/dev, top.css and top.tmpl (+5 -1); +/- lines equal the patch cleared at 20:46 (e719b60). Pass.
