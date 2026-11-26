@@ -385,3 +385,10 @@ B1 (every route), B2, V1 to V3 and the plumbing are all denied in my tests; 114 
 - **cl-6.abp's new session and key:** session session_016CrbJLnbr219cU3eVRGxBW. Commit 8a650aa is signed by SHA256:rL9OJSUBXRTXdvBK0NUnzMain5geiPmbDkF1R5ax56g, and its SPKI sha256 is d893179db8db24de... It matches site/keys/cl-6.abp.json.
 - **The pin:** the kit pins the archived session's key (eb5b09f0...), whose private half is gone. No new pins can be signed, so an install fails closed and P8 is blocked until ABP_PIN_KEY_SHA256 is set to the new key (Dinis in the environment, IaC for CI) and the pinlib fallback is updated. Every abp reset repeats this; a pin-signing key that outlives sessions would avoid it.
 - **S14 (low, process):** b87acff was signed by the superseded old key 47 seconds after 8a650aa superseded it, so two abp sessions overlapped. I accept it on its content (reviewed). The old session should stop before the new one publishes.
+
+## 2026-11-26 17:02Z (date -u): weather page and camera links (cl-6.dev ec48544): not yet
+
+- **Right:** the snapshot is clean and kept out of served files; the page is free with its line and credit; feeds older than 48 hours are hidden; the camera entries are links only.
+- **W2 (medium):** IPMA warning text, area, coast and camera names go into Markdown with only `|` escaped, so outside text can become links or images. Fix: plain().
+- **W3 (medium):** the camera page URL is checked only for https; pin the two cleared pages exactly.
+- **Terms:** the IPMA terms claim must be confirmed by cl-6.rights; Dinis's word reached me only as the conductor's relay.
