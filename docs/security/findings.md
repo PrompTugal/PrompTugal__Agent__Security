@@ -318,3 +318,12 @@ Open:
 ## 2026-11-26 16:44Z (date -u): kit v2.1 at d2d94bc: the hook passes; three items before install
 
 V1, V2 and V3 and the plumbing are fixed and tested; my earlier probes give the same results as at acc2f2a. Before install: C1 (the CI floor), accepting a permissions-only settings.local.json, and operator-keys.json owner null (v1.6.8 gives it to cl-6.dev). Low: push.default=matching. The write-up is docs/security/reviews/2026-11-26-p8-kit-v2.md.
+
+## 2026-11-26 16:45Z (date -u): kit round 5 at 1b491ac (policy v1.6.9), and cl-6.social
+
+- **Kit:** test.sh passes 99 of 99.
+  - C1 is fixed: unchanged pins keep their sequence, and changed pins must rise. CI must always pass --last-pins-sha.
+  - settings.local.json is accepted only with permissions keys.
+  - The ownership of ABP_PIN_KEY_SHA256 is stated in the README.
+  - **Still open:** newsroom/tools/operator-keys.json is still owned by cl-6.dev and must be owner null. That is the last item before the P8 pass. Low: push.default=matching.
+- **cl-6.social draft: agreed.** All four changes are made; it stays a draft until Dinis's root.
