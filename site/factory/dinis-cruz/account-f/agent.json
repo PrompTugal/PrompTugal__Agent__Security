@@ -15,9 +15,9 @@
  "encryption_fingerprint": "sha256:26320aead9a9bc60",
  "ssh_fingerprint": "SHA256:id7YhKBJ1bXEmyS71mRnIJu4sNT/JyTt40KIVAjEsaM",
  "model": "opus",
- "state": "first review done; no hold",
+ "state": "wake review 20:47Z done; no hold",
  "hold": false,
- "last_review": "2026-11-26T11:30Z: docs/security/reviews/2026-11-26-1130-wake-review.md (860 commits, 01:51 to 11:14Z, no hold)",
+ "last_review": "2026-11-26T20:47Z: docs/security/reviews/2026-11-26-2047-wake-review.md (845 commits, 11:14 to 20:48Z, no hold)",
  "open_findings": [
   {
    "id": "S1",
@@ -72,6 +72,20 @@
    "severity": "low",
    "owner": "the PrompTugal.vicky lane (conductor-vicky-3), via cl-6.conductor",
    "what": "10 website commits (07:38 to 10:16Z, curator, journalist-ai, reviewer and checker @PrompTugal.vicky) are signed by ED25519 SHA256:32dP45eSMmVSt/G/CGvcxl/P+MO3Nwj9xeTh/GSA2wc, which is not in board/keys.json; the article .sig files pass the gate",
+   "status": "open: 9 more vicky-lane commits (S86) still signed by the unpublished key; routed again via cl-6.conductor 2026-11-26T20:5xZ"
+  },
+  {
+   "id": "S15",
+   "severity": "low",
+   "owner": "cl-6.journalist, cl-6.devops (board/keys.json via cl-6.dev)",
+   "what": "board/keys.json still lists only the old, home-superseded keys of cl-6.journalist (ee4688b0) and cl-6.devops (9a50822e) as active; the new session keys of 16:56Z are not on the board",
+   "status": "open"
+  },
+  {
+   "id": "S16",
+   "severity": "nit",
+   "owner": "cl-6.dev",
+   "what": "test fixtures use maria.silva@ and joao@ at a real outlet domain (barlavento.pt); use an invented domain",
    "status": "open"
   }
  ],

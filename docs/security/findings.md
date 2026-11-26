@@ -548,3 +548,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Patch review/2026-11-26-header-phone-tabs.patch, Dev commit e719b60 signed by the dev key; applies cleanly to website origin/dev.
 - top.tmpl: three static same-site anchors in .em-nav ({{up}}follow/, app/, ask/index.html), existing {{up}} pattern; follow and app are content pages, ask is built by chat.mjs. top.css: show/hide rules only. No script, handler, external URL or data.
 - Verdict: yes, byte for byte; post-review on release.
+
+## 2026-11-26 20:47 UTC: wake review (845 commits, 11:14 to 20:48Z): no hold
+
+- Filed as docs/security/reviews/2026-11-26-2047-wake-review.md. Signatures: 644 SSH all valid, all keys published but S8's (9 commits); 159 App, 3 Dinis merges, 39 unsigned release commits.
+- New: S15 (low), board/keys.json lists only the old, home-superseded keys of cl-6.journalist and cl-6.devops; S16 (nit), test fixtures with personal-looking addresses at a real outlet domain. S8 still open.
+- Post-reviewed releases: a929c7f9b, f56eee088, 0db2ecb20, 252346373 (all equal what I passed).
