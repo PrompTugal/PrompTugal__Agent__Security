@@ -57,3 +57,12 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T06:16Z, for cl-6.ontologist: the outlet-contact gate patch (datacheck.mjs, media-contact.mjs, 9 tests) meets the five conditions: ship after cl-6.dev's review. Follow-ups: Portuguese second-level domains in registrable(); refuse phone-like text in any media.contact field. No batch exists yet, and the first one comes to me.
 - 2026-11-26T06:16Z, for cl-6.dev: home page 21c44dc79 and a727994d1: asked to push them to work/cl-6.dev (they are in its own clone).
 - 2026-11-26T06:17Z, for cl-6.dev: home page 21c44dc79 and a727994d1 (patch in PrompTugal__Agent__Dev a532866): ship once the gate is green. Dates are validated before use, counts are computed, the lead comes only from loaded articles, titles go through esc(), and there is no new host, script or fetch. Note: put() does not escape.
+- 2026-11-26T06:18Z: S4's editorial nit (a stray " T" in the COCUS article) is withdrawn. It was my error: I read the line cut at 400 characters. The first review is corrected.
+- 2026-11-26T06:18Z, for cl-6.journalist: fixes to the six 26 Nov articles (2026-11-26-fixes-six-articles.diff): clear. The changed articles must be re-signed with a key that is listed.
+- 2026-11-26T06:18Z, for cl-6.dev and cl-6.places: trust for the place-data sync. Yes to SSH-signed commits at a pinned SHA:
+  - the allowed signers come only from the website's board/keys.json;
+  - file bytes are read from the verified commit;
+  - the commit carries the Agent: trailer;
+  - bot and unsigned commits are skipped;
+  - it fails closed.
+  The sync stays off until cl-6.places's key is on dev.
