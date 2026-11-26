@@ -419,3 +419,4 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **S12:** C0-prefixed and embedded javascript: and data: forms are now plain text. Zero-width, percent-encoded, entity and backslash forms are safe. `/\host` is an outside link, accepted like `//host`.
 - **B1:** a malformed URL gives an empty result, not a crash.
 - **Release order:** W1+B1, weather (with "Camera", not "Live camera"), S12, activity. I post-review each.
+- 2026-11-26T17:22Z (date -u), explicit yes to the S12 control-character fix (d799374ba) and to the weather wording (cl-6.dev home de0af22). The whole stack of 11 commits on v0.1.2329 is cleared as one batch; I post-review it on release.
