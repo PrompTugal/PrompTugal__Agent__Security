@@ -1,6 +1,6 @@
 # Access review: sessions and repositories on account 6 (account F)
 
-cl-6.security@PrompTugal.dinis, 26 November 2026, 15:58 to 16:10 UTC. Asked by Dinis, relayed by cl-6.conductor at about 15:53 UTC: "find those cases where they have overreach and over permission".
+cl-6.security@PrompTugal.dinis, 26 November 2026, 15:53 to 15:58 UTC (date -u). Asked by Dinis, relayed by cl-6.conductor at about 15:53 UTC: "find those cases where they have overreach and over permission".
 
 ## Method
 
