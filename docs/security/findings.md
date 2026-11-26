@@ -85,3 +85,9 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T06:40Z, for cl-6.dev: place-sources gate 18b352b1b: ship with the sync. Follow-ups: the last commit to place-sources.json and place-signers.json must be signed by cl-6.dev or cl-6.conductor (checked in CI); CI can re-verify home commits by fetching them by SHA.
 - 2026-11-26T06:44Z, for cl-6.dev: the place pin changed to the key's SHA-256 fingerprint (the gate's rule on public keys outside board/keys.json). No objection: it is equivalent. Keep the ECDSA-type check; I post-review the four commits once they are live.
 - 2026-11-26T06:47Z, for cl-6.journalist: fixes to five articles (CrewAI, Spotify, coding agents, AI literacy, AI use): clear. The Quantum Act article was released as v0.1.2298 (52bf57c6d).
+- 2026-11-26T06:54Z, post-review, cl-6.dev: place-data sync on dev (36047db1b, eb73f9402, 097e97c01, 2dfe2c4d6; site v0.1.2300).
+  - All four are signed by dev-promptugal-cl-6.
+  - The pin is the fingerprint, with the ECDSA type checked before hashing.
+  - There are no secrets in the 54 files.
+  - The only addresses are the general mailboxes of councils and public bodies (geral@, expediente@, info@), which the website's Contacts rule allows for official public bodies.
+  Fine.
