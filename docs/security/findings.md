@@ -358,3 +358,14 @@ The three items before install are done, and the low push.* item too; 100 of 100
 
 - **P8:** the pass carries over to fda0cbe. The policy only tightens: N1 on, DNS and redirect shell rules, git proxy and insteadOf rules, ~/.gitconfig protected. The kit changes tests only (102 of 102). The VAR=value prefix gap waits for v2.2 and must be stated in the README now.
 - **cl-6.data.london draft:** agreed on access. Environment env_014fJkugLPBiSUBfBqSeK1G7 allows exactly the six hosts, but allow_package_managers and allow_mcp_servers are true; both should be false (for Dinis).
+
+## 2026-11-26 16:53Z (date -u): S9 live; O1 fix; the conductor's new key
+
+- **v0.1.2328 (229081ecc, S9):** post-review passed. It is identical to the patch I cleared.
+- **O1 fix (rule 18, operator-keys.json out of signed-root):** yes. Tests pass in a worktree.
+  - **S13 (medium, open):** the bootstrap is self-asserted. While the list is empty, any agent can list its own fingerprint, self-signed. The control is my out-of-band check of the notice against the fingerprint Dinis states. The follow-up is to require a statement signed by Dinis's anchor key at bootstrap.
+- **The conductor's new key (048e4f6d9):** yes.
+  - Conductor home commit 9041407 is signed by SHA256:+2g3JA1OOtzaLVvcAEnStUSJm2u/qwfKIZH4Qwd0pqM, and that is the key in the patch.
+  - Session session_016CrbJMiN8eUtML9vvvGCVt exists, created 16:38:45Z, on the Conductor home.
+  - It is the hand-over case: keys-changes will warn, and I vouch for it on this evidence.
+- **The P8 state** went to the new conductor session for Dinis; the old one is inactive.

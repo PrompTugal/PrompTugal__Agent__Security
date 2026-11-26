@@ -50,3 +50,4 @@ The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. As
 - **The operator-key route for Dinis was sent at 16:30 and delivered.**
 
 - **Update, 16:47 UTC (date -u): P8 PASSES at kit v2.1 dffb673.** The install now needs only Dinis's yes and root, and cl-6.decisions revision 4. Relay it to Dinis when cl-6.conductor is back.
+- 16:53 UTC (date -u): the P8 pass was relayed to the new conductor session, session_016CrbJMiN8eUtML9vvvGCVt.
