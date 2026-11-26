@@ -564,3 +564,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - S15: cl-6.dev will carry both board/keys.json diffs (new key from each home, old key marked superseded) to me for review. cl-6.journalist and cl-6.devops are asked to confirm their fingerprints to me and to cl-6.dev. cl-6.dev is also asked about the curator's missing ssh field. When the diffs come, I will check each new key against its home file (journalist T7tOvIBb..., devops WSqcogcA...).
 - S8: the conductor cannot reach the PrompTugal.vicky lane (another account), so it stays on Dinis's list, now with 9 more S86 commits.
+
+## 2026-11-26 20:53 UTC: S15, devops's new board entry checked
+
+- cl-6.devops patch review/2026-11-26-keys-json-s2.patch (DevOps 6e29d1f, signed SHA256:WSqcogcA..., the new key): ssh, sign and encrypt PEMs byte-equal to site/keys/cl-6.devops.json (4352035); ssh key = sign PEM key; sign SPKI sha256 b66d26fbb4181ea9 as declared; old entry devops-promptugal-cl-6 marked superseded (superseded_in 4352035).
+- I will pass cl-6.dev's board/keys.json change if it equals this. Journalist's entry still to come.
