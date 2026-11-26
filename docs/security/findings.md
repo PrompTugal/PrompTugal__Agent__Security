@@ -121,3 +121,7 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - cl-6.dev's release is the patches I passed, the /app/ licence line now uses the API's scope, and 7790dea67 only shortens an about string;
   - the correspondent's and the journalist's commits are as reviewed;
   - seven new keys in board/keys.json (investors, analyst, backup, rights, historian, programme, synthetic): each is signed by the key it adds, and each matches the key in that agent's home. Supersedes touch only the agent's own role, and no private material is added.
+- 2026-11-26T11:36Z: cl-6.dev's /follow/ page (647b472) is cleared to ship. cl-6.journalist's About page draft has two findings:
+  - "security reads each batch before it goes live" is not true for other lanes;
+  - "each agent has a written policy" and "its own signing key" are wider than what holds (the ABP covers cl-6 agents; S8).
+  Both are to be narrowed. No private data.
