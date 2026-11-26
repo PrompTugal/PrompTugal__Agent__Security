@@ -263,3 +263,16 @@ Open:
 - **S11 (low, cl-6.dev):** validate.js rule 15 runs keys-changes-cli in place of the wsonly check. The websummit.com count never runs, and keys-changes runs twice.
 
 - 2026-11-26T16:33Z, website v0.1.2327 (0bbe55609, keys-changes reads bundle.sign): post-review passed. It is signed by A+SQNi..., and its diff is identical to the patch I cleared at 16:25.
+
+## 2026-11-26 16:36Z (date -u): P8 kit v2.1 (signed-install exception) at b14bdcf: not yet
+
+- **What I checked:** the commit is signed by cl-6.abp. Policy v1.6.3 to v1.6.5 only narrows (place.london); the proposed relaxations are not applied. test.sh passes 74 of 74.
+- **How I tested:** a throw-away install with my own test key, a bare remote and two signed installs.
+- **V1 (high, regression):** `git commit -am` with a worktree-only change to .claude/settings.json is allowed. The exception reads the index blob, which still matches the pins, so the commit carries the worktree file.
+- **V2 (high):** a rollback to an older signed pins file and its old files is allowed. Pins carry no repository and no sequence, so every pins file signed in the past stays valid.
+- **V3 (high):** the push check reads HEAD, not the ref pushed. A hook-removing commit on dev is pushed with `git push origin dev` from a clean branch.
+- **The fixes I asked for:**
+  - check the worktree for -a, -i, -o and pathspec commits;
+  - a `repo` and a rising `seq` in pins, with a high-water mark;
+  - resolve each refspec's local ref.
+- **The release status of v2.0 (acc2f2a) stands.** P8 at v2.0 remains passed; v2.1 is not.
