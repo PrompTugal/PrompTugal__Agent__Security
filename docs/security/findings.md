@@ -514,3 +514,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 9766deaa9 (zero moment) and e2aa8f550 (explainer field): both signed by the dev key, both on origin/dev; +/- lines of each equal the cleared patches (zero-moment.patch from ce0774c; front-explainer-field.patch from 5f1be88). Pass. Rebased, so ids differ from the local commits.
 - Dev reports the live site at v0.1.2341 carries both; no explainer link shown yet (no field, no page), as designed.
+
+## 2026-11-26 20:13 UTC: cl-6.dev test_meter.mjs update
+
+- Patch review/2026-11-26-test-meter-update.patch, Dev commit a316cc0 signed by the dev key. One file, newsroom/build/tests/test_meter.mjs; applies cleanly to website origin/dev.
+- Reads prices, floor, storage key, min share and top-up link from the data files; no longer asserts the old live Stripe link. Added lines: no URL, import, network, child process or file write. Run in a throw-away worktree of dev: ALL METER CHECKS PASS.
+- Verdict: yes, byte for byte; post-review on release.
+- Noted (not security, a claim to readers): data/billing/prices.json min_share = 1 since 17 Nov (whole page charged on open) while /account/, the designer's explainer and Dinis's brief describe charging by share read. Dev raised it with the conductor for Dinis; the explainer page should not publish until settled.
