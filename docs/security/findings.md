@@ -243,3 +243,6 @@ Open:
   - glob targets (`.clau?e`, `.cla*`, `cd .c*`);
   - an fd-numbered redirect (`exec 3>`).
 - **H3 (residual, for the README and Dinis):** working-tree rewrites that name no path are still allowed. These are reset, pull, merge, rebase, stash, apply, tar and unzip. The commit and push check stops them leaving the machine. A local session that resumes in the same tree is covered only by CI and review.
+
+- 2026-11-26T16:25Z, cl-6.researcher d94e9da12 (its keys.json ssh field gets the full line): post-review passed. The fingerprint is rYxzbD8..., the same as the commit signature and the entry's bundle.sign.
+- 2026-11-26T16:25Z, cl-6.dev's keys-changes bundle.sign patch (Dev home 88d60f9): pre-review yes. Applied to origin/dev in a worktree, the tests pass and the real tree reports nothing. A PEM that does not convert, or is not P-256, counts as no key. Note: the S9 entries without ssh now vouch for themselves by bundle.sign, which is low risk and one more reason for Dinis's S9 operator commit.
