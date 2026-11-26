@@ -253,3 +253,11 @@ Open:
 - **The write-up:** docs/security/reviews/2026-11-26-p8-kit-v2.md.
 - **Residuals:** code execution; working-tree rewrites (covered by the commit and push check, plus CI); R6 observe; a relative Glob that lists names.
 - **Conditions:** I pre-review each install commit; the per-repository CI check on .claude/** and abp/**.
+
+## 2026-11-26 16:30Z (date -u): Dinis's operator key, the route sent via cl-6.conductor
+
+- **The key:** his anchor key (sha256:db7f79fdd87e030a) if he can sign git commits with it. Otherwise a new ed25519 key on his own machine, linked from the anchor by a signed pki.sgit.ai statement.
+- **The public half:** the .pub line and its fingerprint. He states the fingerprint himself in a session, as the out-of-band check.
+- **The entry:** written and SSH-signed by Dinis himself, never by an agent. I verify the signature against the fingerprint he stated.
+- **S10 (medium, open, cl-6.dev):** before the key means anything, the gate must pin operators by fingerprint in a protected gate file (newsroom/tools/operator-keys.json). Pinning by agent name or role in board/keys.json is not enough: any agent could self-publish an operator entry, because a first publication is self-signed.
+- **S11 (low, cl-6.dev):** validate.js rule 15 runs keys-changes-cli in place of the wsonly check. The websummit.com count never runs, and keys-changes runs twice.
