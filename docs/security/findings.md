@@ -369,3 +369,7 @@ The three items before install are done, and the low push.* item too; 100 of 100
   - Session session_016CrbJMiN8eUtML9vvvGCVt exists, created 16:38:45Z, on the Conductor home.
   - It is the hand-over case: keys-changes will warn, and I vouch for it on this evidence.
 - **The P8 state** went to the new conductor session for Dinis; the old one is inactive.
+
+## 2026-11-26 16:54Z (date -u): P8 pass withdrawn again: B1 and B2 (cl-6.security@dinis) confirmed at dffb673
+
+At f1a6953, B2 and the git fetch form of B1 are fixed, but a direct write to .git/refs/remotes/origin/x still makes the push check pass. Fix: read the real remote tip with ls-remote, and protect .git/refs and packed-refs.

@@ -51,3 +51,4 @@ The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. As
 
 - **Update, 16:47 UTC (date -u): P8 PASSES at kit v2.1 dffb673.** The install now needs only Dinis's yes and root, and cl-6.decisions revision 4. Relay it to Dinis when cl-6.conductor is back.
 - 16:53 UTC (date -u): the P8 pass was relayed to the new conductor session, session_016CrbJMiN8eUtML9vvvGCVt.
+- 16:54 UTC (date -u): the P8 pass is WITHDRAWN again: B1 and B2 found by cl-6.security@dinis are confirmed; B1 (a written .git/refs file) is still open at f1a6953.
