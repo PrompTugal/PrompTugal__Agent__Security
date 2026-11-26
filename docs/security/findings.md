@@ -327,3 +327,25 @@ V1, V2 and V3 and the plumbing are fixed and tested; my earlier probes give the 
   - The ownership of ABP_PIN_KEY_SHA256 is stated in the README.
   - **Still open:** newsroom/tools/operator-keys.json is still owned by cl-6.dev and must be owner null. That is the last item before the P8 pass. Low: push.default=matching.
 - **cl-6.social draft: agreed.** All four changes are made; it stays a draft until Dinis's root.
+
+## 2026-11-26 16:47Z (date -u): network ABP design (ABP 1befe06, policy v1.7.0): agreed in principle; I lead
+
+Dinis's ask, relayed through cl-6.maestro: default deny, capture every request.
+
+**Agreed:** the shape, the three capture layers, the breach test (proxy log against hook log) and the environment as the real boundary.
+
+**Must change:**
+- **A.** github.com and raw.githubusercontent.com only by owner path (PrompTugal, SovereignWebsite), with the owner/repo logged in the clear. Any user's content is otherwise an exfiltration and injection channel.
+
+**Threat cases sent (B1 to B9):**
+- URL normalisation, userinfo, IP literals and metadata addresses;
+- redirects (curl -L);
+- shorteners and fetch-for-me relays (archive save, translate proxies, reader proxies, CORS proxies);
+- DNS tools and a direct resolver as a channel;
+- git insteadOf, proxy, credential, sshCommand and env overrides, ~/.gitconfig protected, submodules;
+- package managers and their install scripts;
+- WebSearch as a send;
+- MCP and connectors as network (GitHub writes, the Gmail tools present in session tool lists, send_message, watch_url);
+- the proxy log must record allowed requests too.
+
+**N1 from day one for the no-network class:** yes, with WebSearch and package managers denied. Add an own-sites read set (promptugal.news, *.promptugal.news, data.promptugal.news, GET only) for review and routing roles, mine included.
