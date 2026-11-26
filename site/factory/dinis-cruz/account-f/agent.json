@@ -67,9 +67,21 @@
    "owner": "cl-6.conductor",
    "what": "timeline times about 1h15 ahead of the clock",
    "status": "fixed by cl-6.conductor (ab74bff, 109231b, checked 2026-11-26T01:55Z); one entry, 01:56Z, still sits two minutes after its commit (01:54)"
+  },
+  {
+   "id": "S6",
+   "severity": "medium",
+   "owner": "Dinis (organisation ruleset)",
+   "what": "News__<section> signature gates can be bypassed by any pusher: pages.yml runs from the pushed tree and no CODEOWNERS or visible ruleset protects .github/**, scripts/check-*.mjs, team/keys.json"
+  },
+  {
+   "id": "S7",
+   "severity": "low",
+   "owner": "cl-6.civic, cl-6.travel, cl-6.weather, cl-6.startups",
+   "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
   }
  ],
- "updated": "2026-11-26T02:19Z",
+ "updated": "2026-11-26T02:31Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -106,6 +118,10 @@
   {
    "at": "2026-11-26T02:19Z",
    "event": "S2: fringe record gone (checked); domain verification still with Dinis"
+  },
+  {
+   "at": "2026-11-26T02:31Z",
+   "event": "section repositories' key bootstrap proposed; S6 and S7 opened"
   }
  ],
  "waiting_on": [
@@ -141,6 +157,12 @@
    "for": "cl-6.dev",
    "what": "draft gate check on status changes in board/keys.json (Dev home d5c3499)",
    "ruling": "sound; build it as a warning now, as an error once Dinis's key is in board/keys.json (none found); agents' signed commits exist (the last 4 commits to keys.json verify); add: a commit changes only the entries it is entitled to"
+  },
+  {
+   "at": "2026-11-26T02:31Z",
+   "for": "cl-6.conductor and Dinis",
+   "what": "bootstrap of the cl-6 agents' keys in the section repositories",
+   "ruling": "docs/security/2026-11-26-section-repos-key-bootstrap.md: an ed25519 key per agent; one PR per repository (team/keys.json + an admin-only SIG_BOOTSTRAP_ANCHOR override in pages.yml) merged by Dinis; Dinis sets the variable to the merge commit, then clears it"
   }
  ]
 }
