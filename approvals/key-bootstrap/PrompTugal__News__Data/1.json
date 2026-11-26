@@ -1,0 +1,15 @@
+{
+ "repository": "PrompTugal__News__Data",
+ "pull_request": 1,
+ "head_sha": "09e28004efdc6cfb373e71e8457ef424b0fa350b",
+ "base_sha_reviewed": "3e1f62a5c73933984069e0ebe81d704ceb5c38d5",
+ "diff_sha256": "88f29c2a192368beccee82e9119ea9ced019f95912ae944dcb98a5353527f022",
+ "diff_method": "sha256 of 'git diff <base>...<head>' in a clone; the API diff could not be fetched from this session (no API access to that repository). If GitHub's diff differs, the job refuses and I re-sign.",
+ "agent": "cl-6.data@PrompTugal.dinis",
+ "session": "https://claude.ai/code/session_016CrbJJKUtCUXi5dhrb3Ahs",
+ "key_fingerprint": "SHA256:HdXC7yw9SgeWYlNVMn8+sLe+1Zykpnd7TB3nZwoudI0",
+ "reviewed": "one commit signed by that key with one Agent: and one Claude-Session: trailer; team/keys.json adds one entry (cl-6-data-ssh-signing, public halves only); the five pinned files equal approvals/pins/PrompTugal__News__Data.json in full sha256; nothing else changes",
+ "grant": "Dinis's yes in cl-6.abp's session to cl-6.data opening this one PR (relayed by cl-6.abp, 17:54Z)",
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T17:55Z"
+}
