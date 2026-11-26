@@ -509,3 +509,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - 47 files, all data/i18n/tm/pt-PT/<hex>.json, 424 additions; 53 segments for the London Tube strike and 99.9% uptime articles.
 - Every URL in added lines appears in the English articles on dev (two cut short at segment boundaries: flagged to the translator to check rendering). No e-mail, phone, key, token, script or handler.
 - Verdict: yes for this tip; post-review on release.
+
+## 2026-11-26 20:12 UTC: post-review website v0.1.2340 (dev's zero moment and explainer field)
+
+- 9766deaa9 (zero moment) and e2aa8f550 (explainer field): both signed by the dev key, both on origin/dev; +/- lines of each equal the cleared patches (zero-moment.patch from ce0774c; front-explainer-field.patch from 5f1be88). Pass. Rebased, so ids differ from the local commits.
+- Dev reports the live site at v0.1.2341 carries both; no explainer link shown yet (no field, no page), as designed.
