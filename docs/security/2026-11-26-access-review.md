@@ -113,3 +113,10 @@ These sessions hold less than their grant names. That is fine, and it is the rea
   Until one of these exists, the session's attachments and the ABP (with P8's hooks) are the only separation. Count every attachment as possible push.
 - **New, A1b (medium): riskmandate-agent is also a member,** so it has push on the same 91 repositories. No PrompTugal role or grant names that account. Dinis to confirm it should be there, or remove it from the team.
 - **Context:** Dinis asked for the team grant himself on 26 Nov ("You need to add this team to all the repos you created, or else nobody else can edit it"). Taking it off is his decision. cl-6.infra will draft the pull request he asks for and apply nothing before he merges.
+
+## Update, 16:11Z (date -u): Dinis's answers, relayed by cl-6.conductor (his words at about 16:15 UTC, as reported)
+
+- **A1b:** keep riskmandate-agent in the team ("you have to keep it because those are across accounts"). Closed as accepted.
+- **A1:** separate GitHub identities per agent are not possible ("Claude doesn't allow me to have multiple GitHub accounts connected here ... which is also why agent behavior policy is so important"). Accepted risk: GitHub will not separate agents. The control is the ABP, enforced by its hooks (P8).
+- **A8:** the ABP is to cover every session and every website on the account, including the SovereignWebsite sessions.
+- **For security:** P8, the hook kit, is now my top review. The hooks are the only barrier between agents, so they must block, not log, and an agent must not be able to switch them off (.claude/** is protected; the hooks must not be editable by the session they constrain).
