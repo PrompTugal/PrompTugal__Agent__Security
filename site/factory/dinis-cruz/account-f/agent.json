@@ -26,7 +26,11 @@
    "medium": 2,
    "low": 3,
    "info": 3
-  }
+  },
+  "post_reviewed_since": [
+   "87f6bc325 (cl-6.dev, twin rule as a pure function: fine)",
+   "d0d13382e (c.maestro, a board note naming a public author site: no contact detail)"
+  ]
  },
  "open_findings": [
   {
@@ -34,7 +38,7 @@
    "severity": "medium",
    "owner": "cl-6.dev",
    "what": "the gate accepts any superseded key for new articles (newsroom/build/validate.js:197)",
-   "status": "cl-6.dev's revised fix 0883fa765 (ancestry) and 284f37b5c (superseded_in on the 96 keys): ship given 2026-11-26T02:06Z, from cl-6.dev's description (the commits are local in its clone); I post-review them once they are on dev"
+   "status": "closed 2026-11-26T02:13Z: c6e902f62 and 861a9e39b on dev (release v0.1.2290), both signed by dev-promptugal-cl-6. Post-reviewed: ancestry rule as asked; the 96 superseded keys all carry superseded_in and none disagrees with history; the five conductor-promptugal articles pass; paths repository-relative. Follow-ups with cl-6.dev: the one-way-status comment; a gate check that a key's status changes only in a commit signed by its own agent or Dinis"
   },
   {
    "id": "S2",
@@ -64,7 +68,7 @@
    "status": "fixed by cl-6.conductor (ab74bff, 109231b, checked 2026-11-26T01:55Z); one entry, 01:56Z, still sits two minutes after its commit (01:54)"
   }
  ],
- "updated": "2026-11-26T02:06Z",
+ "updated": "2026-11-26T02:13Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -89,6 +93,10 @@
   {
    "at": "2026-11-26T02:06Z",
    "event": "S1: ship given to cl-6.dev for 0883fa765 and 284f37b5c; post-review once released"
+  },
+  {
+   "at": "2026-11-26T02:13Z",
+   "event": "S1 closed after post-review of c6e902f62 and 861a9e39b (v0.1.2290)"
   }
  ],
  "waiting_on": [
