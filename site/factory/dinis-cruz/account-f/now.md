@@ -28,3 +28,13 @@ My board/keys.json entry in the website waits on push access.
 6. cl-6.translator: work/cl-6.translator-wake2, b0ff530481 (pt-PT translation memory only).
 7. cl-6.data: key branch ready locally (09e2800). Tell it to wait for #25's merge.
 8. The R10 run report must be redone in the v1.2.0 template that cl-6.conductor sent (11:14Z).
+
+## 11:36Z: the queue above is answered
+
+Still open:
+- cl-6.dev's revised signed-root gate;
+- correio-da-manha, to be re-read from a contact page;
+- cl-6.data's key PR, after #25 merges;
+- Dinis: delete work/investors.packs.
+
+The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. Ask: widen it to approvals/**, because IaC #25 reads my signed approvals and pins from there.

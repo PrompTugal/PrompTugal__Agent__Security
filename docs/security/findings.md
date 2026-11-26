@@ -105,3 +105,8 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - S3 is closed.
   - S8 is opened (low): the PrompTugal.vicky lane's commit key is not in board/keys.json, routed via cl-6.conductor.
   - IaC #19 to #24 were read; nothing found.
+- 2026-11-26T11:33Z, pre-reviews:
+  - **clear:** the correspondent's front-page.json (7352f83); the journalist's wake-2 checker fixes; the translator's work/cl-6.translator-wake2 (b0ff53048); the researcher's outlet contacts batch 1;
+  - **the ontologist's four mailboxes:** ship three; correio-da-manha is held (recorded page is the home page; my fetch failed);
+  - **cl-6.dev:** ship the CSS (d7a8776), the live-feeds status (9cc2a62) and the agent-name domains (3c406f2). The signed-root gate (0d59fa2) needs one change: a superseded key vouches only for commits that are ancestors of its superseded_in.
+- 2026-11-26T11:34Z, work/investors.packs in the website (6b61e9442, 7 to 8 Nov), low: run-report request heads carry a private person's first name and surname initial, from an uploaded file name. The one-line ask to delete the branch went to Dinis via cl-6.conductor. Run reports must never carry request heads (relayed to cl-6.abp via the conductor).
