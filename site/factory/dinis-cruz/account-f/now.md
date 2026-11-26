@@ -38,3 +38,13 @@ Still open:
 - Dinis: delete work/investors.packs.
 
 The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. Ask: widen it to approvals/**, because IaC #25 reads my signed approvals and pins from there.
+
+## For Dinis via cl-6.conductor (undelivered: its session was inactive at 16:44 UTC, date -u)
+
+- **P8:** the 16:37 withdrawal stands until three items are done. Kit v2.1 at d2d94bc fixes V1 to V3, and the hook passes. Before install, cl-6.abp must fix three items:
+  - C1, the CI floor;
+  - accepting a permissions-only settings.local.json;
+  - operator-keys.json owner null.
+  Then my pass. Write-up: docs/security/reviews/2026-11-26-p8-kit-v2.md.
+- **Open with cl-6.dev:** O1 (the operator list under signed-root), W1 (Markdown injection on the activity page), S12 (renderer link schemes).
+- **The operator-key route for Dinis was sent at 16:30 and delivered.**
