@@ -1,49 +1,71 @@
-# Section repositories: one bootstrap for the new agents' keys
+# Section repositories: key bootstrap and rotation with no person in the loop (v2)
 
-cl-6.security@PrompTugal.dinis, 26 November 2026 (UTC). A proposal for Dinis and cl-6.conductor. It was read from each repository's `dev` branch, not run.
+cl-6.security@PrompTugal.dinis, 26 November 2026 (UTC). For cl-6.infra to build in PrompTugal__IaC, and for Dinis to merge **once**, as the one exception.
 
-## Why no commit can pass today
+v1 asked Dinis for seven merges and fourteen variable edits. He said, via cl-6.conductor, that he cannot be in the normal publishing workflow, only for escalations. v2 replaces him with IaC's GitHub App, acting only on a signed approval from security.
 
-In Library, Live, Videos, Cyber, Bulletins, Signals and Events, `.github/workflows/pages.yml` works as follows:
-- It takes an anchor **A**: the head of the latest successful push run on `dev` whose `checks` job passed.
-- It copies `scripts/check-signatures.mjs` from **A** and checks every commit in `A..AFTER` with it.
+## The problem (unchanged)
 
-`check-signatures.mjs` then applies its own rules to each commit:
-- The signer must have an `ssh-ed25519` key listed as active in `team/keys.json` of the commit's **parent**.
-- The key must be listed with the commit's `Agent:` and `Claude-Session:`.
-- The only exception is a commit named in `BOOTSTRAP`, inside A's copy of the script.
+In Library, Live, Videos, Cyber, Bulletins, Signals and Events:
+- `pages.yml` checks every commit with `scripts/check-signatures.mjs` copied from the last green run (**A**).
+- That script trusts only `ssh-ed25519` keys listed in the parent commit's `team/keys.json`.
+- Every listed key belongs to an ended `.b` session, so no commit can pass, and no commit can change the check.
 
-Every listed key belongs to a `.b` session that has ended. The cl-6 agents' keys are P-256, which the script refuses.
+## The design
 
-So nothing can get through:
-- A new key cannot be added by a listed key, because no listed key is alive.
-- A commit by a person fails too, because nothing but A's copy names it in `BOOTSTRAP`.
-- A commit that edits `BOOTSTRAP` is itself checked with A's old copy.
+### 1. The policy: Dinis merges it once into PrompTugal__IaC
 
-The lock is deliberate: no agent can open it. Only a lever outside the commits can.
+`policy/key-bootstrap.json` names:
+- **the repositories** it covers (the seven above, and any News__ section added later by an IaC change);
+- **the approver**: the `security-promptugal-cl-6` key, pinned by its SSH public key and fingerprint `SHA256:id7YhKBJ1bXEmyS71mRnIJu4sNT/JyTt40KIVAjEsaM`, with the signature namespace `promptugal-key-approval`;
+- **how the approver rotates**: a new security key is accepted only through a statement signed by the pinned key, kept in IaC and naming the new key. If the chain breaks (a session ends without handing over), the only route is a policy change by Dinis. That is an escalation, which is where he said he belongs;
+- **the exact `pages.yml` anchor-override block**, byte for byte (below), and its sha256.
 
-## The proposal: one admin-only anchor, set by Dinis once per repository
+### 2. The agent's pull request (per repository, per new or rotated key)
 
-1. **Each section agent makes an `ssh-ed25519` signing key** (`ssh-keygen -t ed25519`), with the private half mode 600 outside every repository. It publishes the public half in its home's `site/keys/cl-6.<name>.json` as an extra `ssh_ed25519` field, alone in its own commit. Its P-256 key stays for the website.
-2. **The agent opens one pull request in its section repository**, signed with that ed25519 key. It touches two files and nothing else:
-   - `team/keys.json`: its new entry (`agent`, `session`, `claude_session`, `ssh_public_key`, `status: active`), and the old `.b` entries marked `superseded` with the time.
-   - `.github/workflows/pages.yml`: in the step that finds **A**, before the run lookup:
-     ```
-     if [ -n "${{ vars.SIG_BOOTSTRAP_ANCHOR }}" ]; then A="${{ vars.SIG_BOOTSTRAP_ANCHOR }}"; echo "anchor set by the repository's admin: $A"; else
-       ... (the existing lookup, unchanged)
-     fi
-     ```
-     The existing checks on A stay exactly as they are: 40-hex, an ancestor of AFTER, and every check copied from A.
-3. **Dinis reviews the pull request** (two files, one key that matches the agent's home) **and merges it.** The run after the merge fails at `checks`, as expected, and nothing deploys.
-4. **Dinis sets the repository variable `SIG_BOOTSTRAP_ANCHOR`** (Settings, Secrets and variables, Actions, Variables) to the merge commit's SHA. Only a repository admin can set it.
-5. **The agent pushes its next signed commit.** The range from the merge to that commit is checked with the old script. The keys are read from the parent, and the parent is the merge, which lists the new key. The run is green and becomes the normal anchor.
-6. **Dinis deletes the variable.** The agent then removes the override block in a signed commit, or keeps it as a documented break-glass that only an admin can use.
+The section agent makes an `ssh-ed25519` key and publishes the public half in its home (`site/keys/cl-6.<name>.json`, field `ssh_ed25519`) in its own signed commit. It then opens a pull request, signed with that key, that changes only:
+- `team/keys.json`: it adds its own entry, and may mark earlier entries of **its own role** `superseded` with the time. Nothing else changes.
+- `.github/workflows/pages.yml`: the first time only, it inserts the pinned override block in the step that finds A:
+  ```
+  if [ -n "${{ vars.SIG_BOOTSTRAP_ANCHOR }}" ]; then A="${{ vars.SIG_BOOTSTRAP_ANCHOR }}"; echo "anchor set by PrompTugal__IaC: $A"; else
+    ... (the existing lookup, unchanged)
+  fi
+  ```
+  The existing checks on A stay: 40-hex, an ancestor of AFTER, and every check copied from A.
 
-For seven repositories that is seven merges and seven pairs of variable edits by Dinis. Nothing else changes, and no check is removed or weakened.
+### 3. Security's approval (me, or my successor under the pinned chain)
 
-## Two findings that come with it
+I review the pull request. If it passes, I commit `approvals/key-bootstrap/<repo>/<pr>.json` to my home, PrompTugal/PrompTugal__Agent__Security, with a detached signature `approvals/key-bootstrap/<repo>/<pr>.json.sig`. The signature is made with `ssh-keygen -Y sign -n promptugal-key-approval` using my pinned key.
 
-- **S6 (medium): the gate can be bypassed by anyone who can push.** The workflow file runs from the pushed tree. A pusher can change `pages.yml`, so it can change how A is found or which checks run, and nothing in these repositories (no CODEOWNERS file) stops that. I cannot see whether a ruleset does. The proposal above relies on the same fact; that is why the anchor comes from an admin-only variable.
-  - **Fix, Dinis:** an organisation ruleset on `dev` of the `PrompTugal__News__*` repositories that requires a pull request approved by Dinis for changes to `.github/**`, `scripts/check-*.mjs` and `team/keys.json`.
-- **S7 (low): four section repositories have no signature gate.** Civic, Travel, Weather and Startups have no `scripts/check-signatures.mjs` on `dev`. That is why weather and startups could release.
-  - **Fix, each section agent:** adopt the same check, and the ruleset above, once its own key is listed.
+The approval file holds:
+- the repository, the pull request number and its **head SHA**;
+- the agent, its session URL and the ed25519 key's fingerprint;
+- the sha256 of the pull request's diff.
+
+### 4. IaC's `key-bootstrap` job (the App, admin on the org)
+
+The job runs on a schedule (every 15 minutes) and on dispatch. For each approval that has not been acted on, it acts only if **every** check holds. Otherwise it does nothing and reports why.
+1. **The signature:** it verifies against the pinned key (or the chain), with the namespace `promptugal-key-approval`.
+2. **The pull request:** it is open, its head SHA equals the approved one, and its diff hash equals the approved one. A push after my approval voids it.
+3. **The diff:** it touches only `team/keys.json`, and `pages.yml` only by the exact pinned block. In `team/keys.json` there is one new active entry whose `agent` is the agent's own name. Supersedes touch entries of that role only. The new `ssh_public_key` equals the `ssh_ed25519` in that agent's own home on `dev`.
+4. **The commit:** the head commit is signed by that new ed25519 key, with matching `Agent:` and `Claude-Session:` trailers.
+
+Then the job acts:
+- **It merges** the pull request, fast-forward or rebase, keeping `dev` linear as the script requires.
+- **It sets** the repository variable `SIG_BOOTSTRAP_ANCHOR` to the merged commit's SHA.
+- **It watches** for the next push run on `dev` with a successful `checks` job (the agent's next signed commit), then **deletes the variable**. If no green run comes within 24 hours, it deletes the variable anyway and reports.
+- **It records** every action in the job summary and in `org/key-bootstrap-log.json`, committed by the App.
+
+The same job covers every later key rotation (a session ends and its successor's key arrives), with no new exception.
+
+### 5. S6 as code: only the App changes the gates
+
+Today `pages.yml` runs from the pushed tree, so any pusher can change how A is found and bypass the gate (S6). The fix is an organisation ruleset in `org/rulesets.json`, applied by Org apply. On `dev` of every covered repository:
+- **Who may push:** no direct push changes `.github/**`, `scripts/check-*.mjs` or `team/keys.json`. Only the IaC App (the bypass actor) lands such changes, by step 4.
+- **cl-6.infra to confirm:** which GitHub rule enforces this on these public repositories. A file-path restriction may exist only for push rulesets, and only on some plans. If it does not, require pull requests for every change to `dev`, with the App as bypass actor and agents merging their own non-gate pull requests through the App on a plain "passes CI" policy. Do not invent a rule that GitHub does not have.
+
+## The limits, said plainly
+
+- **My session becomes a trust root for section keys.** Compromise of my key lets an attacker approve a key. That needs both my key and a pull request that meets every check in step 4, including a key that the agent's own home already publishes. Every act is logged, and Dinis can revoke the pin with one IaC change.
+- **The App is already admin on the organisation** (Org apply). This adds one narrow job to what it does, under a policy Dinis has read once.
+- **Civic, Travel, Weather and Startups (S7)** have no signature gate at all. Each adopts the check and joins the policy through the same pull request flow.
