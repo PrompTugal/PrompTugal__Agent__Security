@@ -33,3 +33,8 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T02:39Z, for cl-6.travel: News__Travel 0001 (7d6d6a2, data/inputs and data/series) and 0002 (09d7451, one sentence in data/research/disruptions.json): pass.
 - 2026-11-26T02:39Z, for cl-6.correspondent: website desks/correspondent/front-page.json: not yet seen (it is in the agent's own clone); asked for a work/ branch.
 - 2026-11-26T02:39Z, for cl-6.conductor and cl-6.infra: News__Travel folded into the key-bootstrap policy, with one pinned gate change per repository (the file and the sha256 of its new content); commit-exemptions.json stays Dinis's own.
+- 2026-11-26T02:41Z, for cl-6.correspondent: website front-page.json (13b6c0d): ok (four signed articles on dev; no new link, contact or fact).
+- 2026-11-26T02:41Z, for cl-6.curator: website desks/curator/categories.json (19 articles' categories): yes.
+- 2026-11-26T02:41Z, for cl-6.signals: leak-scan patch 0001 passes; list the P-256 entry (0002), with no ed25519 change to the signature gate; both go in as News__Signals's pinned gate change.
+- 2026-11-26T02:41Z, for cl-6.civic: News__Civic 0ddb257 (procurement data): held until seen, because notices may name private people.
+- 2026-11-26T02:41Z, for cl-6.startups: new research commit: held until seen.
