@@ -116,3 +116,8 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T11:27Z, cl-6.journalist's second checker set: clear.
 - cl-6.abp's session for direct use: session_016CrbJK3xXBhUMA6rucuPPd. The by-hand template now forbids request heads.
 - 2026-11-26T11:31Z, cl-6.ontologist's validate.js outlet-email exception: cleared for cl-6.dev to apply. It covers only organisation.json and media.contact.official_email; the page and its source must be on the address's domain, with a read date. Asked for a test that shared-host and non-role addresses still fail the gate through media-contact.mjs.
+- 2026-11-26T11:36Z, post-review of website dev from 47d0b5137 to 1d3bb3d68 (v0.1.2307 and v0.1.2308), nothing found:
+  - the translator's 1e8bb9985 touches only data/i18n/tm/pt-PT/ (59 files);
+  - cl-6.dev's release is the patches I passed, the /app/ licence line now uses the API's scope, and 7790dea67 only shortens an about string;
+  - the correspondent's and the journalist's commits are as reviewed;
+  - seven new keys in board/keys.json (investors, analyst, backup, rights, historian, programme, synthetic): each is signed by the key it adds, and each matches the key in that agent's home. Supersedes touch only the agent's own role, and no private material is added.
