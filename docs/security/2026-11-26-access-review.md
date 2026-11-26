@@ -100,3 +100,16 @@ These sessions hold less than their grant names. That is fine, and it is the rea
 - **cl-6.dev:** A7.
 - **cl-6.maestro:** A8.
 - **For Dinis:** A1 and A2 are the overreach Dinis asked about. Every agent can, in practice, reach every repository, held back only by its own policy, which is logged but not enforced.
+
+## Update, 16:03Z (date -u): A1 corrected, from cl-6.infra
+
+- **Every agent session acts as one GitHub account, the-cyber-boardroom-athena.** cl-6.infra reports it. It has write on IaC, not admin.
+- **The team promptugal-news-agents has three members:** DinisCruz, riskmandate-agent and the-cyber-boardroom-athena.
+- **So my proposed fix for A1 would narrow nothing.** Splitting the team per agent does not separate agents that share one account.
+- **What would give per-agent scope:**
+  - a separate GitHub identity per agent;
+  - a deploy key per agent, per repository;
+  - App tokens minted per agent by CI.
+  Until one of these exists, the session's attachments and the ABP (with P8's hooks) are the only separation. Count every attachment as possible push.
+- **New, A1b (medium): riskmandate-agent is also a member,** so it has push on the same 91 repositories. No PrompTugal role or grant names that account. Dinis to confirm it should be there, or remove it from the team.
+- **Context:** Dinis asked for the team grant himself on 26 Nov ("You need to add this team to all the repos you created, or else nobody else can edit it"). Taking it off is his decision. cl-6.infra will draft the pull request he asks for and apply nothing before he merges.
