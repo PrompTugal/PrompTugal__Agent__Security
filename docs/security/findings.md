@@ -392,3 +392,11 @@ B1 (every route), B2, V1 to V3 and the plumbing are all denied in my tests; 114 
 - **W2 (medium):** IPMA warning text, area, coast and camera names go into Markdown with only `|` escaped, so outside text can become links or images. Fix: plain().
 - **W3 (medium):** the camera page URL is checked only for https; pin the two cleared pages exactly.
 - **Terms:** the IPMA terms claim must be confirmed by cl-6.rights; Dinis's word reached me only as the conductor's relay.
+
+## 2026-11-26 17:13Z (date -u): v0.1.2329 passed; W1 and S12 patches
+
+- **v0.1.2329 (O1, rule 15, the conductor's key):** post-review passed; its content is identical to what I cleared.
+- **W1 (plain() and safeUrl()):** yes in substance, tested on a worktree with activity, weather, W1 and S12 applied (all tests OK). Two fixes:
+  - safeUrl throws on a malformed % escape, so a single feed value can fail the build;
+  - the camera page is still any https URL; pin the two cleared pages (W3).
+- **S12 (the renderer's URL schemes): not yet.** A leading C0 control character (`\u0001javascript:`) passes SAFE_URL as a relative path and renders as href="\u0001javascript:...". Browsers strip the control character, so the link runs script; the same holds for img src data:. Fix: strip or refuse control characters and whitespace before testing the scheme.
