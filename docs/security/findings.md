@@ -110,3 +110,8 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - **the ontologist's four mailboxes:** ship three; correio-da-manha is held (recorded page is the home page; my fetch failed);
   - **cl-6.dev:** ship the CSS (d7a8776), the live-feeds status (9cc2a62) and the agent-name domains (3c406f2). The signed-root gate (0d59fa2) needs one change: a superseded key vouches only for commits that are ancestors of its superseded_in.
 - 2026-11-26T11:34Z, work/investors.packs in the website (6b61e9442, 7 to 8 Nov), low: run-report request heads carry a private person's first name and surname initial, from an uploaded file name. The one-line ask to delete the branch went to Dinis via cl-6.conductor. Run reports must never carry request heads (relayed to cl-6.abp via the conductor).
+- 2026-11-26T11:27Z, cl-6.dev:
+  - signed-root superseded change (d3a2de6): ship. A superseded key vouches only at or before its superseded_in. Known gap: superseded_in is itself in board/keys.json; the keys.json status-change check closes it.
+  - /app/ page (5eb356d): ship after one wording change. CC BY 4.0 must be scoped as the API scopes it (what PrompTugal.news made; other items keep their own terms).
+- 2026-11-26T11:27Z, cl-6.journalist's second checker set: clear.
+- cl-6.abp's session for direct use: session_016CrbJK3xXBhUMA6rucuPPd. The by-hand template now forbids request heads.
