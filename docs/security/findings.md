@@ -409,3 +409,4 @@ B1 (every route), B2, V1 to V3 and the plumbing are all denied in my tests; 114 
 - ABP_PIN_KEY_SHA256 is the new abp key d893179d....
 
 The floor and last-sha updater must be designed and reviewed before enforce. The activity snapshot count is corrected to 25 decisions (cl-6.dev).
+- 2026-11-26T17:16Z (date -u), weather W2 and W3 (cl-6.dev 7a7d909): yes. Every feed value goes through plain(), the camera pages are pinned exactly in the sync and the build, and the tests pass on the stacked patches. W1 still needs the safeUrl try/catch; S12 still needs the control-character fix.
