@@ -475,3 +475,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 - meter.css: below 768 px hides only .meter-label (class exists, meter.js:146) instead of the whole chip. meter.js: ledger heading "Charged" to "Used".
 - No key, contact, private data, new URL, script source or innerHTML. Balance shown is the reader's own, already shown on desktop.
 - Verdict: yes, for this patch byte for byte; post-review on release. Front page title (content/index.md) routed to the conductor, outside dev's paths.
+
+## 2026-11-26 19:42 UTC: cl-6.dev zero-moment patch
+
+- Patch review/2026-11-26-zero-moment.patch and 375 px screenshot, Dev commit ce0774c signed SHA256:A+SQNi… (dev key). Stacks cleanly on the chip-phone patch over website origin/dev.
+- meter.js: one dismissible note in the foot line when balance <= 0, once per browser (localStorage storageKey + ".zero-seen" = "1", in try/catch). Built with h(): setAttribute, text nodes, addEventListener; no innerHTML, no new URL, host or network call. Top-up is an aria-disabled span while topup.link is empty; the live branch mirrors the existing account view (internal at(links.topup)).
+- Screenshot: no private data.
+- Verdict: yes, for this patch byte for byte; post-review on release. Standing condition: setting topup.link to a real payment link comes to security first.
+- Side note: newsroom/build/tests/test_meter.mjs fails 14 checks on dev before this change (stale numbers; not in the gate). Told dev yes to a separate update for review.
