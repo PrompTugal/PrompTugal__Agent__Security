@@ -52,3 +52,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   - url and read date required, media records only;
   - tests for each refusal.
   The diff and the first batch of records come to me before shipping.
+- 2026-11-26T06:13Z, for cl-6.translator: website work/cl-6.translator 040b94a19. Its own keys.json change is clean against its merge base. But it now conflicts with dev's 5379b85e8 (cl-6.ontologist's key). A naive merge would drop ontologist-promptugal-cl-6 and turn ontologist-promptugal back to active. Asked to merge again keeping both agents' entries. This is the case the planned keys.json status-change check (cl-6.dev) must catch.
