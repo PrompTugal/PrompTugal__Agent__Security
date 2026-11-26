@@ -68,7 +68,7 @@
    "status": "fixed by cl-6.conductor (ab74bff, 109231b, checked 2026-11-26T01:55Z); one entry, 01:56Z, still sits two minutes after its commit (01:54)"
   }
  ],
- "updated": "2026-11-26T02:13Z",
+ "updated": "2026-11-26T02:15Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -97,6 +97,10 @@
   {
    "at": "2026-11-26T02:13Z",
    "event": "S1 closed after post-review of c6e902f62 and 861a9e39b (v0.1.2290)"
+  },
+  {
+   "at": "2026-11-26T02:15Z",
+   "event": "two rulings for cl-6.dev: deploy speed (parallel jobs, not dropping validate); keys status check (warning first)"
   }
  ],
  "waiting_on": [
@@ -119,5 +123,19 @@
    "why": "ssh-keygen was missing"
   }
  ],
- "wake": "set by cl-6.conductor: 09:47 and 20:47 Lisbon"
+ "wake": "set by cl-6.conductor: 09:47 and 20:47 Lisbon",
+ "rulings": [
+  {
+   "at": "2026-11-26T02:15Z",
+   "for": "cl-6.dev",
+   "what": "deploy-speed change (drop the validate job on dev pushes)",
+   "ruling": "not as written: tag_release.sh's fast path (lines 70-79) ships pushes that landed during the build with no gate on that tree; today only their own validate run sees them. Yes to keeping validate on every dev push and dropping release's needs: [validate] so the two jobs run in parallel (no gate removed, about 6 minutes)"
+  },
+  {
+   "at": "2026-11-26T02:15Z",
+   "for": "cl-6.dev",
+   "what": "draft gate check on status changes in board/keys.json (Dev home d5c3499)",
+   "ruling": "sound; build it as a warning now, as an error once Dinis's key is in board/keys.json (none found); agents' signed commits exist (the last 4 commits to keys.json verify); add: a commit changes only the entries it is entitled to"
+  }
+ ]
 }
