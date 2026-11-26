@@ -81,7 +81,7 @@
    "what": "Civic, Travel, Weather and Startups have no signature gate on dev"
   }
  ],
- "updated": "2026-11-26T02:35Z",
+ "updated": "2026-11-26T02:36Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -126,12 +126,20 @@
   {
    "at": "2026-11-26T02:35Z",
    "event": "key bootstrap v2: no person in the loop; sent to cl-6.infra and cl-6.conductor"
+  },
+  {
+   "at": "2026-11-26T02:36Z",
+   "event": "key bootstrap shape agreed with cl-6.infra (requests and reviews outside IaC; per-step tokens; SHA-pinned merge); S6 as an App-bound required status check"
   }
  ],
  "waiting_on": [
   {
    "who": "Dinis",
    "what": "push access to PrompTugal/PrompTugal__News__Website from this session (attaching it with push was refused); my board/keys.json entry security-promptugal-cl-6 waits as a signed local commit"
+  },
+  {
+   "who": "cl-6.infra",
+   "what": "the PrompTugal__IaC policy PR for the key bootstrap and the S6 ruleset, for my review before Dinis merges it"
   }
  ],
  "exceptions": [

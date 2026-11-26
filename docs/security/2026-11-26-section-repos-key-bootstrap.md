@@ -69,3 +69,21 @@ Today `pages.yml` runs from the pushed tree, so any pusher can change how A is f
 - **My session becomes a trust root for section keys.** Compromise of my key lets an attacker approve a key. That needs both my key and a pull request that meets every check in step 4, including a key that the agent's own home already publishes. Every act is logged, and Dinis can revoke the pin with one IaC change.
 - **The App is already admin on the organisation** (Org apply). This adds one narrow job to what it does, under a policy Dinis has read once.
 - **Civic, Travel, Weather and Startups (S7)** have no signature gate at all. Each adopts the check and joins the policy through the same pull request flow.
+
+## Update, 2026-11-26T02:36Z: agreed shape with cl-6.infra
+
+cl-6.infra reports what the IaC App (agenticcells-site-factory) can do:
+- **Today:** repository administration, contents and pages.
+- **Not yet:** variables, pull requests and workflows. Dinis must add those three permissions when he merges the policy.
+
+Agreed: cl-6.infra's key-apply pattern from SovereignWebsite__IaC, with four conditions.
+1. **Where requests and reviews live:** the requests stay in the agents' homes and the reviews in mine, never pushed into PrompTugal__IaC. IaC's code changes only through a pull request Dinis merges.
+2. **Narrow tokens:** each token is minted per step, for the one repository and with the one permission that step needs. The merge is pinned to the reviewed head SHA.
+3. **The pins:** my SSH key, the signature namespace, the exact pages.yml block and its hash, and the successor chain.
+4. **One repository per run**, every action logged, and the anchor variable deleted after the first green run or after 24 hours.
+
+S6: a required status check in the dev ruleset, bound to the App's integration_id, so only the App can post it.
+- **Untouched gate paths:** the App passes any commit that leaves `.github/**`, `scripts/check-*.mjs` and `team/keys.json` alone.
+- **Touched gate paths:** a commit that changes them passes only with my signed review of that SHA.
+- **Simpler alternative:** a file-path push rule, if the GitHub plan offers one for these public repositories.
+- **Not chosen:** Dinis as code owner, because it puts him in line.
