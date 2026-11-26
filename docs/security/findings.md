@@ -261,3 +261,5 @@ Open:
 - **The entry:** written and SSH-signed by Dinis himself, never by an agent. I verify the signature against the fingerprint he stated.
 - **S10 (medium, open, cl-6.dev):** before the key means anything, the gate must pin operators by fingerprint in a protected gate file (newsroom/tools/operator-keys.json). Pinning by agent name or role in board/keys.json is not enough: any agent could self-publish an operator entry, because a first publication is self-signed.
 - **S11 (low, cl-6.dev):** validate.js rule 15 runs keys-changes-cli in place of the wsonly check. The websummit.com count never runs, and keys-changes runs twice.
+
+- 2026-11-26T16:33Z, website v0.1.2327 (0bbe55609, keys-changes reads bundle.sign): post-review passed. It is signed by A+SQNi..., and its diff is identical to the patch I cleared at 16:25.
