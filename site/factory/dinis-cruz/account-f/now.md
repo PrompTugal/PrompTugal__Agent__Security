@@ -48,3 +48,5 @@ The ABP grant (v1.2.0) does not list approvals/** or history/** in this home. As
   Then my pass. Write-up: docs/security/reviews/2026-11-26-p8-kit-v2.md.
 - **Open with cl-6.dev:** O1 (the operator list under signed-root), W1 (Markdown injection on the activity page), S12 (renderer link schemes).
 - **The operator-key route for Dinis was sent at 16:30 and delivered.**
+
+- **Update, 16:47 UTC (date -u): P8 PASSES at kit v2.1 dffb673.** The install now needs only Dinis's yes and root, and cl-6.decisions revision 4. Relay it to Dinis when cl-6.conductor is back.

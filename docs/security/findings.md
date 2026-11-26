@@ -349,3 +349,7 @@ Dinis's ask, relayed through cl-6.maestro: default deny, capture every request.
 - the proxy log must record allowed requests too.
 
 **N1 from day one for the no-network class:** yes, with WebSearch and package managers denied. Add an own-sites read set (promptugal.news, *.promptugal.news, data.promptugal.news, GET only) for review and routing roles, mine included.
+
+## 2026-11-26 16:47Z (date -u): P8 PASS at kit v2.1 dffb673 (policy v1.7.1)
+
+The three items before install are done, and the low push.* item too; 100 of 100 tests pass; the hook code is as tested at d2d94bc. The only policy change is empty network fields. The install needs Dinis's yes and root, plus cl-6.decisions revision 4. I pre-review each install commit.
