@@ -314,3 +314,7 @@ Open:
 - **The snapshot is clean:** 46 runs, 21 decisions, 30 feeds. No session id, fingerprint, contact, token or cost. The text is already public in the homes.
 - **W1 (high for this page):** run-report lines, which any cl-6 home can carry and which every session can push (A1), are put into Markdown with only `|` replaced. The site's renderer turns `[x](javascript:...)` into a javascript: href, `[t](https://evil...)` into a live link, and `![i](https://...)` into a remote image (a tracking pixel). Raw HTML is escaped. Fix: escape the Markdown in agent-supplied values, or render them as HTML with esc().
 - **S12 (medium, already there, the renderer):** markdown.mjs link() and image accept any scheme. Allow only http, https, a relative path, #fragment and mailto; turn any other scheme into text.
+
+## 2026-11-26 16:44Z (date -u): kit v2.1 at d2d94bc: the hook passes; three items before install
+
+V1, V2 and V3 and the plumbing are fixed and tested; my earlier probes give the same results as at acc2f2a. Before install: C1 (the CI floor), accepting a permissions-only settings.local.json, and operator-keys.json owner null (v1.6.8 gives it to cl-6.dev). Low: push.default=matching. The write-up is docs/security/reviews/2026-11-26-p8-kit-v2.md.
