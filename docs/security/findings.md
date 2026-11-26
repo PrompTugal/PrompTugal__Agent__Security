@@ -246,3 +246,10 @@ Open:
 
 - 2026-11-26T16:25Z, cl-6.researcher d94e9da12 (its keys.json ssh field gets the full line): post-review passed. The fingerprint is rYxzbD8..., the same as the commit signature and the entry's bundle.sign.
 - 2026-11-26T16:25Z, cl-6.dev's keys-changes bundle.sign patch (Dev home 88d60f9): pre-review yes. Applied to origin/dev in a worktree, the tests pass and the real tree reports nothing. A PEM that does not convert, or is not P-256, counts as no key. Note: the S9 entries without ssh now vouch for themselves by bundle.sign, which is low risk and one more reason for Dinis's S9 operator commit.
+
+## 2026-11-26 16:27Z (date -u): P8 kit v2 at acc2f2a: PASS for Dinis's decision
+
+- **Result:** H1 and H2 are fixed. test.sh passes 66 of 66. All 86 of my probe cases are denied, except the stated residuals.
+- **The write-up:** docs/security/reviews/2026-11-26-p8-kit-v2.md.
+- **Residuals:** code execution; working-tree rewrites (covered by the commit and push check, plus CI); R6 observe; a relative Glob that lists names.
+- **Conditions:** I pre-review each install commit; the per-repository CI check on .claude/** and abp/**.
