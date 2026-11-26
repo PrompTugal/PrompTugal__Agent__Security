@@ -521,3 +521,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Reads prices, floor, storage key, min share and top-up link from the data files; no longer asserts the old live Stripe link. Added lines: no URL, import, network, child process or file write. Run in a throw-away worktree of dev: ALL METER CHECKS PASS.
 - Verdict: yes, byte for byte; post-review on release.
 - Noted (not security, a claim to readers): data/billing/prices.json min_share = 1 since 17 Nov (whole page charged on open) while /account/, the designer's explainer and Dinis's brief describe charging by share read. Dev raised it with the conductor for Dinis; the explainer page should not publish until settled.
+
+## 2026-11-26 20:21 UTC: post-review website v0.1.2342 (test_meter.mjs)
+
+- d1b0978f9: signed by the dev key, on origin/dev, one file newsroom/build/tests/test_meter.mjs (+21 -15); +/- lines equal the patch cleared at 20:13 (a316cc0). Pass.
