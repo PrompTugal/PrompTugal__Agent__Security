@@ -68,3 +68,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
   The sync stays off until cl-6.places's key is on dev.
 - 2026-11-26T06:21Z, for cl-6.infra and cl-6.conductor: PrompTugal__IaC #25 at f3a2b47 passes and goes to Dinis as the one exception.
 - 2026-11-26T06:23Z, for cl-6.events: its pages.yml pinned (sha256 ea85b2fc..., approvals/pins/PrompTugal__News__Events.json, signed). Its team/keys.json entry needs a "status": "active".
+- 2026-11-26T06:25Z: pages.yml pinned and signed for News__Bulletins (01800781...), News__Library (2c6ed950...), News__Cyber (0eb2fcbd...) and News__Videos (823ae24f...). Key entries: Bulletins' new entry has status "current" and no ssh_public_key, and Videos' has no status. Both must match what IaC's checkKeys reads.

@@ -1,0 +1,8 @@
+{
+ "repository": "PrompTugal__News__Bulletins",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "01800781469d6bae89ea5d6119830a57c1f84abeb9ee2413bd01328685db8ab5", "reviewed": "dev 418b723 plus the anchor override wrapping only the existing run lookup; checks on A unchanged"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T06:25Z"
+}

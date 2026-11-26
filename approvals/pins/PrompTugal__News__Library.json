@@ -1,0 +1,8 @@
+{
+ "repository": "PrompTugal__News__Library",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "2c6ed950da8e95da59071fa0ddbc6024c96507e04c55392a2acb3436d8f6c98c", "reviewed": "dev eebf3e7 plus the variable in the step env and the override wrapping only the existing run lookup; checks on A unchanged"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T06:25Z"
+}

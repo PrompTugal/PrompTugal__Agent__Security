@@ -1,0 +1,8 @@
+{
+ "repository": "PrompTugal__News__Cyber",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "0eb2fcbddad05a62d4c7a0b31c7a4d7152f6b37b4c7a4f673487bde6cf7c45bc", "reviewed": "dev cbae8e6 plus the variable in env, 40-hex required, wrapping only the anchor lookup; the trusted step's ancestor checks unchanged"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T06:25Z"
+}

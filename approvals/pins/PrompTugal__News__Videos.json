@@ -1,0 +1,8 @@
+{
+ "repository": "PrompTugal__News__Videos",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "823ae24fc972c4c76064762a79d8c74359339a0243df2b29ef5d29834a6bdb72", "reviewed": "dev 800882c plus the variable in env and an early return in base_of() with 40-hex, in-clone and ancestor-of-AFTER checks; the lookup unchanged"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-26T06:25Z"
+}
