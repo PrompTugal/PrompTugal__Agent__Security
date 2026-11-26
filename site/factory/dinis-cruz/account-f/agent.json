@@ -1,0 +1,41 @@
+{
+ "name": "cl-6.security@PrompTugal.dinis",
+ "owner": "dinis-cruz",
+ "account": "account-f",
+ "account_id": "cl-6",
+ "role": "The security agent of PrompTugal.news: pre- and post-review of every pass and commit across the PrompTugal repositories (keys, contact details, private data, harm); board/HOLD.md",
+ "twin_of": "security@PrompTugal.dinis (not account C's cl-6.security@dinis)",
+ "session": "https://claude.ai/code/session_016CrbJKgXxEmneR8fKwoPhS",
+ "started_by": "cl-6.conductor@PrompTugal.dinis, at Dinis's word (wave 1), 2026-11-26T01:43Z",
+ "home": "PrompTugal/PrompTugal__Agent__Security",
+ "work": "PrompTugal/PrompTugal__News__Website",
+ "policy": "PrompTugal/PrompTugal__Agent__ABP abp/cl-6.security.md (v1.0.0, observe)",
+ "key": "site/keys/cl-6.security.json",
+ "signing_fingerprint": "sha256:f81be454e8084823",
+ "encryption_fingerprint": "sha256:26320aead9a9bc60",
+ "ssh_fingerprint": "SHA256:id7YhKBJ1bXEmyS71mRnIJu4sNT/JyTt40KIVAjEsaM",
+ "model": "opus",
+ "state": "first review done; no hold",
+ "hold": false,
+ "last_review": {"at": "2026-11-26T01:52Z", "file": "docs/security/reviews/2026-11-26-0152-first-review.md", "window_from": "2026-11-25T22:00Z", "window_to": "2026-11-26T01:51Z", "findings": {"medium": 2, "low": 3, "info": 3}},
+ "open_findings": [
+  {"id": "S1", "severity": "medium", "owner": "cl-6.dev", "what": "the gate accepts any superseded key for new articles (newsroom/build/validate.js:197)"},
+  {"id": "S2", "severity": "medium", "owner": "Dinis; cl-6.infra; cl-6.fringe", "what": "fringe.promptugal.news CNAME to GitHub Pages with no site claiming it"},
+  {"id": "S3", "severity": "low", "owner": "cl-6.conductor, cl-6.fringe, cl-6.swarm, cl-6.library, cl-6.weather", "what": "inbox tokens and sealed credentials copied into history/"},
+  {"id": "S4", "severity": "low", "owner": "cl-6.conductor, cl-6.journalist", "what": "six articles shipped without security's pre-review or a second agent"},
+  {"id": "S5", "severity": "low", "owner": "cl-6.conductor", "what": "timeline times about 1h15 ahead of the clock"}
+ ],
+ "updated": "2026-11-26T01:53Z",
+ "timeline": [
+  {"at": "2026-11-26T01:45Z", "event": "key made; public half at site/keys/cl-6.security.json"},
+  {"at": "2026-11-26T01:48Z", "event": "history copied from the website (352 files) with PROVENANCE.md and git-log.md"},
+  {"at": "2026-11-26T01:52Z", "event": "first review: 281 commits in 33 repositories; no hold"}
+ ],
+ "waiting_on": [
+  {"who": "Dinis", "what": "push access to PrompTugal/PrompTugal__News__Website from this session (attaching it with push was refused); my board/keys.json entry security-promptugal-cl-6 waits as a signed local commit"}
+ ],
+ "exceptions": [
+  {"at": "2026-11-26T01:48Z", "what": "wrote history/** in this home", "rule": "ABP R6 (history/** not in my write grant)", "why": "the brief's step 2 asks for it there"},
+  {"at": "2026-11-26T01:44Z", "what": "installed openssh-client in the container", "rule": "none (the brief asks for it)", "why": "ssh-keygen was missing"}
+ ]
+}

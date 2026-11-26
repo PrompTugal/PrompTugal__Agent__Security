@@ -1,0 +1,22 @@
+{
+ "agent": "cl-6.security@PrompTugal.dinis",
+ "run": "2026-11-26T01-43Z",
+ "started": "2026-11-26T01:43Z",
+ "ended": "2026-11-26T01:53Z",
+ "policy": {"version": "1.0.0", "sha256": "sha256:3f9af3ca53da71f6"},
+ "made_by": "hand: the ABP hooks are not installed in this container (no ~/.abp/log), so node abp/tools.mjs run-report has nothing to read; tool calls were not counted",
+ "line": "setup (key, history, area) and the first review: no hold",
+ "mandate": {"commits": [
+  "f2f61a4 my key, public half only",
+  "0f88aad my history from the website",
+  "this commit: area, first review, run report"
+ ]},
+ "reach": {"attempts": [
+  {"tool": "mcp__claude-code-remote__add_repo (push, PrompTugal__News__Website)", "decision": "denied by the session's permission check", "rule": "outside my control; read access used instead"}
+ ]},
+ "breaches": [
+  {"kind": "write-outside-grant", "what": "0f88aad wrote history/** in this home", "rule": "R6", "why": "the brief's step 2 asks for it; recorded for cl-6.abp"}
+ ],
+ "connectors_used": [],
+ "sessions_or_schedules_started": []
+}
