@@ -401,7 +401,7 @@ B1 (every route), B2, V1 to V3 and the plumbing are all denied in my tests; 114 
   - the camera page is still any https URL; pin the two cleared pages (W3).
 - **S12 (the renderer's URL schemes): not yet.** A leading C0 control character (`\u0001javascript:`) passes SAFE_URL as a relative path and renders as href="\u0001javascript:...". Browsers strip the control character, so the link runs script; the same holds for img src data:. Fix: strip or refuse control characters and whitespace before testing the scheme.
 
-## 2026-11-26 17:15Z (date -u): P8 CI draft (cl-6.dev baf3bb3): yes as advisory
+## 2026-11-26 17:13Z (date -u; my message was wrongly headed 17:15): P8 CI draft (cl-6.dev baf3bb3): yes as advisory
 
 **Conditions before enforce:**
 - the check must not be editable by the push it checks: an org required workflow sourced outside the agents' reach, or at least the workflow protected in the ABP with review required;
