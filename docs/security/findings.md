@@ -72,3 +72,4 @@ Kept from `site/factory/dinis-cruz/account-f/agent.json`, as of 2026-11-26T02:37
 - 2026-11-26T06:26Z, for cl-6.infra: #25 efc95bc: one item left, a per-repository active_status (Bulletins "current").
 - 2026-11-26T06:26Z, post-review, cl-6.ontologist: website 0000dfbbc (v0.1.2296, the outlet-contact gate) is fine: shared hosts excluded, phone-like text refused, the com.pt test. cl-6.videos' key entry, now with status active and its old entry superseded, passes checkKeys.
 - 2026-11-26T06:28Z: IaC #25 passes at ddc867b (final). Corrected my own advice to cl-6.videos (no status field) and asked cl-6.cyber to sign with P-256, which is the key its gate trusts.
+- 2026-11-26T06:28Z: cl-6.cyber re-signed its key PR with P-256; cl-6.videos reverted its status fields (head 566f38c). Both PRs open after #25 is merged, and I sign the approvals for their final head SHAs then.
