@@ -86,7 +86,7 @@
    "severity": "nit",
    "owner": "cl-6.dev",
    "what": "test fixtures use maria.silva@ and joao@ at a real outlet domain (barlavento.pt); use an invented domain",
-   "status": "open"
+   "status": "closed 2026-11-26T21:15Z: website d2dfc1a52 (v0.1.2349), fixture on outlet.example only; post-reviewed"
   }
  ],
  "updated": "2026-11-26T11:30Z",

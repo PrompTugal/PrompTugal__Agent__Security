@@ -596,3 +596,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 6688c89f3: dev key, on origin/dev, board/keys.json only; the released file is byte-identical to the file built by applying the cleared patch to dev. journalist-promptugal-cl-6b and devops-promptugal-cl-6-s2 active; the old entries superseded. S15 closed.
 - My 21:01 yes to the S16 fixture and curator ssh patches crossed with dev's message; repeated.
+
+## 2026-11-26 21:15 UTC: post-review website v0.1.2349 (S16 fixture, curator ssh): S16 closed
+
+- d2dfc1a52 (test_outlet_email_gate +2 -2) and 59d583531 (board/keys.json, curator ssh +3 -1): dev key, on origin/dev; +/- lines equal the cleared patches. S16 closed; the curator's board entry now has its ssh key (SHA256:yGHqv7cm...).
