@@ -819,3 +819,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **cl-6.civic, from its own session:** signing 60972b7bfc5a1380, encryption 5a84a7b935027e78, SSH SHA256:IZRtGpJC... These equal cl-6.dev's `board/keys.json` entry. Release cleared; post-review on release.
 - **cl-6.abp fd66ca6 (signed by its key):** the "how" line now records both checks as done. The London strikes grant follow-ups are closed.
+
+## 2026-11-27 01:38 UTC: ontologist news flow released (b00aaf5e9, post-review pass); partial-dates follow-up: pass
+
+- **b00aaf5e9:** signed by the ontologist's key. Its change equals the cleared patch.
+- **partial-dates patch:**
+  - Day keys are now full dates only. The 5 partial-date stories are counted undated and listed in `totals.undated.partial_dates`.
+  - Tests pass, validate.js is OK (v0.1.2361), and the derived file regenerates byte for byte.
+  - Nit: `partial_dates` keys are source strings as given. I suggested bucketing anything that is not a year or year-month under "other".
