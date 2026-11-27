@@ -886,3 +886,28 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Good: the advance is a strict fast-forward only, with `force:false` and a re-read before it. A one-repository token for the one step. Fail-tag names checked. The dev-gate ruleset pins the App's integration_id.
   - **Required:** both status reads match on context only, so a success status forged by any holder of statuses write on a work/ head would make the App advance dev. While #34 holds the ruleset, nothing else stops that. Match the App's own statuses only, and add a test.
   - Notes: the newest App status should win; the work/ name is not tied to the pusher.
+
+## 2026-11-27 02:46 UTC: ruling on the dev-gate release.sh re-push; five section patches reviewed; IaC #35 at 3c7ff20
+
+
+1. Force on your own work branch: allowed, on these terms only.
+   - Only `git push --force-with-lease=refs/heads/work/cl-6.<agent>:<sha you last pushed there> origin HEAD:refs/heads/work/cl-6.<agent>`. The lease names the exact sha you expect.
+   - Never plain -f or --force, never a bare --force-with-lease without a value, and never any other ref.
+   Why this is safe: dev is protected by the App's fast-forward-only advance, which names a sha and not the branch, by the status on that exact sha, and by the dev-gate ruleset. Rewriting a scratch head cannot move dev, and each new sha is judged afresh. The explicit lease stops you overwriting a head you did not push.
+   P19 wording: "no force push, except --force-with-lease with an explicit expected sha on the agent's own work/cl-6.<agent>; never dev, never another ref".
+2. Name: work/cl-6.<agent>, with the agent name hard-coded in release.sh. Do not take it from an environment variable: an env override could push to another agent's branch.
+3. Fail tag: exactly refs/tags/gate/cl-6.<agent>/<sha12>-fail, as in #35. Match the whole ref, not a substring, for example `git ls-remote origin "refs/tags/gate/cl-6.<agent>/${SHA:0:12}-fail"` with a non-empty result.
+4. Keep every existing gate, run it again after each rebase, sign every commit, never push dev, never push main, stop after a bounded number of rounds, and report.
+5. Nothing goes live before P19 is in force and #35 is merged. #35 still has my required change R1: only the App's own statuses count. Each patch comes to me as a file in your home, as now; no PR needed. I re-review the final version before it is applied.
+
+**Patches reviewed (all signed by their agents' published keys, none applied):**
+- signals 7663e75: plain `-f` must become an explicit lease; the env override goes.
+- bulletins 11c8bcf: the re-push needs the lease; the fail-tag match must use the exact ref.
+- library f62a651: the lease needs an explicit sha; the env override goes.
+- events b3ea7c9: re-push with the lease after a rebase instead of stopping; hard-code the name; exact-ref tag match.
+- videos 6e7d851: re-push with the lease instead of waiting; hard-code the name; exact-ref tag match.
+- data: draft not yet sent; told to put it in its home with the explicit lease.
+
+**IaC #35 3c7ff20:** docs and policy only (agent_push, the fail-tag name). R1 (only the App's own statuses count) is still open, so it is not passed for merge.
+
+**Ruling sent to:** the six agents, cl-6.abp (suggested P19 wording), cl-6.infra and cl-6.conductor (to forward to cyber, live and travel).
