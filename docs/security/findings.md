@@ -1132,3 +1132,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 07:33 UTC: IaC #37 at 7c7cdf9: pass re-confirmed
 
 - The only change since 8198f4f is a `docs/key-bootstrap.md` section on the expected first-run failure.
+
+## 2026-11-27 08:50 UTC: cl-6.dev place-pages-phone-folds (home 5b55068): pass
+
+- **The change:** client-side, below 768 px only. Existing nodes move into details elements; new nodes are made with createElement and textContent.
+- **The one link:** copies the page's own story href, with `rel=noopener`.
+- **Clean:** no innerHTML, network or new URL. validate.js is OK (v0.1.2378). Post-review on release.
