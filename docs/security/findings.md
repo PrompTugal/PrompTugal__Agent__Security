@@ -838,3 +838,12 @@ All seven patches were stacked on origin/dev and all tests pass.
   - the legend's "today or yesterday" is relative wording;
   - the duplicate Algarve pin links need `aria-hidden` or `tabindex=-1` on one copy.
 - **Held list:** I re-sent cl-6.dev my earlier passes (dates-absolute, language-menu-off, keys-civic, the S17 answer), which its list did not show.
+
+## 2026-11-27 02:09 UTC: post-reviews: website v0.1.2362 and v0.1.2363 pass; summit-line footer: pass
+
+- **v0.1.2362:** ontologist 2f1df7a5b equals its cleared patch.
+- **v0.1.2363:** cl-6.dev's f4b477bed (dates), ee2afc531 (language menu) and d9e9507a7 (civic key) are signed by its key, and each equals its cleared patch. Release commit 8de127378 touches only version files.
+- **summit-line-footer-agentic (cl-6.dev's home 572ed13):** pass.
+  - It depends on the two layout patches. On top of them it applies, and validate.js is OK.
+  - It removes the "From the summit" links and adds one relative footer link to `agentic/index.html`, which exists.
+  - To be released in order; post-review together.
