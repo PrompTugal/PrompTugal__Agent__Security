@@ -1061,3 +1061,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Scan:** no key, token, vault key, sealed value or email.
 - **Missed before:** d466166 and e803bc0 (26 Nov), which I reviewed, also touched `vaults/`. I missed the grant point then.
 - **Ruling:** nothing to undo. Recommended fix (a): release.sh stages only granted paths, by explicit allow-list, never `git add -A`. Or (b): cl-6.abp grants `vaults/*/latest/**`. That is for cl-6.abp and Dinis. Post-review the change.
+
+## 2026-11-27 07:19 UTC: weather 73f0db3 post-review pass; 25c753d: pass
+
+- **73f0db3 (v0.1.73):** signed by cl-6.weather's key. All 49 files equal the pack hashes.
+- **25c753d (pack a05864c):** reproduced at 73f0db3 against data v0.1.157. 48 of 49 hashes match. The forecast and reading lines are identical. `sync.json` differs only in run fields. Public data only. Post-review on push.
