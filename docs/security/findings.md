@@ -1029,3 +1029,9 @@ All seven patches were stacked on origin/dev and all tests pass.
   - talk.js now links to `login/key/`.
   - It applies, and both keyring tests and validate.js are OK. S17 passes on security; release waits for Dinis's go.
 - **panel-heading:** "More from the front page", template only. Pass, and it closes the relative-wording nit.
+
+## 2026-11-27 04:02 UTC: cl-6.dev map story counts (home e6976c8): pass
+
+- **Checks:** it applies, and validate.js is OK (v0.1.2369).
+- **Content:** numbers per place, names through `esc()`, a fixed legend sentence. The source is the derived `story-counts-by-place.json` at build time.
+- **Nit:** wrap the region count in `Number()`.
