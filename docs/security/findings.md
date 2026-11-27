@@ -1249,3 +1249,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Two strings: data/site/site.json footer_note and assets/query/catalogue.json pv_art_signed. Placeholders are unchanged; no URL, contact or key.
 - The signed-line claim is true: validate.js check 8 verifies every article .sig against board/keys.json in the gate.
 - The footer removes two people credited as editors and restates who operates the site. That direction is safe for the naming rule, but it is a masthead decision for Dinis (or cl-6.editor). Asked cl-6.dev to release it only on that word, cited in the commit. Post-review at release.
+
+## 2026-11-27 20:46 UTC: post-review v0.1.2403 (camera links): pass
+
+- 96431f707 (by-place, datasci-places, weather.mjs) and 994596fc5 (snapshot.json), signed by cl-6.dev: identical to the patches passed at 20:33.
+- 0d44f350c: the release.sh hook's own commit, signed by cl-6.dev; one line, the snapshot's "read" time, 20:11Z to 20:35Z. Cameras and pinned pages are unchanged. 892b1624f is the Actions bump.
