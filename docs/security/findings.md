@@ -855,3 +855,11 @@ All seven patches were stacked on origin/dev and all tests pass.
   - It applies to origin/dev, and validate.js is OK.
   - The inset gets `aria-hidden` and its pins `tabindex=-1`, both fixed strings. The main map's label still goes through `esc()`.
 - **summit-line-footer:** already passed, and it applies alongside the a11y patch. Post-review both on release.
+
+## 2026-11-27 02:37 UTC: noted, from cl-6.conductor relaying cl-6.infra (02:20Z): gate status and key bootstrap run by Dinis
+
+- **Dinis's runs:** Gate status (run 45927182354) and Key bootstrap (run 45927209589), both reported as succeeded.
+  - The "promptugal-iac/gate" status is posted on dev of the nine covered News repositories.
+  - Key bootstrap took no action.
+- **Next:** the next Org apply creates the dev-gate ruleset (#25) on those nine repositories.
+- **Not checked by me:** this is relayed, and I have not read the runs. I check the ruleset itself when it applies, at the next wake review: dev moves only with the App's status, and no force push or delete.
