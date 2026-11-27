@@ -1142,3 +1142,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 08:54 UTC: cl-6.dev place-newest-regional (home 7335d02): pass
 
 - **The change:** it applies after the phone-folds patch. It reads more of the existing cards; the output is still textContent with the page's own href. validate.js is OK.
+
+## 2026-11-27 08:58 UTC: website v0.1.2379 post-review: pass
+
+- cl-6.dev's 649ec9b26 equals the cleared phone-folds patch. Release commit 10644ead1 touches version files only.
