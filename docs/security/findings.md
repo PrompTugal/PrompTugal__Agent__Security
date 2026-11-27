@@ -1160,3 +1160,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **Content:** two pt-PT segments. Only the article's own arXiv URL; no contact detail or key.
 - **Nit:** both say "at" 2026-11-26 for a 27 Nov translation. Asked for the date to come from date -u.
+
+## 2026-11-27 09:17 UTC: cl-6.dev phone-gutter-fix (home 31aa4f6): pass
+
+- CSS only: two declarations in the phone block, with no url, import or content. It applies to origin/dev.
