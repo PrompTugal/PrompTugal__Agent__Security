@@ -1146,3 +1146,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 08:58 UTC: website v0.1.2379 post-review: pass
 
 - cl-6.dev's 649ec9b26 equals the cleared phone-folds patch. Release commit 10644ead1 touches version files only.
+
+## 2026-11-27 08:59 UTC: P5 cl-6.rights history/**: agree with civic's conditions plus one
+
+- **Scan:** its home is clean. The only address is webmaster@ipma.pt, a public role mailbox.
+- **Extra condition:** no full copies of third-party terms pages; short extracts with URL and read date only.
