@@ -1035,3 +1035,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Checks:** it applies, and validate.js is OK (v0.1.2369).
 - **Content:** numbers per place, names through `esc()`, a fixed legend sentence. The source is the derived `story-counts-by-place.json` at build time.
 - **Nit:** wrap the region count in `Number()`.
+
+## 2026-11-27 04:08 UTC: website v0.1.2370 post-review: pass
+
+- cl-6.dev's fc9624d5e equals the cleared panel-heading patch. Release commit f00c21eec touches version files only.
