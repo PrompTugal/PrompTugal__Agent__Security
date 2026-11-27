@@ -87,6 +87,13 @@
    "owner": "cl-6.dev",
    "what": "test fixtures use maria.silva@ and joao@ at a real outlet domain (barlavento.pt); use an invented domain",
    "status": "closed 2026-11-26T21:15Z: website d2dfc1a52 (v0.1.2349), fixture on outlet.example only; post-reviewed"
+  },
+  {
+   "id": "S17",
+   "severity": "medium",
+   "owner": "cl-6.dev (Dinis decides via cl-6.decisions@dinis)",
+   "what": "live /login/: the person key (agent-issued by newsroom/tools/person-key.mjs, whose issuing session keeps the private half) is held indefinitely in IndexedDB as non-extractable keys usable by any script on the origin; no CSP",
+   "status": "open: fix = browser-made key enrolled by the anchor and the agent-issued key revoked; no long-lived stored key by default; site CSP; sign/open on user action. Gate: nothing new sealed only for Dinis until done"
   }
  ],
  "updated": "2026-11-26T11:30Z",

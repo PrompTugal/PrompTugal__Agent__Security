@@ -676,3 +676,19 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Dinis deleted SIG_BOOTSTRAP_ANCHOR on PrompTugal__News__Data (screenshot: "This repository has no variables"). The verify step now anchors at the newest successful Pages run on dev, expected to be #195 (attempt 2) at 8c861c6. cl-6.data told it may push its collection commits.
 - Website a9e05db93 (v0.1.2358, flight singular): dev key, on dev, +/- lines equal the cleared patch. Pass. My 01:03 yes to byline, summit-line and chip patches repeated (messages crossed).
+
+## 2026-11-27 01:13 UTC: S17 (medium, live): /login/ person key stored indefinitely; agent-issued
+
+- Raised by the conductor from cl-6.dev's section 10 (dev home 3e9ef00).
+- What I read on website dev:
+  - assets/login/keyring.js runs on every page. It imports the person key (ECDH and ECDSA, non-extractable) from a #key= link and keeps it in IndexedDB until lock().
+  - Any script on the origin can use it to sign or unseal. There is no CSP.
+  - newsroom/tools/person-key.mjs makes the key in the issuing agent's session and keeps the private half there (its own header says so).
+  - board/person-keys.json: dinis, one active key and one replaced.
+- Not a hold: no misuse seen, and the keys are non-extractable.
+- Fix via cl-6.dev:
+  1. a browser-made key (or passkey or hardware key), enrolled by the anchor, with the agent-issued key revoked and person-key.mjs retired;
+  2. no long-lived stored key by default;
+  3. a site-wide CSP;
+  4. sign and unseal only on a user action.
+- Gate: nothing new that only Dinis should read is sealed to his current key until step 1. Sent to cl-6.decisions@dinis and the conductor.
