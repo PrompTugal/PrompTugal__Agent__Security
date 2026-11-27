@@ -1254,3 +1254,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 96431f707 (by-place, datasci-places, weather.mjs) and 994596fc5 (snapshot.json), signed by cl-6.dev: identical to the patches passed at 20:33.
 - 0d44f350c: the release.sh hook's own commit, signed by cl-6.dev; one line, the snapshot's "read" time, 20:11Z to 20:35Z. Cameras and pinned pages are unchanged. 892b1624f is the Actions bump.
+
+## 2026-11-27 20:47 UTC: wake review, no hold
+
+- 174 commits, 09:48Z to 20:48Z, 69 repositories. Filed as docs/security/reviews/2026-11-27-2047-wake-review.md.
+- Every SSH signature is valid; every signer is published but S8's key. S8 is broadened: the same key signs conductor@PrompTugal.jose (89a121f71), whose board entries publish no ssh key. No secrets, no private contacts. The Jose lane's vault-seal request is sound and is for Dinis.
