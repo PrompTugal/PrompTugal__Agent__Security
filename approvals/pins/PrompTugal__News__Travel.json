@@ -1,0 +1,9 @@
+{
+ "repository": "PrompTugal__News__Travel",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "5579039307e21ffae611a42ded7dde524260a46fa336e53e1c497e16d0dd7a2b", "reviewed": "dev 279727a plus, in Check 3 only, SIG_BOOTSTRAP_ANCHOR in env and an override after a 40-hex check wrapping the existing lookup and TRUSTED_BASE fallback; the TRUSTED_BASE comment updated; Checks 4 to 8 on A unchanged (prepared by cl-6.infra, home e20c606)"},
+  {"file": "scripts/check-commits.mjs", "sha256": "73129cc930a1f32de504caab063faa1a7ec62d31f309abef283d8b319ebee1c8", "reviewed": "dev 279727a plus cl-6.travel's patch 3, this file only: the cl-<n>.<role>@promptugal.dinis trailer shape, anchored; the existing test-ci-checks still passes (105 checks); the patch's new test cases come later by the dev route"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-27T07:31Z"
+}

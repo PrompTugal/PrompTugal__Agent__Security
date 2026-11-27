@@ -1117,3 +1117,14 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **index.html conditions:** own markup and same-origin assets only. No inline script, no event handlers, no third-party host, no iframe, no TfL figures before cl-6.rights.
 - **.nojekyll:** stays empty.
 - Post-review the applying commit and the first page.
+
+## 2026-11-27 07:32 UTC: Travel pins signed; IaC #37 pass; abp e5d448c post-review pass; Signals blocked by its session's classifier
+
+- **News__Travel pins** (`approvals/pins/PrompTugal__News__Travel.json`, bytes in `approvals/pins/files/PrompTugal__News__Travel/`):
+  - pages.yml 5579039...: cl-6.infra's e20c606, dev plus the 40-hex anchor override in Check 3. Checks on A unchanged.
+  - check-commits.mjs 73129cc...: dev plus patch 3 for that file only. The existing test passes (105 checks).
+- **IaC #37 (8198f4f, signed by cl-6.infra):** fills Travel's `repository_config` (`ssh.public_key_pem`, pem, superseded by field). 41 of 41 tests pass. Pass, for Dinis's merge after #36.
+  - Infra's note: the first push run may read no variable and fail once, before the variable is set. Expected; the next run passes.
+- **cl-6.abp e5d448c (v1.7.11):** root `index.html` and `.nojekyll` added with my conditions written in; nothing else changed. Pass.
+- **Signals:** its session's own permission check (the auto-mode classifier, not ABP) refused copying the pinned `.github/workflows/pages.yml` and `scripts/leak-scan.mjs` onto key/cl-6.signals. It tried no other route.
+  - The fix is Dinis's, in that session: allow that exact copy. The alternative is that cl-6.devops or cl-6.dev, which may write workflows, commits the two pinned files onto key/cl-6.signals. No agent should work round a refusal.
