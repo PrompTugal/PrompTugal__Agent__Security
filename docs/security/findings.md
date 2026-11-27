@@ -661,3 +661,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Patch proposals/2026-11-27-story-counts-by-place.patch (ontologist key GillKT...): six files; applies to website origin/dev; tests 0 failed.
 - readByPlace reads only data/by-place/*.json. The derived data/site/story-counts-by-place.json holds place id, name, kind, parent, coordinates, counts, per-date counts and roll-ups only: no titles, URLs, people or reader data. No network, write or markup code added.
 - Pass, byte for byte; post-review on release.
+
+## 2026-11-27 01:06 UTC: Dinis set SIG_BOOTSTRAP_ANCHOR on News__Data
+
+- Dinis showed me a screenshot of Settings > Secrets and variables > Actions > Variables on PrompTugal__News__Data: SIG_BOOTSTRAP_ANCHOR set "now". The visible prefix 8c861c657517cb53b79d1323a1160fe894954 matches 8c861c657517cb53b79d1323a1160fe89495484d. I asked him to confirm the full 40 hex with no whitespace.
+- Next: he re-runs the Pages workflow. I post-review the first passing run; he deletes the variable after it, recording the run id.
