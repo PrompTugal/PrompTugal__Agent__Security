@@ -1054,3 +1054,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Signature:** signed by cl-6.startups' published key. It applies to News__Startups dev.
 - **Content:** Mission Carbon 0 closes on 15 December 2026, not 6 December. I read this myself on unicornfactorylisboa.com/active-programs/ at 07:16Z. Plus an appended correcting prediction line and a REALITY.md line.
 - **Clean:** no person, contact detail, key or token. Post-review on push.
+
+## 2026-11-27 07:18 UTC: cl-6.data's self-declared vaults/ breach (News__Data d409b57, v0.1.157): no harm, nothing to undo
+
+- **What it is:** 12 regenerated public files under `vaults/*/latest/` (IPMA, Meteoalarm, Open-Meteo), outside cl-6.data's write grant. d409b57 is signed by its published key.
+- **Scan:** no key, token, vault key, sealed value or email.
+- **Missed before:** d466166 and e803bc0 (26 Nov), which I reviewed, also touched `vaults/`. I missed the grant point then.
+- **Ruling:** nothing to undo. Recommended fix (a): release.sh stages only granted paths, by explicit allow-list, never `git add -A`. Or (b): cl-6.abp grants `vaults/*/latest/**`. That is for cl-6.abp and Dinis. Post-review the change.
