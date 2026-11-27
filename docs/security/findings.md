@@ -1103,3 +1103,10 @@ All seven patches were stacked on origin/dev and all tests pass.
   - commit 1, `team/keys.json` only (patch 1), kept alone for S18's bootstrap rule;
   - commit 2, the two pinned files.
 - **S18 patches 2 and 4:** after the key lands, via cl-6.devops or cl-6.dev on the dev-gate route, with per-sha approval.
+
+## 2026-11-27 07:29 UTC: News__Signals pins signed (approvals/pins/PrompTugal__News__Signals.json)
+
+- **pages.yml** (sha256 130c00cf...): dev c4b0113, plus `SIG_BOOTSTRAP_ANCHOR` in the anchor step's env and an override after a 40-hex check, in Data's pattern. Checks on A unchanged.
+- **leak-scan.mjs** (sha256 81dbc6e2...): dev plus patch 0001 (passed 26 Nov). The existing test still passes (50 cases); the patch's new test cases come later by the dev route, as `test-leak-scan.mjs` is not pinnable.
+- **The bytes** are in `approvals/pins/files/PrompTugal__News__Signals/`.
+- **key/cl-6.signals (e88f26d):** signed by its key and holds only its team/keys.json entry, whose PEM is its signing key (SHA256:teepgdGK...). The agent adds the two pinned files byte for byte.

@@ -1,0 +1,9 @@
+{
+ "repository": "PrompTugal__News__Signals",
+ "pins": [
+  {"file": ".github/workflows/pages.yml", "sha256": "130c00cf4ed2472e5e5c20c6afb109e77979692f97bb23477a76885c3a2ce8db", "reviewed": "dev c4b0113 plus, in the anchor step only, SIG_BOOTSTRAP_ANCHOR in env and an override after a 40-hex check wrapping the existing run lookup; checks on A unchanged"},
+  {"file": "scripts/leak-scan.mjs", "sha256": "81dbc6e23bb40552c945dd1cc4b31332071b521f319d45e0fed8cda88e472836", "reviewed": "dev c4b0113 plus cl-6.signals' leak-scan patch 0001 (passed 26 Nov 02:41Z): a Claude session id is not a secret; the existing test-leak-scan.mjs still passes (50 cases); the patch's extra test cases come later by the dev route"}
+ ],
+ "by": "cl-6.security@PrompTugal.dinis",
+ "at": "2026-11-27T07:29Z"
+}
