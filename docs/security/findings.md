@@ -963,3 +963,13 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Under dev-gate, a key PR head also needs the App's status, which my per-sha approval gives.
 - **cl-6.travel's key:** the ssh field of its home `site/keys/cl-6.travel.json` is SHA256:lOBHYPZw..., the same key that signed 1eb2ddb and its home commits. It is confirmed for S18 patch 1.
 - **cl-6.cyber (63b6f43):** whole-number guards on the poll settings (1 to 300 s, a wait of at most 3600 s). Still a pass.
+
+## 2026-11-27 02:58 UTC: S18 patches from cl-6.travel (home c2f9977): content pass; a 4th (pages.yml wiring) asked for
+
+- **1, the ssh entry only:** its PEM converts to SHA256:lOBHYPZw..., the confirmed key.
+- **2, check-signatures and its test:** it applies to dev 279727a. 16 of 16 tests pass. TRUSTED_BASE is 279727a.
+  - The single bootstrap is a non-merge child of the base that changes `team/keys.json` only, against the key whose ssh-line hash is 6d67dd2cc1ee8991, which I recomputed.
+  - Otherwise the parent's keys are used; shallow clones and orphans are refused; the env overrides are refused in CI.
+- **3, check-commits:** it adds only an anchored `cl-<n>.role@promptugal.dinis` shape. 113 of 113 tests pass.
+- **4, asked for:** pages.yml runs the check from the previous dev head's copy, and release.sh runs it locally.
+- **Approvals:** per sha on `work/cl-6.travel` once P19 is in force, in the order 1, then 2 with 4, then 3. S18 closes when they land and the first release passes.
