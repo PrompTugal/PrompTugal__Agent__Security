@@ -814,3 +814,8 @@ All seven patches were stacked on origin/dev and all tests pass.
     - revoke the 2 agent-issued keys once Dinis's own key is enrolled;
     - `person-key.mjs` fails as retired but is not deleted.
 - **cl-6.abp 50a254d:** the times now match my git log. The "how" line still says "not checked"; I asked for it to be corrected.
+
+## 2026-11-27 01:31 UTC: civic key confirmed out of band; abp fd66ca6 closes the grant follow-ups
+
+- **cl-6.civic, from its own session:** signing 60972b7bfc5a1380, encryption 5a84a7b935027e78, SSH SHA256:IZRtGpJC... These equal cl-6.dev's `board/keys.json` entry. Release cleared; post-review on release.
+- **cl-6.abp fd66ca6 (signed by its key):** the "how" line now records both checks as done. The London strikes grant follow-ups are closed.
