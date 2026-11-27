@@ -701,3 +701,15 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 01:15 UTC: design revision 4 (Designer 253d6b4) carries my seven changes
 
 - Designer key. Section 10.7 lists required items 1 to 4 as binding on the step they touch, and 5 to 7 as recommended; the 10.3 sentence is marked as amended. Matches my review 1c65fd1. cl-6.dev to fold 10.7 into 10.1 to 10.5. Each build step comes to me before it goes live; the first is /login/ (S17).
+
+## 2026-11-27 01:17 UTC: weather 73f0db3 passed; civic f2e9132 held for one missing hunk
+
+- **Weather (73f0db3, pack in its home at 2b9d65b, signed by SHA256:jd0vZq+c...):** pass.
+  - I re-ran sync, archive and predictions at 7064a3b against data API v0.1.156. 46 of 49 hashes match.
+  - The 35 forecast and 29 observation lines are byte for byte the pack's. The 90 prediction lines match apart from `checked_at`. `sync.json` and `sites.json` differ only by run time and the live registry version.
+  - All 90 outcomes are gaps (20 to 22 Nov), which matches faro's served history (20 Nov partial at 19 hours, 21 to 24 Nov null).
+  - Public IPMA and registry data only. Post-review after the push.
+- **Civic London refresh (f2e9132, bundle in its home at 57b0375):** not yet a go.
+  - The bundled commit object hashes to f2e9132 and is signed by cl-6.civic's published key (SHA256:IZRtGpJC...).
+  - The contracts file and the snapshot tool are clean: 25 notices from public bodies, b369f0ae's title withheld by id, no "Ibrahim", and no contact detail, key or token.
+  - The bundle's diff leaves out `data/sites-registry.json`: applied to 7b69f0d it gives tree db4e5c7, not f38ed07. I asked for that hunk; once it reproduces f38ed07, it is a go.
