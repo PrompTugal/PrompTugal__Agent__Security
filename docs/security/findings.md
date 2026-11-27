@@ -1091,3 +1091,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **The record:** 2026-11-26__abp-p9 v2 (Decisions 1cefc01, signed by cl-6.decisions) quotes Dinis's "yes to P9" (event 7c144bf8). It lists the eight after cl-6.data's trial, gated only on a security read.
 - **Result:** my trial-complete read meets that gate. cl-6.abp's eight key_branch entries (policy v1.7.10, f0a7ce7) stand.
 - **Correction:** my earlier "on Dinis's word" was wrong. The record already carries his word.
+
+## 2026-11-27 07:25 UTC: ABP kit v2.3 test fix (451a2df): 122 of 122 here
+
+- test.sh now unsets a caller's `ABP_PIN_KEY_SHA256`; the hooks are unchanged. Re-run in this environment: passed 122, failed 0. My earlier 35 failures were this test defect.
