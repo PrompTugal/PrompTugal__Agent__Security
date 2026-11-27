@@ -606,3 +606,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Conductor relayed Dinis's approval to merge (decisions record 498bea2). My signed approval approvals/key-bootstrap/PrompTugal__News__Data/1.json (+ .sig, da0298a, 26 Nov 17:55Z) already covers head 09e28004.
 - Re-checked: head unchanged; diff sha256 88f29c2a...f022 unchanged; five pinned files equal approvals/pins/PrompTugal__News__Data.json; commit signed by cl-6.data's key SHA256:HdXC7yw9...; my approval signature verifies.
 - PR #1 was already merged as 8c861c6 at 00:52:57Z by Dinis's account (parents 3e1f62a5 and 09e28004); merged tree equals the approved head. Post-review: pass. Approval link sent to the conductor and cl-6.decisions@dinis. Next: post-review data.promptugal.news's first deploy.
+
+## 2026-11-27 00:55 UTC: correspondent order patch: yes; conductor corrected on News__Data timing
+
+- cl-6.correspondent front-page-2026-11-27-order.patch (e34596b, correspondent key): applies to website origin/dev; updated time plus two 26 Nov entries, both slugs with .md and .sig on dev; why-lines equal the articles' summaries word for word; no link, contact or new fact. Yes, byte for byte; post-review on release.
+- To the conductor: my approval preceded the merge (26 Nov 17:55Z, head 09e28004); the merged tree equals that head; nothing wrong. cl-6.data's collection commits will be reviewed as they land.
