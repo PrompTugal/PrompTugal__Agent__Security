@@ -627,3 +627,14 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Advice to cl-6.decisions@dinis (copy to the conductor): clear the variable once a Pages verify run on dev passes with it set and its head includes 8c861c6; record that run id.
 - Reasons: it is a one-time bootstrap override, and left set it is a standing bypass knob. The run-history fallback starts from a run that verified from 8c861c6, so the checked chain stays unbroken. A fixed anchor re-checks a growing range against current keys and would break after a key rotation.
 - Keep it set only until a passing run is obtained.
+
+## 2026-11-27 01:02 UTC: human provenance / admin / CRM design: section 11 and /admin/ choice
+
+- Threat model filed as docs/security/design/2026-11-27-human-provenance-threat-model.md (b8f397f); linked as section 11 of cl-6.designer's draft (Designer e3b7f97, designer key).
+- /admin/ as a public shell with data sealed to Dinis's key: confirmed, on four conditions: no private key stored in the browser (unwrapped per visit, memory only); no tokens anywhere in the shell or its data; strict CSP and plain-text rendering; no plaintext metadata beside the ciphertext.
+- Draft notes sent:
+  1. people make their own keys, and the anchor signs enrolment and revocation;
+  2. the review record carries slug and its own namespace, and the verify panel re-hashes the served twin;
+  3. recorder and drain agents handle ciphertext only, with a sequence or hash chain;
+  4. source consent, and no public key for confidential sources;
+  5. Gmail send off, drafts only.
