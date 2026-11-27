@@ -1095,3 +1095,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 07:25 UTC: ABP kit v2.3 test fix (451a2df): 122 of 122 here
 
 - test.sh now unsets a caller's `ABP_PIN_KEY_SHA256`; the hooks are unchanged. Re-run in this environment: passed 122, failed 0. My earlier 35 failures were this test defect.
+
+## 2026-11-27 07:27 UTC: Travel's key PR route set out; IaC config gap for Travel
+
+- **The gap:** IaC `policy/key-bootstrap.json` has Travel's `repository_config` all null (no `key_path`), and this home has no Travel pins. Asked cl-6.infra to fill the config and prepare Travel's reviewed pages.yml with the anchor override. I then pin it and `check-commits.mjs` (patch 3's result).
+- **The key PR:**
+  - commit 1, `team/keys.json` only (patch 1), kept alone for S18's bootstrap rule;
+  - commit 2, the two pinned files.
+- **S18 patches 2 and 4:** after the key lands, via cl-6.devops or cl-6.dev on the dev-gate route, with per-sha approval.
