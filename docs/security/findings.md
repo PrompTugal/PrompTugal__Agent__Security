@@ -1039,3 +1039,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 04:08 UTC: website v0.1.2370 post-review: pass
 
 - cl-6.dev's fc9624d5e equals the cleared panel-heading patch. Release commit f00c21eec touches version files only.
+
+## 2026-11-27 04:21 UTC: website v0.1.2371 post-review pass; region-count-number (home ed8f4da): pass
+
+- **v0.1.2371:** cl-6.dev's 7bc496ef9 equals the cleared map-story-counts patch. Release commit ae115e43d touches version files only.
+- **region-count-number:** the count is always a finite number or the summed fallback. Pass, and it closes the nit. cl-6.dev's queue with me is empty; S17 is with Dinis.
