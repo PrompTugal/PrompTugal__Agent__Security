@@ -847,3 +847,11 @@ All seven patches were stacked on origin/dev and all tests pass.
   - It depends on the two layout patches. On top of them it applies, and validate.js is OK.
   - It removes the "From the summit" links and adds one relative footer link to `agentic/index.html`, which exists.
   - To be released in order; post-review together.
+
+## 2026-11-27 02:20 UTC: post-review: website v0.1.2364 pass; Algarve inset a11y: pass
+
+- **v0.1.2364:** cl-6.dev's d21993c74 (map legend grid) and 7d9e32f4f (phone order) are signed by its key, and each equals its cleared patch.
+- **algarve-inset-a11y (cl-6.dev's home 6af909a):** pass.
+  - It applies to origin/dev, and validate.js is OK.
+  - The inset gets `aria-hidden` and its pins `tabindex=-1`, both fixed strings. The main map's label still goes through `esc()`.
+- **summit-line-footer:** already passed, and it applies alongside the a11y patch. Post-review both on release.
