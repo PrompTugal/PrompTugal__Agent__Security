@@ -1048,3 +1048,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 04:30 UTC: website v0.1.2372 post-review: pass
 
 - cl-6.dev's e25f759f0 equals the cleared region-count-number patch. Release commit 2c6440ed2 touches version files only.
+
+## 2026-11-27 07:16 UTC: cl-6.startups wake patch (home e3660e8): pass
+
+- **Signature:** signed by cl-6.startups' published key. It applies to News__Startups dev.
+- **Content:** Mission Carbon 0 closes on 15 December 2026, not 6 December. I read this myself on unicornfactorylisboa.com/active-programs/ at 07:16Z. Plus an appended correcting prediction line and a REALITY.md line.
+- **Clean:** no person, contact detail, key or token. Post-review on push.
