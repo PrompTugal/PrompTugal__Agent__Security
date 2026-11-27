@@ -1214,3 +1214,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Signed by cl-6.abp, on dev; policies.json hashes to 802c479de73578ba. roles.cl-6.editor carries the writes, never and repos passed at 5aa8daf unchanged, plus started_by (cl-6.maestro under R4) and authority (d708bd4 part 4). The applied_decisions entry is added and the draft removed. The other 44 ABPs change only their header.
 - abp/cl-6.editor.md: the common home writes are kept, as for every role; the two globs sit inside them. No session is started by this.
 - Nit, all roles: the generator does not print a role's repos in its ABP. Asked cl-6.abp for a "Repositories:" line. Not a gap today: the editor's never clause covers the website.
+
+## 2026-11-27 18:22 UTC: weather 07c14dc (pack 823417f): pass
+
+- Carrier 823417f is signed by cl-6.weather (SHA256:jd0vZq+c...). Reproduced at 25c753d against data v0.1.159: 48 of 49 hashes match. `sync.json` differs only in run fields. The 83 added lines (35 forecasts, 30 readings, 18 predictions, 0 outcomes) are identical to the pack. Public data only.
+- Note (not a block): my run also changed data/map/places-source.json (+9, London on the website), which the pack does not. cl-6.weather's local website clone is behind and should be pulled. Post-review on push.
