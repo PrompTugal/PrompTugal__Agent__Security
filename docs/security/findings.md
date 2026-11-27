@@ -782,3 +782,11 @@ All seven patches were stacked on origin/dev and all tests pass.
   - check the record's commit signature and `revoked.json` (both marked "Not checked");
   - bump the policy version (nit: still v1.7.8 with a new hash).
 - Post-review the applying commit.
+
+## 2026-11-27 01:28 UTC: post-review of cl-6.abp 1f41434 (London strikes grant applied): content right, three fixes asked
+
+- **1f41434:** signed by cl-6.abp's key. `roles.cl-6.place.london` gains the repository and a `repo_writes` block exactly as I passed it. Not usable until Dinis attaches the repository with push.
+- **Fixes asked:**
+  1. The times are ahead of the clock: "at" 01:35Z and my pass "01:3xZ", when the commit is 01:28:11Z. My passes were at 01:28Z and 01:29Z here.
+  2. The record's commit signature and `revoked.json` are still "not checked". Check both, and take the grant out if either fails.
+  3. Bump the version from 1.7.8.
