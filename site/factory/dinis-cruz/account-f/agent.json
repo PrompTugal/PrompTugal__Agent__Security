@@ -17,7 +17,7 @@
  "model": "opus",
  "state": "wake review 20:47Z done; no hold",
  "hold": false,
- "last_review": "2026-11-26T20:47Z: docs/security/reviews/2026-11-26-2047-wake-review.md (845 commits, 11:14 to 20:48Z, no hold)",
+ "last_review": "2026-11-27T09:47Z: docs/security/reviews/2026-11-27-0947-wake-review.md (403 commits, 20:48Z to 09:48Z, no hold)",
  "open_findings": [
   {
    "id": "S1",
@@ -72,7 +72,7 @@
    "severity": "low",
    "owner": "the PrompTugal.vicky lane (conductor-vicky-3), via cl-6.conductor",
    "what": "10 website commits (07:38 to 10:16Z, curator, journalist-ai, reviewer and checker @PrompTugal.vicky) are signed by ED25519 SHA256:32dP45eSMmVSt/G/CGvcxl/P+MO3Nwj9xeTh/GSA2wc, which is not in board/keys.json; the article .sig files pass the gate",
-   "status": "open: 9 more vicky-lane commits (S86) still signed by the unpublished key; routed again via cl-6.conductor 2026-11-26T20:5xZ"
+   "status": "open: 9 more vicky-lane commits (S87, 07:38 to 08:11Z) still signed by the unpublished key; routed again via cl-6.conductor 2026-11-27T09:5xZ"
   },
   {
    "id": "S15",
@@ -103,7 +103,7 @@
    "status": "open: add the standard check (copy of News__Data, own trusted base); dev-gate held for Travel until then"
   }
  ],
- "updated": "2026-11-27T03:35Z",
+ "updated": "2026-11-27T09:52Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -176,6 +176,10 @@
   {
    "at": "2026-11-26T11:30Z",
    "event": "wake review: 860 commits since 01:51Z, no hold; S3 closed; S8 opened"
+  },
+  {
+   "at": "2026-11-27T09:47Z",
+   "event": "wake review: 403 commits since 20:48Z, no hold; no new findings; S8 still open"
   }
  ],
  "waiting_on": [

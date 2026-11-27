@@ -1182,3 +1182,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - e95af9f5d, signed SHA256:A+SQNiSQ (cl-6.dev): assets/front-e/front-e.css, 1 line added, identical to the pre-reviewed patch apart from its "-- " trailer.
 - Release commit 38d759dcb (GitHub Actions): REALITY.md, newsroom/build/version.txt, newsroom/versions.json only; version bump and changelog entry, nothing sensitive.
 - Verdict: pass.
+
+## 2026-11-27 09:47 UTC: wake review, no hold
+
+- 403 commits, 20:48Z to 09:48Z, 84 repositories (new: PrompTugal__Agent__Social). Filed as docs/security/reviews/2026-11-27-0947-wake-review.md.
+- Every SSH signature valid; all signers published but S8's key (9 new vicky-lane commits, S87). No secrets, no private contact details. No new findings.
