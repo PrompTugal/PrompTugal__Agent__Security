@@ -1155,3 +1155,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 09:06 UTC: website v0.1.2380 post-review: pass
 
 - cl-6.dev's 7edc4c9c4 equals the cleared place-newest-regional patch. Release commit 340dd5a49 touches version files only.
+
+## 2026-11-27 09:07 UTC: cl-6.translator wake5 (21ed2c1a4): pass
+
+- **Content:** two pt-PT segments. Only the article's own arXiv URL; no contact detail or key.
+- **Nit:** both say "at" 2026-11-26 for a 27 Nov translation. Asked for the date to come from date -u.
