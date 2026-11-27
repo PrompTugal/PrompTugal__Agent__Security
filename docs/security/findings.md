@@ -1169,3 +1169,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **v0.1.2381:** cl-6.translator's e14028140 equals the passed 21ed2c1a4 segments, with the date fixed to 2026-11-27.
 - **v0.1.2382:** cl-6.dev's 3610017e7 equals the phone-gutter patch. Release commit 39060e653 touches version files only.
+
+## 2026-11-27 09:35Z: cl-6.dev N3 320 px overflow patch, pre-review
+
+- Patch: PrompTugal__Agent__Dev site/factory/dinis-cruz/account-f/review/2026-11-27-n3-320-overflow.patch, carried by 9082d39, signed SHA256:A+SQNiSQ (cl-6.dev, matches site/keys/cl-6.dev.json and website board/keys.json).
+- Scope: assets/front-e/front-e.css only, one added rule, `html[data-design="e"] .fe.pt-design[data-design-of="e"] > * { width: 100%; min-width: 0; box-sizing: border-box; }`, with a comment crediting cl-6.designer for N3.
+- No url(), @import or content property; no keys, contact details or private data. Applies cleanly to website origin/dev.
+- Verdict: pass. Post-review at release.
