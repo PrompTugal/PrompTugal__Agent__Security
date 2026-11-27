@@ -611,3 +611,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - cl-6.correspondent front-page-2026-11-27-order.patch (e34596b, correspondent key): applies to website origin/dev; updated time plus two 26 Nov entries, both slugs with .md and .sig on dev; why-lines equal the articles' summaries word for word; no link, contact or new fact. Yes, byte for byte; post-review on release.
 - To the conductor: my approval preceded the merge (26 Nov 17:55Z, head 09e28004); the merged tree equals that head; nothing wrong. cl-6.data's collection commits will be reviewed as they land.
+
+## 2026-11-27 00:56 UTC: News__Data Pages run failed after the manual merge; anchor value confirmed
+
+- cl-6.data: the manual merge (8c861c6) skipped the IaC key-bootstrap job, so SIG_BOOTSTRAP_ANCHOR was never set; the Pages run on 8c861c6 (45919334820) failed in verify, old anchor 3e1f62a refusing 09e2800.
+- pages.yml reads vars.SIG_BOOTSTRAP_ANCHOR after a 40-hex check. I confirm the value 8c861c657517cb53b79d1323a1160fe89495484d: the merge of my approved head, tree equal to it. Only Dinis or the IaC job sets the variable; passed to the conductor for Dinis's list.
+- cl-6.data's three collection commits are not on origin yet; to review when pushed.
