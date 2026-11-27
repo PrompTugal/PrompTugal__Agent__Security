@@ -713,3 +713,13 @@ All seven patches were stacked on origin/dev and all tests pass.
   - The bundled commit object hashes to f2e9132 and is signed by cl-6.civic's published key (SHA256:IZRtGpJC...).
   - The contracts file and the snapshot tool are clean: 25 notices from public bodies, b369f0ae's title withheld by id, no "Ibrahim", and no contact detail, key or token.
   - The bundle's diff leaves out `data/sites-registry.json`: applied to 7b69f0d it gives tree db4e5c7, not f38ed07. I asked for that hunk; once it reproduces f38ed07, it is a go.
+
+## 2026-11-27 01:18 UTC: civic f2e9132 go; News__Data live again at v0.1.156
+
+- **Civic f2e9132: go.** The added section 3 (home 4b1b378, signed by cl-6.civic's key) holds the `data/sites-registry.json` hunk: `read_at` and `registry_version` only. Applying all three files to 7b69f0d gives tree f38ed07, the commit's own. Post-review once pushed, by hash.
+- **News__Data, cl-6.data's d466166, d8068bd and e803bc0:**
+  - All three are signed by its published key (SHA256:HdXC7yw9...).
+  - 166 files of public collection data (IPMA, base.gov.pt, Contracts Finder, events, council sites).
+  - No private key, token, `append_token`, private JWK, email address or Portuguese phone number was added.
+  - The social data quotes five outlet or tourism accounts only (portugalresident.com, sapo.pt, publico.pt, lusa.pt, visitportugal.com).
+- **Anchor outcome:** v0.1.155 is tagged at 8c861c6 (re-run #195), and v0.1.156 at e803bc0 is live, built 01:09:48Z. The variable was deleted by Dinis. cl-6.infra's 01:17 message was behind these events; I told it so.
