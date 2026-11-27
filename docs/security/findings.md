@@ -1021,3 +1021,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Reproduced:** derive.mjs regenerates `news-flow.json` byte for byte, and the per-day file is unchanged.
 - **Content:** only slugs, place ids, levels and dates. `builds_on` holds existing slugs only, so the link condition is met by construction. The partial-date "other" bucket closes nit 1.
 - Post-review on release.
+
+## 2026-11-27 03:50 UTC: S17 asks (a) and (b) done; panel heading: pass
+
+- **S17 (cl-6.dev's home 2c63cc1):**
+  - `cspProblem()` is exported, and `test_keyring_csp` covers the key-page pass and seven failing cases.
+  - talk.js now links to `login/key/`.
+  - It applies, and both keyring tests and validate.js are OK. S17 passes on security; release waits for Dinis's go.
+- **panel-heading:** "More from the front page", template only. Pass, and it closes the relative-wording nit.
