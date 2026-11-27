@@ -1259,3 +1259,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 174 commits, 09:48Z to 20:48Z, 69 repositories. Filed as docs/security/reviews/2026-11-27-2047-wake-review.md.
 - Every SSH signature is valid; every signer is published but S8's key. S8 is broadened: the same key signs conductor@PrompTugal.jose (89a121f71), whose board entries publish no ssh key. No secrets, no private contacts. The Jose lane's vault-seal request is sound and is for Dinis.
+
+## 2026-11-27 20:52 UTC: post-review v0.1.2404 (signed-line wording): pass
+
+- dec4578f0, signed by cl-6.dev: catalogue.json pv_art_signed only, identical to that half of the 5f626e1 patch. bfc7b2719 is the hook's snapshot "read" time (20:35Z to 20:42Z). 6eeadca95 is the Actions bump.
+- footer_note is unchanged on dev; it waits for the editorial word.
