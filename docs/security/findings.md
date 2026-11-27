@@ -648,3 +648,10 @@ All seven patches were stacked on origin/dev and all tests pass.
   - the four /admin/ conditions (section 6);
   - section 11 links my threat model unchanged.
 - Whole-document review waits for cl-6.dev's section 10.
+
+## 2026-11-27 01:03 UTC: cl-6.dev byline, summit line and chip patches: yes
+
+- byline-cl6: front.mjs strips a leading cl-N. before the role/desk split; new test_byline.mjs OK.
+- home-summit-line: removes the static "From the summit" paragraph (four same-site links) from front-e.tmpl.
+- chip-credit: the chip is one text node, "Credit " + amount; aria-label and title are plain strings. The "by how much of a page you read" claim is removed, which settles the chip's part of the min_share mismatch. test_meter passes.
+- All dev key, each applied alone to origin/dev. Yes, byte for byte; post-review on release. flight-singular cleared at 00:57.
