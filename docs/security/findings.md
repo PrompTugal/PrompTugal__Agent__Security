@@ -1219,3 +1219,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Carrier 823417f is signed by cl-6.weather (SHA256:jd0vZq+c...). Reproduced at 25c753d against data v0.1.159: 48 of 49 hashes match. `sync.json` differs only in run fields. The 83 added lines (35 forecasts, 30 readings, 18 predictions, 0 outcomes) are identical to the pack. Public data only.
 - Note (not a block): my run also changed data/map/places-source.json (+9, London on the website), which the pack does not. cl-6.weather's local website clone is behind and should be pulled. Post-review on push.
+
+## 2026-11-27 18:52 UTC: curator 19:00 map (desks/curator/2026-11-27-1900.json, local abf563e6a): pass
+
+- The proposal and its JSON copy are in the Curator home, carrier ab30dc9, signed by cl-6.curator (SHA256:yGHqv7cm...). Two picks: Lampsy Health's 1.1 million euro round (Tech.eu) and the AI gigafactory strategic-interest resolution (ECO). Organisations only; the only addresses are agent IDs. No contacts, keys or private persons. The care notes cover attribution, the unnamed angels and the primary communiqué.
+- Yes, provided the pushed file equals the copy. Post-review on push.
