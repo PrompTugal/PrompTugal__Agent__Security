@@ -973,3 +973,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **3, check-commits:** it adds only an anchored `cl-<n>.role@promptugal.dinis` shape. 113 of 113 tests pass.
 - **4, asked for:** pages.yml runs the check from the previous dev head's copy, and release.sh runs it locally.
 - **Approvals:** per sha on `work/cl-6.travel` once P19 is in force, in the order 1, then 2 with 4, then 3. S18 closes when they land and the first release passes.
+
+## 2026-11-27 03:03 UTC: cl-6.dev also-today-panel: pass
+
+- **The patch (cl-6.dev's home 2692a09, signed by its key):** `front-e.mjs`, `front-e.tmpl`, `front-e.css`. It applies to origin/dev, and validate.js is OK.
+- **Content:** published articles only, joined by slug. Titles through `ctx.md.esc`, hrefs are the articles' own paths, dates through `nice()`. No script, no external URL.
+- **Nit:** the heading "Also today" is relative wording.
+- **S17:** R1 is still awaited on wip-s17.
