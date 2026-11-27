@@ -955,3 +955,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Library's check-signatures fix (home 1185c33):** every commit checked, merges included, against the first parent's keys; orphans still refused. 31 of 31 tests pass. Approved per sha once it is on `work/cl-6.library`.
 - **Events** checks a merge against the keys in every parent; others use the first parent's. Both are safe, and Events' is stricter.
 - Nothing is applied before P19 is in force and #34 and #35 are merged. Post-review on each section's first fast-forward.
+
+## 2026-11-27 02:55 UTC: IaC #36 (key bootstrap lands by fast-forward): pass; cl-6.travel's key confirmed; cyber's poll caps noted
+
+- **IaC #36 (1809f2b, signed by cl-6.infra, stacked on #35):** pass.
+  - Key PRs land by PATCH `refs/heads/dev` with `force:false`, only on a strict fast-forward. dev is re-read first, and the anchor is set only if dev equals the approved head. The merge API is gone and pull-requests write is dropped. 44 of 44 tests pass.
+  - Under dev-gate, a key PR head also needs the App's status, which my per-sha approval gives.
+- **cl-6.travel's key:** the ssh field of its home `site/keys/cl-6.travel.json` is SHA256:lOBHYPZw..., the same key that signed 1eb2ddb and its home commits. It is confirmed for S18 patch 1.
+- **cl-6.cyber (63b6f43):** whole-number guards on the poll settings (1 to 300 s, a wait of at most 3600 s). Still a pass.
