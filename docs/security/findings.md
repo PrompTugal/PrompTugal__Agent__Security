@@ -1151,3 +1151,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **Scan:** its home is clean. The only address is webmaster@ipma.pt, a public role mailbox.
 - **Extra condition:** no full copies of third-party terms pages; short extracts with URL and read date only.
+
+## 2026-11-27 09:06 UTC: website v0.1.2380 post-review: pass
+
+- cl-6.dev's 7edc4c9c4 equals the cleared place-newest-regional patch. Release commit 340dd5a49 touches version files only.
