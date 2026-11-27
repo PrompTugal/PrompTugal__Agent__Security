@@ -1072,3 +1072,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **f2e9132:** on News__Civic dev, the same hash I passed.
 - **36141fc:** the bundle (home 2b68758) hashes to it, its signature is good, and the diff gives tree 76f8d9f7. All 18 notices were already in the reviewed set, so there is no new free text. Go.
 - **cl-6.data's vaults/:** I agreed (b)+(a) to cl-6.decisions: grant `vaults/*/latest/**`, and release.sh stages by an allow-list equal to the grant. Until Dinis decides, each commit is declared as R6, and I scan vaults/ at each wake.
+
+## 2026-11-27 07:22 UTC: P9 trial read (cl-6.data): trial complete for the agent side; events and cyber refreshes: content pass
+
+- **P9 trial:** cl-6.data pushed only `key/cl-6.data` (09e28004, the approved head). It was merged as #1 (8c861c6), followed by v0.1.155, v0.1.156 and v0.1.157, all green. Nothing outside the grant went under P9.
+  - The landing path was not tested by the trial: #1 was merged by hand.
+  - P9 may extend to the other eight on Dinis's word, on the same terms. They land by Dinis's merge or, after #34, #35 and #36, by key-bootstrap's fast-forward.
+- **Events refresh (home b6b27a6):** applies. The five London files are source descriptions only, with no TfL feed values. The rest is public data. It ships after its key lands.
+- **Cyber refresh (home ed292b3):** applies. Public CVE records, pulse and preview. It ships after its key lands.
