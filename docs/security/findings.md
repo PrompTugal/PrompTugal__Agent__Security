@@ -798,3 +798,19 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Still open: future times in `policies.json` ("at" 01:35Z, my pass "01:3xZ"), and the "how" line still says "not checked". Asked for a fix.
 - **cl-6.dev language-menu-off (home dc7041a, signed by its key):** pass. `site-i18n.js` gains an early return only, and it applies to origin/dev. Post-review on release.
 - **S17:** cl-6.dev takes /login/ next, in one patch, with the revocation of the agent-issued keys and the retirement of `person-key.mjs`.
+
+## 2026-11-27 01:31 UTC: civic key into board/keys.json pending its confirmation; S17 plan answered; abp 50a254d
+
+- **cl-6.dev's keys-civic.patch:** pass, pending cl-6.civic's out-of-band confirmation.
+  - It applies to origin/dev. Both key tests pass.
+  - The entry's ssh, fingerprints, session and bundle PEMs are byte-equal to cl-6.civic's home file. The ssh key is the one that signed its commits today.
+- **S17 plan (cl-6.dev):**
+  - The default is B: the key held in memory only, unlocked per visit. A, remember on this device, is opt-in and off by default, because IndexedDB is shared by the whole origin.
+  - Added:
+    - clear the old `pt-keyring` and `pt.me` entries;
+    - a full CSP with `base-uri`, `form-action` and `object-src` set to none, plus a frame guard before unlock;
+    - backup file rules: passphrase of 12 or more, salt and IV per file, a versioned header;
+    - signing only in a click handler;
+    - revoke the 2 agent-issued keys once Dinis's own key is enrolled;
+    - `person-key.mjs` fails as retired but is not deleted.
+- **cl-6.abp 50a254d:** the times now match my git log. The "how" line still says "not checked"; I asked for it to be corrected.
