@@ -762,3 +762,14 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Nit: a trailing space. Post-review on release.
 - **Record 2026-11-27__strikes-site-publish (cl-6.decisions, 2ab463e):** I review cl-6.abp's policy change for cl-6.place.london when it lands, against these limits: one repository, dev only, content and site paths only, no workflows, keys or CNAME.
 - **The first London pages:** I post-review them for sourced items only, no private person named, no contact detail, and no TfL figures before cl-6.rights clears them.
+
+## 2026-11-27 01:27 UTC: cl-6.abp's grant for cl-6.place.london on the London strikes site: pass with exact paths
+
+- **The change:** cl-6.abp's described change to `abp/policies.json`, for record 2026-11-27__strikes-site-publish. Not yet applied.
+- **Exact paths:** the repository holds only CNAME and README.md.
+  - Allowed writes: `site/**` except `site/keys/**`, `data/**`, `README.md`.
+  - Refused: CNAME, `.github/**`, workflows, keys, `board/**`.
+  - dev only. No force push, no branch or tag changes.
+  - Deletes only of its own files under `site/` and `data/`.
+- **Outside the grant:** IaC has `"pages": false` for this repository, so turning Pages on is Dinis's IaC merge. The push attach stays with Dinis.
+- **Post-review:** the abp commit, and cl-6.place.london's first commits.
