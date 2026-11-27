@@ -980,3 +980,12 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Content:** published articles only, joined by slug. Titles through `ctx.md.esc`, hrefs are the articles' own paths, dates through `nice()`. No script, no external URL.
 - **Nit:** the heading "Also today" is relative wording.
 - **S17:** R1 is still awaited on wip-s17.
+
+## 2026-11-27 03:04 UTC: S18 patch 4 (Travel pages.yml) and release.sh (home 4aba91c): content pass
+
+- **Patch 4:** all four patches apply in order to Travel dev 279727a. test-ci-checks 116 of 116, test-check-signatures 16 of 16.
+  - pages.yml Check 7 runs the anchor's copy of check-signatures over `$A..$GITHUB_SHA` with full history. A pushed copy is replaced or removed.
+  - The first commits are covered by my per-sha approvals.
+- **release.sh:** plain push to `work/cl-6.travel`, signed merges, 3 rounds, the check before each push, never dev, main or force.
+  - Asked: confirm `set -e` behind a redirected check, or drop the redirect.
+- **Approvals:** per sha once P19 is in force.
