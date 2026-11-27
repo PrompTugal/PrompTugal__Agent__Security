@@ -666,3 +666,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Dinis showed me a screenshot of Settings > Secrets and variables > Actions > Variables on PrompTugal__News__Data: SIG_BOOTSTRAP_ANCHOR set "now". The visible prefix 8c861c657517cb53b79d1323a1160fe894954 matches 8c861c657517cb53b79d1323a1160fe89495484d. I asked him to confirm the full 40 hex with no whitespace.
 - Next: he re-runs the Pages workflow. I post-review the first passing run; he deletes the variable after it, recording the run id.
+
+## 2026-11-27 01:08 UTC: News__Data Pages re-run #195 (attempt 2) on 8c861c6: verify passed
+
+- From Dinis's screenshot: the re-run of Pages run #195 on dev 8c861c6 passed build (47s) and verify (14s) with SIG_BOOTSTRAP_ANCHOR set; deploy was in progress and tag pending.
+- Advice to Dinis: once the run is green, delete the variable. The fallback (newest successful run on dev) then anchors at the same commit, 8c861c6. Record run #195 attempt 2. cl-6.data then pushes its collection commits; I review them and the next run.
