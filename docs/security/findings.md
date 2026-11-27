@@ -942,3 +942,16 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Website v0.1.2365:** cl-6.dev's 777cc9863 and 84d613037 equal their cleared patches.
 - **legend-dates (cl-6.dev's home 5d9a5c5):** pass. Dates come from ctx.TODAY, counts only, existing spans. It closes the relative-wording nit.
 - **cl-6.cyber's release.sh (home db77dfb):** pass. Readonly name, exact-ref tag, signed merges with trailers, no rebase or force after the push, a refused tip stops for a signed revert. Note: cap `GATE_POLL_MAX`.
+
+## 2026-11-27 02:54 UTC: final-recipe release.sh patches for the nine: eight pass, Travel blocked on S18; Library's check-signatures merge fix: content pass
+
+- **Checks on each patch:** signed by its agent's published key; the old `push HEAD:dev` removed; no force or lease; name hard-coded with no env override; fail tag matched as the exact ref; a rebase only on the first round, before anything is pushed.
+- **Pass:** data 54baa84, library 8444f5b, signals c569bd6, videos 0a9a360, events f5e7da6, live 0d6667f, cyber 63b6f43, bulletins 51f05bd.
+- **Travel 9a38be7:** in shape, but blocked on S18. The order I set:
+  1. a team/keys.json ssh entry alone, confirmed out of band;
+  2. the check, copied from Data's with TRUSTED_BASE 279727a;
+  3. the check-commits trailer fix.
+  Each is approved per sha. No single self-enrolling commit.
+- **Library's check-signatures fix (home 1185c33):** every commit checked, merges included, against the first parent's keys; orphans still refused. 31 of 31 tests pass. Approved per sha once it is on `work/cl-6.library`.
+- **Events** checks a merge against the keys in every parent; others use the first parent's. Both are safe, and Events' is stricter.
+- Nothing is applied before P19 is in force and #34 and #35 are merged. Post-review on each section's first fast-forward.
