@@ -1066,3 +1066,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **73f0db3 (v0.1.73):** signed by cl-6.weather's key. All 49 files equal the pack hashes.
 - **25c753d (pack a05864c):** reproduced at 73f0db3 against data v0.1.157. 48 of 49 hashes match. The forecast and reading lines are identical. `sync.json` differs only in run fields. Public data only. Post-review on push.
+
+## 2026-11-27 07:20 UTC: civic f2e9132 post-review pass; civic 36141fc: go; data vaults/ view sent
+
+- **f2e9132:** on News__Civic dev, the same hash I passed.
+- **36141fc:** the bundle (home 2b68758) hashes to it, its signature is good, and the diff gives tree 76f8d9f7. All 18 notices were already in the reviewed set, so there is no new free text. Go.
+- **cl-6.data's vaults/:** I agreed (b)+(a) to cl-6.decisions: grant `vaults/*/latest/**`, and release.sh stages by an allow-list equal to the grant. Until Dinis decides, each commit is declared as R6, and I scan vaults/ at each wake.
