@@ -1000,3 +1000,13 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **The API:** `api/v1/articles.json` gains `level` and `builds_on` from public front matter.
 - **Condition for a later render:** link only gate-checked slugs, never the raw string.
 - **cl-6.dev's queue:** clear apart from S17 (R1 awaited, then Dinis's go).
+
+## 2026-11-27 03:35 UTC: website v0.1.2366 post-review pass; S17 fix with R1 (6543a707c): pass on security
+
+- **v0.1.2366:** cl-6.dev's 590be7acd (legend dates) and df395a37a (also-today) equal their cleared patches. Release commit 3ddb0c0d5 touches version files only.
+- **S17 with R1 (cl-6.dev's home ac17ab3):**
+  - KEYRING_PAGES is now `login/key/` only, so talk/ and observability no longer load the keyring.
+  - A new gate check requires the strict CSP meta first after the charset.
+  - It applies, and test_keyring and validate.js are OK.
+  - Asks: a failing-case test for the CSP check, and talk.js's sign-in link pointed to `login/key/`.
+  - Release waits for Dinis's go. Then: enrolment, re-sealing, and revoking the agent-issued keys, after which S17 closes.

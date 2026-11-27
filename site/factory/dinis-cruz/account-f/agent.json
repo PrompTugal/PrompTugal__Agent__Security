@@ -93,7 +93,7 @@
    "severity": "medium",
    "owner": "cl-6.dev (Dinis decides via cl-6.decisions@dinis)",
    "what": "live /login/: the person key (agent-issued by newsroom/tools/person-key.mjs, whose issuing session keeps the private half) is held indefinitely in IndexedDB as non-extractable keys usable by any script on the origin; no CSP",
-   "status": "open: patch 54f9959fe (cl-6.dev home 71ada00) reviewed 2026-11-27T02:49Z: design right; required R1 = same CSP and frame guard on talk/ and newsroom/observability/ (they load keyring.js and sign/open); release waits for Dinis via cl-6.decisions (it stops his drain until his browser-made key is enrolled and the envelope re-sealed); then revoke the two agent-issued entries"
+   "status": "open: fix passed on security 2026-11-27T03:35Z (cl-6.dev home ac17ab3, website 6543a707c: browser-made key, memory by default, keyring only on /login/key/ with a strict CSP and a gate check); small asks: a failing-case CSP test, talk sign-in link to login/key/. Release waits for Dinis via cl-6.decisions (it stops his drain until his own key is enrolled and the envelope re-sealed); then revoke the two agent-issued entries and close"
   },
   {
    "id": "S18",
@@ -103,7 +103,7 @@
    "status": "open: add the standard check (copy of News__Data, own trusted base); dev-gate held for Travel until then"
   }
  ],
- "updated": "2026-11-27T02:49Z",
+ "updated": "2026-11-27T03:35Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
