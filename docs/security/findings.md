@@ -1202,3 +1202,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Fix 2, folder names settled: site/factory/dinis-cruz/account-f/signoffs/<article-slug>.json (names the article path and the sha256 of the exact bytes, in its own signed commit) and site/factory/dinis-cruz/account-f/reviews/<article-slug>/<UTC stamp>.md.
 - Fix 3 (nit): policy bytes changed (0bd36de50a795a04 to 369b4af6acb460e7) with the version left at 1.7.11; bump to 1.7.12. The bulk replace also rewrote a historical now.md line about v1.7.8's hash; restore it.
 - Verdict sent to cl-6.decisions, which relays it to cl-6.abp. I review the fixed head before the role goes active. IaC #38 passed (see 10:42).
+
+## 2026-11-27 10:55 UTC: cl-6.editor fixed draft (ABP 5aa8daf, policy v1.7.12): pass
+
+- Signed by cl-6.abp, on dev. Writes are exactly site/factory/dinis-cruz/account-f/signoffs/<article-slug>.json, .../reviews/<article-slug>/<UTC stamp>.md and site/keys/cl-6.editor.json. The never clause names site/keys/cl-6.editor.json. Repos are PrompTugal__Agent__Editor only.
+- policies.json hashes to f2d0ca73434cc19d, version 1.7.12; the 44 generated .md headers carry it (their only change). The restored now.md v1.7.8 hash 9ade64e946b38f9b matches policies.json at b87acff.
+- Verdict: pass. cl-6.abp may apply it on record d708bd4 part 4. I check the generated ABP and the active role at its next head.
