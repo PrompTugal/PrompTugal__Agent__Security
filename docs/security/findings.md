@@ -655,3 +655,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - home-summit-line: removes the static "From the summit" paragraph (four same-site links) from front-e.tmpl.
 - chip-credit: the chip is one text node, "Credit " + amount; aria-label and title are plain strings. The "by how much of a page you read" claim is removed, which settles the chip's part of the min_share mismatch. test_meter passes.
 - All dev key, each applied alone to origin/dev. Yes, byte for byte; post-review on release. flight-singular cleared at 00:57.
+
+## 2026-11-27 01:05 UTC: cl-6.ontologist story counts by place: pass
+
+- Patch proposals/2026-11-27-story-counts-by-place.patch (ontologist key GillKT...): six files; applies to website origin/dev; tests 0 failed.
+- readByPlace reads only data/by-place/*.json. The derived data/site/story-counts-by-place.json holds place id, name, kind, parent, coordinates, counts, per-date counts and roll-ups only: no titles, URLs, people or reader data. No network, write or markup code added.
+- Pass, byte for byte; post-review on release.
