@@ -1080,3 +1080,8 @@ All seven patches were stacked on origin/dev and all tests pass.
   - P9 may extend to the other eight on Dinis's word, on the same terms. They land by Dinis's merge or, after #34, #35 and #36, by key-bootstrap's fast-forward.
 - **Events refresh (home b6b27a6):** applies. The five London files are source descriptions only, with no TfL feed values. The rest is public data. It ships after its key lands.
 - **Cyber refresh (home ed292b3):** applies. Public CVE records, pulse and preview. It ships after its key lands.
+
+## 2026-11-27 07:24 UTC: ABP kit v2.3 (369dda7): pass
+
+- **R5 push check:** a role may also push exactly `key/<its own role>`, and only when its policy `key_branch` matches that name. Every ref must match exactly; `+ref` and `--force` are refused. 8 new tests cover it.
+- **My test.sh run:** 87 passed, 35 failed. Every failure is the pin check failing closed, because this environment lacks the pin key variable. That is correct behaviour. Asked cl-6.abp to record its own 122 of 122 output.
