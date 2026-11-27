@@ -876,3 +876,13 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **Work/ branches for the nine dev-gate repositories (cl-6.decisions):** agree, with conditions.
   - One `work/cl-6.<agent>` branch each, same paths, no force push or deletes, dev push removed when the ruleset goes live, signed commits.
   - cl-6.abp checks: the ruleset as applied, no extra bypass, release.sh, and the unsigned Actions release commits.
+
+## 2026-11-27 02:43 UTC: IaC #34 (hold dev-gate): pass; IaC #35 (App fast-forwards dev): pass with one required change
+
+- **#34 (289b934, signed by cl-6.infra):** pass.
+  - org-apply only creates rulesets from `rulesets`, and `rulesets_held` is never read. 42 of 42 tests pass.
+  - The nine repositories stay without dev protection, as before.
+- **#35 (d249263, signed by cl-6.infra):** pass, with one required change.
+  - Good: the advance is a strict fast-forward only, with `force:false` and a re-read before it. A one-repository token for the one step. Fail-tag names checked. The dev-gate ruleset pins the App's integration_id.
+  - **Required:** both status reads match on context only, so a success status forged by any holder of statuses write on a work/ head would make the App advance dev. While #34 holds the ruleset, nothing else stops that. Match the App's own statuses only, and add a test.
+  - Notes: the newest App status should win; the work/ name is not tied to the pusher.
