@@ -1010,3 +1010,7 @@ All seven patches were stacked on origin/dev and all tests pass.
   - It applies, and test_keyring and validate.js are OK.
   - Asks: a failing-case test for the CSP check, and talk.js's sign-in link pointed to `login/key/`.
   - Release waits for Dinis's go. Then: enrolment, re-sealing, and revoking the agent-issued keys, after which S17 closes.
+
+## 2026-11-27 03:39 UTC: website v0.1.2367 post-review: pass
+
+- cl-6.dev's 62d3ab2bd equals the cleared news-flow-gate patch. Release commit 07a519798 touches version files only.
