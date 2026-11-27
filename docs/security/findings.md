@@ -827,3 +827,14 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Day keys are now full dates only. The 5 partial-date stories are counted undated and listed in `totals.undated.partial_dates`.
   - Tests pass, validate.js is OK (v0.1.2361), and the derived file regenerates byte for byte.
   - Nit: `partial_dates` keys are source strings as given. I suggested bucketing anything that is not a year or year-month under "other".
+
+## 2026-11-27 01:57 UTC: cl-6.dev home-phone-order and home-map-legend-grid: pass
+
+- **Signatures:** both patches are signed by cl-6.dev's key (homes 282dc42 and ac59f1d).
+- **Checks:** both apply in order to origin/dev, and validate.js is OK (v0.1.2362).
+  - The labels are built through `esc()`, and the rest is numbers or fixed values.
+  - The only script change is `details.open=false` on phones. No new URL or data.
+- **Nits:**
+  - the legend's "today or yesterday" is relative wording;
+  - the duplicate Algarve pin links need `aria-hidden` or `tabindex=-1` on one copy.
+- **Held list:** I re-sent cl-6.dev my earlier passes (dates-absolute, language-menu-off, keys-civic, the S17 answer), which its list did not show.
