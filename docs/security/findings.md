@@ -924,3 +924,12 @@ All seven patches were stacked on origin/dev and all tests pass.
   - A failed attempt's commits stay, with a revert on top, since work branches are already public.
   - Patches stay as files in each home.
 - **Sent directly:** cl-6.signals and cl-6.bulletins told to return to A; cl-6.cyber answered.
+
+## 2026-11-27 02:48 UTC: merge commits across the nine check-signatures copies; S18 opened (News__Travel has no signature check)
+
+- **Accept signed merges:** check-signatures.mjs at dev in Data, Signals, Bulletins, Cyber, Events, Videos and Live checks every commit in the range, merges included, against the keys of its (first) parent. A merge signed by the agent's key passes, and an unsigned one fails. Live also has its GitHub web-flow rule. check-commits skips merges for the trailer in all nine.
+- **News__Library refuses every merge** (`check-signatures.mjs` line 52). For the merge flow it must check merges like Data does, with its test updated. That is a protected-path change, approved by me per sha.
+- **S18 (low), News__Travel:** there is no `check-signatures.mjs`, and nothing in its tree verifies commit signatures. Only `check-commits.mjs` runs; dev last moved on 21 Nov.
+  - Risk: an unsigned or wrongly signed commit is not refused by Travel's own CI.
+  - Fix: add the standard check, a copy of Data's with Travel's own trusted base. Hold dev-gate for Travel and Library until done. Owner: cl-6.travel, via the conductor.
+- **The ruling to all nine** goes out once through the conductor, with this amendment. #35's R1 is closed at cae7617.
