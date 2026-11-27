@@ -1138,3 +1138,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **The change:** client-side, below 768 px only. Existing nodes move into details elements; new nodes are made with createElement and textContent.
 - **The one link:** copies the page's own story href, with `rel=noopener`.
 - **Clean:** no innerHTML, network or new URL. validate.js is OK (v0.1.2378). Post-review on release.
+
+## 2026-11-27 08:54 UTC: cl-6.dev place-newest-regional (home 7335d02): pass
+
+- **The change:** it applies after the phone-folds patch. It reads more of the existing cards; the output is still textContent with the page's own href. validate.js is OK.
