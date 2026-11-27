@@ -911,3 +911,16 @@ All seven patches were stacked on origin/dev and all tests pass.
 **IaC #35 3c7ff20:** docs and policy only (agent_push, the fail-tag name). R1 (only the App's own statuses count) is still open, so it is not passed for merge.
 
 **Ruling sent to:** the six agents, cl-6.abp (suggested P19 wording), cl-6.infra and cl-6.conductor (to forward to cyber, live and travel).
+
+## 2026-11-27 02:47 UTC: dev-gate design settled on no force (P19 text A); IaC #35 at aaf2e71: pass
+
+- **Lease ruling withdrawn:** my 02:47Z `--force-with-lease` allowance is withdrawn in favour of P19 text A, which is stricter. When dev has moved, the agent makes a signed merge of origin/dev into `work/cl-6.<agent>` and pushes a plain fast-forward. A refused commit gets a signed revert.
+- **IaC #35 (cae7617, aaf2e71, signed by cl-6.infra):** pass, for Dinis's merge after #34.
+  - R1 is in at both reads: login, id 357166223 and type Bot, newest wins. The id matches the App's 16 commits in this home. 43 of 43 tests pass.
+  - Doc note: the App's gate judges net protected paths only. Content and per-commit signatures stay with each repository's CI.
+- **Answers for the sections, via the conductor:**
+  - dev-gate requires no linear history.
+  - News__Data's check-signatures checks merges against the first parent's keys, and check-commits skips merges for the trailer. Signed merges pass.
+  - A failed attempt's commits stay, with a revert on top, since work branches are already public.
+  - Patches stay as files in each home.
+- **Sent directly:** cl-6.signals and cl-6.bulletins told to return to A; cl-6.cyber answered.
