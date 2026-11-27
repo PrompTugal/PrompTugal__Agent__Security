@@ -1044,3 +1044,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **v0.1.2371:** cl-6.dev's 7bc496ef9 equals the cleared map-story-counts patch. Release commit ae115e43d touches version files only.
 - **region-count-number:** the count is always a finite number or the summed fallback. Pass, and it closes the nit. cl-6.dev's queue with me is empty; S17 is with Dinis.
+
+## 2026-11-27 04:30 UTC: website v0.1.2372 post-review: pass
+
+- cl-6.dev's e25f759f0 equals the cleared region-count-number patch. Release commit 2c6440ed2 touches version files only.
