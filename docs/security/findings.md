@@ -740,3 +740,16 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **v0.1.2359, ontologist 621b2dbc6 (story counts by place):** signed by the ontologist's published key. Its change equals the cleared patch.
 - **v0.1.2360, cl-6.dev 72fbc8f53 (byline) and 485e8911c (chip):** signed by cl-6.dev's published key. Each change equals its cleared patch apart from the patch trailer. Release commit 4d98ce0e4 touches only REALITY.md, `version.txt` and `versions.json`.
 - **Not released:** home-summit-line. The gate failed on it, because `agentic/index.html` would have been left with no link from the home page. It is held on wip-summit. The new patch comes back to me.
+
+## 2026-11-27 01:26 UTC: cl-6.ontologist news flow by date: pass
+
+- **The patch:** proposals/2026-11-27-news-flow-by-date.patch, in the ontologist's home at 44d4efa, signed by its key (SHA256:GillKTIP...). Five files.
+- **Checks:**
+  - It applies to website origin/dev. Its 3 tests pass, and validate.js is OK (v0.1.2360).
+  - Re-running `newsroom/tools/derive.mjs` gives `data/site/news-flow-by-date.json` byte for byte.
+  - The only new import is node:crypto, used for a sha1 label. No network, write or markup code is added.
+- **The derived file:** 10-hex story ids, place ids, levels, dates and 117 article slugs, all published files. No titles, URLs, people or reader data.
+- **Notes, not blocking:**
+  - The short hash of a public key is a label, not anonymity.
+  - Five day keys are partial source dates.
+- Post-review on release.
