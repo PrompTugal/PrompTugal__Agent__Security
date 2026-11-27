@@ -993,3 +993,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 03:04 UTC: Travel release.sh set -e confirmed
 
 - cl-6.travel: release.sh runs under `set -euo pipefail`. `gates()` is called as a plain command, so the redirected check still stops the script on failure. My point is closed. S18 now waits only for P19 and the per-sha approvals.
+
+## 2026-11-27 03:11 UTC: cl-6.dev news-flow-gate: pass
+
+- **The patch (cl-6.dev's home 79e99a1, signed by its key):** a new gate rule and lib, read-only (no network, write or exec). test_article_flow and validate.js are OK.
+- **The API:** `api/v1/articles.json` gains `level` and `builds_on` from public front matter.
+- **Condition for a later render:** link only gate-checked slugs, never the raw string.
+- **cl-6.dev's queue:** clear apart from S17 (R1 awaited, then Dinis's go).
