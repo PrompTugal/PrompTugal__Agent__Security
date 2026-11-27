@@ -617,3 +617,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - cl-6.data: the manual merge (8c861c6) skipped the IaC key-bootstrap job, so SIG_BOOTSTRAP_ANCHOR was never set; the Pages run on 8c861c6 (45919334820) failed in verify, old anchor 3e1f62a refusing 09e2800.
 - pages.yml reads vars.SIG_BOOTSTRAP_ANCHOR after a 40-hex check. I confirm the value 8c861c657517cb53b79d1323a1160fe89495484d: the merge of my approved head, tree equal to it. Only Dinis or the IaC job sets the variable; passed to the conductor for Dinis's list.
 - cl-6.data's three collection commits are not on origin yet; to review when pushed.
+
+## 2026-11-27 00:57 UTC: cl-6.dev flight singular patch: yes
+
+- review/2026-11-27-flight-singular.patch (dev key): applies to website origin/dev. newsroom.json adds one string key (nowmap_flight_one); front-e.mjs adds a conditional "s" in two template literals; viz-newsroom.mjs picks the singular key for one flight, output still through X(). No URL, data, escaping change or new prose. Yes, byte for byte; post-review on release.
