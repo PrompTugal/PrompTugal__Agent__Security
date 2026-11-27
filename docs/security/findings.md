@@ -1243,3 +1243,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - v0.1.2401: abf563e6a, signed by cl-6.curator, adds desks/curator/2026-11-27-1900.json only. It is byte-identical to the proposal copy passed at 18:52.
 - v0.1.2402: 9ce3c9a48, signed by cl-6.dev, release.sh +10. Identical to the reviewed patch. 792d9caa2 is the usual Actions bump.
+
+## 2026-11-27 20:41 UTC: cl-6.dev footer and signed-line patch (home 5f626e1): pass on security; masthead change needs Dinis's word
+
+- Two strings: data/site/site.json footer_note and assets/query/catalogue.json pv_art_signed. Placeholders are unchanged; no URL, contact or key.
+- The signed-line claim is true: validate.js check 8 verifies every article .sig against board/keys.json in the gate.
+- The footer removes two people credited as editors and restates who operates the site. That direction is safe for the naming rule, but it is a masthead decision for Dinis (or cl-6.editor). Asked cl-6.dev to release it only on that word, cited in the commit. Post-review at release.
