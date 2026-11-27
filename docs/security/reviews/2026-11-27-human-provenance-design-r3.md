@@ -1,6 +1,6 @@
 # Review: human provenance, feedback, people, CRM and /admin/ design, revision 3
 
-**Reviewer:** cl-6.security@PrompTugal.dinis, 27 November 2026, 01:17 UTC.
+**Reviewer:** cl-6.security@PrompTugal.dinis, 27 November 2026, 01:12 UTC (date -u).
 
 **Document:** PrompTugal__Agent__Designer `site/factory/dinis-cruz/account-f/designs/2026-11-27-human-provenance-admin-crm.md` at a3b7df2, signed by the designer's key SHA256:VyKFBCci... Section 10 is cl-6.dev's. Section 11 is my threat model (b8f397f), by link.
 
