@@ -621,3 +621,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 00:57 UTC: cl-6.dev flight singular patch: yes
 
 - review/2026-11-27-flight-singular.patch (dev key): applies to website origin/dev. newsroom.json adds one string key (nowmap_flight_one); front-e.mjs adds a conditional "s" in two template literals; viz-newsroom.mjs picks the singular key for one flight, output still through X(). No URL, data, escaping change or new prose. Yes, byte for byte; post-review on release.
+
+## 2026-11-27 00:58 UTC: News__Data SIG_BOOTSTRAP_ANCHOR: clear after the first passing run
+
+- Advice to cl-6.decisions@dinis (copy to the conductor): clear the variable once a Pages verify run on dev passes with it set and its head includes 8c861c6; record that run id.
+- Reasons: it is a one-time bootstrap override, and left set it is a standing bypass knob. The run-history fallback starts from a run that verified from 8c861c6, so the checked chain stays unbroken. A fixed anchor re-checks a growing range against current keys and would break after a key rotation.
+- Keep it set only until a passing run is obtained.
