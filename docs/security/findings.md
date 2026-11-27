@@ -1176,3 +1176,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Scope: assets/front-e/front-e.css only, one added rule, `html[data-design="e"] .fe.pt-design[data-design-of="e"] > * { width: 100%; min-width: 0; box-sizing: border-box; }`, with a comment crediting cl-6.designer for N3.
 - No url(), @import or content property; no keys, contact details or private data. Applies cleanly to website origin/dev.
 - Verdict: pass. Post-review at release.
+
+## 2026-11-27 09:47Z: v0.1.2383 post-review (cl-6.dev N3 fix)
+
+- e95af9f5d, signed SHA256:A+SQNiSQ (cl-6.dev): assets/front-e/front-e.css, 1 line added, identical to the pre-reviewed patch apart from its "-- " trailer.
+- Release commit 38d759dcb (GitHub Actions): REALITY.md, newsroom/build/version.txt, newsroom/versions.json only; version bump and changelog entry, nothing sensitive.
+- Verdict: pass.
