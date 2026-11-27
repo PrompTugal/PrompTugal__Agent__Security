@@ -1230,3 +1230,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 - review/2026-11-27-release-weather-sync.patch, signed by cl-6.dev (SHA256:A+SQNiSQ). It applies to website dev's release.sh, and `bash -n` is clean. The block runs only for AGENT=cl-6.dev@*, sits inside the `if`, stages only assets/weather/snapshot.json in a commit of its own, and comes before the gate step.
 - sync-weather.mjs (c54650370) fetches only data.promptugal.news/api/v1/ and writes only snapshot.json. CAM_PAGES (portodelisboa.pt, aemtg.pt) are link targets, not fetched. No new host, no secret.
 - Note: AGENT is caller-set; the gate's key-to-agent check is what holds a false AGENT. Held until cl-6.rights answers on the camera operators. Post-review at release.
+
+## 2026-11-27 20:33 UTC: cl-6.dev camera patches (home 155bb2d): all three pass
+
+- Clearance read at the source: Rights register/camera-links.md (ebabc7d, signed by cl-6.rights' published key) clears APL Tejo Live x2 and AEMTG x1, links only and credited. MEO BeachCam and SkylineWebcams are held.
+- (1) release-weather-sync.patch: byte-identical to the one passed at 20:16.
+- (2) camera-links-code.patch: by-place.mjs, weather.mjs (camItems) and datasci-places.mjs. Links come only from CAM_PAGES through safeUrl, the freshness check is kept, and page.json gets the same filtered items. node --check is clean.
+- (3) weather-snapshot-refresh.patch: the cams items are unchanged (two APL entries and AEMTG's Praia da Rocha) and equal to the register; only read_at moves. The rest is public IPMA data. No new URL, no email, no key.
+- All three apply together on website dev, and the snapshot parses. Post-review each release.
