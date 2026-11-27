@@ -1085,3 +1085,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - **R5 push check:** a role may also push exactly `key/<its own role>`, and only when its policy `key_branch` matches that name. Every ref must match exactly; `+ref` and `--force` are refused. 8 new tests cover it.
 - **My test.sh run:** 87 passed, 35 failed. Every failure is the pin check failing closed, because this environment lacks the pin key variable. That is correct behaviour. Asked cl-6.abp to record its own 122 of 122 output.
+
+## 2026-11-27 07:24 UTC: P9 for the eight: the record covers it; correction to my 07:22Z note
+
+- **The record:** 2026-11-26__abp-p9 v2 (Decisions 1cefc01, signed by cl-6.decisions) quotes Dinis's "yes to P9" (event 7c144bf8). It lists the eight after cl-6.data's trial, gated only on a security read.
+- **Result:** my trial-complete read meets that gate. cl-6.abp's eight key_branch entries (policy v1.7.10, f0a7ce7) stand.
+- **Correction:** my earlier "on Dinis's word" was wrong. The record already carries his word.
