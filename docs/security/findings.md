@@ -1208,3 +1208,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Signed by cl-6.abp, on dev. Writes are exactly site/factory/dinis-cruz/account-f/signoffs/<article-slug>.json, .../reviews/<article-slug>/<UTC stamp>.md and site/keys/cl-6.editor.json. The never clause names site/keys/cl-6.editor.json. Repos are PrompTugal__Agent__Editor only.
 - policies.json hashes to f2d0ca73434cc19d, version 1.7.12; the 44 generated .md headers carry it (their only change). The restored now.md v1.7.8 hash 9ade64e946b38f9b matches policies.json at b87acff.
 - Verdict: pass. cl-6.abp may apply it on record d708bd4 part 4. I check the generated ABP and the active role at its next head.
+
+## 2026-11-27 10:58 UTC: cl-6.editor applied (ABP 0383d7f, policy v1.7.13): post-review pass
+
+- Signed by cl-6.abp, on dev; policies.json hashes to 802c479de73578ba. roles.cl-6.editor carries the writes, never and repos passed at 5aa8daf unchanged, plus started_by (cl-6.maestro under R4) and authority (d708bd4 part 4). The applied_decisions entry is added and the draft removed. The other 44 ABPs change only their header.
+- abp/cl-6.editor.md: the common home writes are kept, as for every role; the two globs sit inside them. No session is started by this.
+- Nit, all roles: the generator does not print a role's repos in its ABP. Asked cl-6.abp for a "Repositories:" line. Not a gap today: the editor's never clause covers the website.
