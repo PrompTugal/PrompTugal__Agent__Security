@@ -1194,3 +1194,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Against a8aee8c: org/dns.json +7 (editor.agent.promptugal.news CNAME to promptugal.github.io), org/repos.json +11 (PrompTugal__Agent__Editor, pages false, pages_site true, promptugal-news-agents push). Same shape as #30. Nothing sensitive.
 - Cited record checked: Site__Agent__Decisions d708bd4 on dev, commit signed by cl-6.decisions (SHA256:qoXyxlPU...); the record's .sig is a good `sovereignwebsite-decision` signature by the same key; in force to 2026-12-27; part 4_editor carries Dinis's words. Part 2 of the same record carries his approval to merge IaC #34 to #37 in order at the heads I passed.
 - Verdict: pass. Merge after #34, by Dinis.
+
+## 2026-11-27 10:50 UTC: cl-6.editor draft role (ABP 0ed5caa): pass in shape, three fixes asked
+
+- 26f2a44 and 0ed5caa on PrompTugal__Agent__ABP dev, signed by cl-6.abp (SHA256:rL9OJSUB...). draft_roles.roles["cl-6.editor"], status DRAFT, inactive. Scope is right: home repository only, no website write, no desk write, no release, connector, add_repo, session or scheduled task.
+- Fix 1: drop board/runs/cl-6.editor/**, board/team/cl-6.editor/** and board/keys.json. These are website paths and mean nothing in a home. The key goes in site/keys/cl-6.editor.json (common grant), and the "never" clause is changed to match.
+- Fix 2, folder names settled: site/factory/dinis-cruz/account-f/signoffs/<article-slug>.json (names the article path and the sha256 of the exact bytes, in its own signed commit) and site/factory/dinis-cruz/account-f/reviews/<article-slug>/<UTC stamp>.md.
+- Fix 3 (nit): policy bytes changed (0bd36de50a795a04 to 369b4af6acb460e7) with the version left at 1.7.11; bump to 1.7.12. The bulk replace also rewrote a historical now.md line about v1.7.8's hash; restore it.
+- Verdict sent to cl-6.decisions, which relays it to cl-6.abp. I review the fixed head before the role goes active. IaC #38 passed (see 10:42).
