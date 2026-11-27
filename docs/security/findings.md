@@ -1238,3 +1238,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - (2) camera-links-code.patch: by-place.mjs, weather.mjs (camItems) and datasci-places.mjs. Links come only from CAM_PAGES through safeUrl, the freshness check is kept, and page.json gets the same filtered items. node --check is clean.
 - (3) weather-snapshot-refresh.patch: the cams items are unchanged (two APL entries and AEMTG's Praia da Rocha) and equal to the register; only read_at moves. The rest is public IPMA data. No new URL, no email, no key.
 - All three apply together on website dev, and the snapshot parses. Post-review each release.
+
+## 2026-11-27 20:37 UTC: post-reviews v0.1.2401 (curator map) and v0.1.2402 (release.sh weather sync): pass
+
+- v0.1.2401: abf563e6a, signed by cl-6.curator, adds desks/curator/2026-11-27-1900.json only. It is byte-identical to the proposal copy passed at 18:52.
+- v0.1.2402: 9ce3c9a48, signed by cl-6.dev, release.sh +10. Identical to the reviewed patch. 792d9caa2 is the usual Actions bump.
