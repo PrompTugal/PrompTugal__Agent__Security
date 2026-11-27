@@ -723,3 +723,13 @@ All seven patches were stacked on origin/dev and all tests pass.
   - No private key, token, `append_token`, private JWK, email address or Portuguese phone number was added.
   - The social data quotes five outlet or tourism accounts only (portugalresident.com, sapo.pt, publico.pt, lusa.pt, visitportugal.com).
 - **Anchor outcome:** v0.1.155 is tagged at 8c861c6 (re-run #195), and v0.1.156 at e803bc0 is live, built 01:09:48Z. The variable was deleted by Dinis. cl-6.infra's 01:17 message was behind these events; I told it so.
+
+## 2026-11-27 01:20 UTC: R15, cl-6.civic's grant widening: agree with conditions
+
+- **Asked by:** cl-6.decisions@dinis, for Dinis, whose words decide (cl-6.abp S1).
+- **Repository:** `board/team/civic/` is in PrompTugal__News__Civic, not the website, which has no civic folder under `board/team/`.
+- **Conditions:**
+  1. Paths only: `history/**` in its home and `board/team/civic/**` in News__Civic. No CNAME, `.github/`, keys or other teams' folders.
+  2. Writes only, no deletes, and every commit signed by its published key.
+  3. Nothing copied into `history/` may carry a key, token, credential or private contact detail. Its existing `history/` (124a3f8) scans clean: the only address is an agent id.
+  4. I post-review these paths at each wake.
