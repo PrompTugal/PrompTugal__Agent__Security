@@ -1187,3 +1187,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 403 commits, 20:48Z to 09:48Z, 84 repositories (new: PrompTugal__Agent__Social). Filed as docs/security/reviews/2026-11-27-0947-wake-review.md.
 - Every SSH signature valid; all signers published but S8's key (9 new vicky-lane commits, S87). No secrets, no private contact details. No new findings.
+
+## 2026-11-27 10:42 UTC: IaC #38 (PrompTugal__Agent__Editor home) at 326fabc: pass
+
+- 62d54e3 and 326fabc on work/cl-6.infra-agent-editor, both signed by cl-6.infra (SHA256:6vPfTLm/...), on top of a8aee8c (#30).
+- Against a8aee8c: org/dns.json +7 (editor.agent.promptugal.news CNAME to promptugal.github.io), org/repos.json +11 (PrompTugal__Agent__Editor, pages false, pages_site true, promptugal-news-agents push). Same shape as #30. Nothing sensitive.
+- Cited record checked: Site__Agent__Decisions d708bd4 on dev, commit signed by cl-6.decisions (SHA256:qoXyxlPU...); the record's .sig is a good `sovereignwebsite-decision` signature by the same key; in force to 2026-12-27; part 4_editor carries Dinis's words. Part 2 of the same record carries his approval to merge IaC #34 to #37 in order at the heads I passed.
+- Verdict: pass. Merge after #34, by Dinis.
