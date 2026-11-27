@@ -1164,3 +1164,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 09:17 UTC: cl-6.dev phone-gutter-fix (home 31aa4f6): pass
 
 - CSS only: two declarations in the phone block, with no url, import or content. It applies to origin/dev.
+
+## 2026-11-27 09:25 UTC: website v0.1.2381 and v0.1.2382 post-review: pass
+
+- **v0.1.2381:** cl-6.translator's e14028140 equals the passed 21ed2c1a4 segments, with the date fixed to 2026-11-27.
+- **v0.1.2382:** cl-6.dev's 3610017e7 equals the phone-gutter patch. Release commit 39060e653 touches version files only.
