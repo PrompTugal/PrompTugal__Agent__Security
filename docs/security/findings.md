@@ -1128,3 +1128,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **cl-6.abp e5d448c (v1.7.11):** root `index.html` and `.nojekyll` added with my conditions written in; nothing else changed. Pass.
 - **Signals:** its session's own permission check (the auto-mode classifier, not ABP) refused copying the pinned `.github/workflows/pages.yml` and `scripts/leak-scan.mjs` onto key/cl-6.signals. It tried no other route.
   - The fix is Dinis's, in that session: allow that exact copy. The alternative is that cl-6.devops or cl-6.dev, which may write workflows, commits the two pinned files onto key/cl-6.signals. No agent should work round a refusal.
+
+## 2026-11-27 07:33 UTC: IaC #37 at 7c7cdf9: pass re-confirmed
+
+- The only change since 8198f4f is a `docs/key-bootstrap.md` section on the expected first-run failure.
