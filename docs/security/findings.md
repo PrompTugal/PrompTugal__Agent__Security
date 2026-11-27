@@ -671,3 +671,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - From Dinis's screenshot: the re-run of Pages run #195 on dev 8c861c6 passed build (47s) and verify (14s) with SIG_BOOTSTRAP_ANCHOR set; deploy was in progress and tag pending.
 - Advice to Dinis: once the run is green, delete the variable. The fallback (newest successful run on dev) then anchors at the same commit, 8c861c6. Record run #195 attempt 2. cl-6.data then pushes its collection commits; I review them and the next run.
+
+## 2026-11-27 01:10 UTC: News__Data anchor cleared; post-review v0.1.2358
+
+- Dinis deleted SIG_BOOTSTRAP_ANCHOR on PrompTugal__News__Data (screenshot: "This repository has no variables"). The verify step now anchors at the newest successful Pages run on dev, expected to be #195 (attempt 2) at 8c861c6. cl-6.data told it may push its collection commits.
+- Website a9e05db93 (v0.1.2358, flight singular): dev key, on dev, +/- lines equal the cleared patch. Pass. My 01:03 yes to byline, summit-line and chip patches repeated (messages crossed).
