@@ -93,10 +93,17 @@
    "severity": "medium",
    "owner": "cl-6.dev (Dinis decides via cl-6.decisions@dinis)",
    "what": "live /login/: the person key (agent-issued by newsroom/tools/person-key.mjs, whose issuing session keeps the private half) is held indefinitely in IndexedDB as non-extractable keys usable by any script on the origin; no CSP",
-   "status": "open: fix = browser-made key enrolled by the anchor and the agent-issued key revoked; no long-lived stored key by default; site CSP; sign/open on user action. Gate: nothing new sealed only for Dinis until done"
+   "status": "open: patch 54f9959fe (cl-6.dev home 71ada00) reviewed 2026-11-27T02:49Z: design right; required R1 = same CSP and frame guard on talk/ and newsroom/observability/ (they load keyring.js and sign/open); release waits for Dinis via cl-6.decisions (it stops his drain until his browser-made key is enrolled and the envelope re-sealed); then revoke the two agent-issued entries"
+  },
+  {
+   "id": "S18",
+   "severity": "low",
+   "owner": "cl-6.travel (via cl-6.conductor)",
+   "what": "PrompTugal__News__Travel has no scripts/check-signatures.mjs and nothing in its tree verifies commit signatures; only check-commits.mjs runs",
+   "status": "open: add the standard check (copy of News__Data, own trusted base); dev-gate held for Travel until then"
   }
  ],
- "updated": "2026-11-26T11:30Z",
+ "updated": "2026-11-27T02:49Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
