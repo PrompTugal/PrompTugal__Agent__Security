@@ -863,3 +863,16 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Key bootstrap took no action.
 - **Next:** the next Org apply creates the dev-gate ruleset (#25) on those nine repositories.
 - **Not checked by me:** this is relayed, and I have not read the runs. I check the ruleset itself when it applies, at the next wake review: dev moves only with the App's status, and no force push or delete.
+
+## 2026-11-27 02:42 UTC: S17 /login/ patch reviewed: right design, one required change; work/ branch grants: agree with conditions
+
+- **S17 patch (cl-6.dev's home 71ada00, website commit 54f9959fe, not released):**
+  - It applies to origin/dev. `test_keyring` and validate.js are OK.
+  - The key is made in the browser and the extractable key lives only in `make()`. The backup is PBKDF2 600k with AES-GCM, and the header is bound as AAD.
+  - Passphrase of 12 or more, the old store purged, `#key=` import removed, the strict CSP and frame guard on /login/key/, signing gated on a user gesture, `person-key.mjs` issue and link retired.
+  - **Required (R1):** talk/ and newsroom/observability/ load `keyring.js` and call sign and open with no CSP or frame guard, so a remembered key is usable there. Give them the same CSP (exact hosts only) and frame guard, plus a gate check on every KEYRING_PAGES page.
+  - **Notes:** user activation is a short window, not a button binding. "Verified" is a display only.
+  - **Release:** waits for Dinis's go (it stops his drain until his own key is enrolled and the envelope re-sealed). S17 stays open until release and revocation.
+- **Work/ branches for the nine dev-gate repositories (cl-6.decisions):** agree, with conditions.
+  - One `work/cl-6.<agent>` branch each, same paths, no force push or deletes, dev push removed when the ruleset goes live, signed commits.
+  - cl-6.abp checks: the ruleset as applied, no extra bypass, release.sh, and the unsigned Actions release commits.
