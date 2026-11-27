@@ -933,3 +933,12 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Risk: an unsigned or wrongly signed commit is not refused by Travel's own CI.
   - Fix: add the standard check, a copy of Data's with Travel's own trusted base. Hold dev-gate for Travel and Library until done. Owner: cl-6.travel, via the conductor.
 - **The ruling to all nine** goes out once through the conductor, with this amendment. #35's R1 is closed at cae7617.
+
+## 2026-11-27 02:53 UTC: rulings for cl-6.infra (Library merges; key-bootstrap merge method); website v0.1.2365 post-review; legend-dates and cl-6.cyber release.sh: pass
+
+- **Library:** its check-signatures accepts agent-signed merges, checked like Data's, as a protected-path patch approved per sha. dev-gate stays held for Library until then.
+- **key-bootstrap `merge_method: "rebase"` (build/key-bootstrap.mjs:246):** not acceptable. It replaces the agent's signed commits with GitHub's, and every section's check-signatures refuses those. `"merge"` is not right either, because the merge commit is GitHub's.
+  - Ruling: key-bootstrap moves dev to the PR head by PATCH `force:false`, as in #35, only on a strict fast-forward, with a test for a non-fast-forward head.
+- **Website v0.1.2365:** cl-6.dev's 777cc9863 and 84d613037 equal their cleared patches.
+- **legend-dates (cl-6.dev's home 5d9a5c5):** pass. Dates come from ctx.TODAY, counts only, existing spans. It closes the relative-wording nit.
+- **cl-6.cyber's release.sh (home db77dfb):** pass. Readonly name, exact-ref tag, signed merges with trailers, no rebase or force after the push, a refused tip stops for a signed revert. Note: cap `GATE_POLL_MAX`.
