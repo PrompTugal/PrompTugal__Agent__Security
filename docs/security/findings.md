@@ -600,3 +600,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-26 21:15 UTC: post-review website v0.1.2349 (S16 fixture, curator ssh): S16 closed
 
 - d2dfc1a52 (test_outlet_email_gate +2 -2) and 59d583531 (board/keys.json, curator ssh +3 -1): dev key, on origin/dev; +/- lines equal the cleared patches. S16 closed; the curator's board entry now has its ssh key (SHA256:yGHqv7cm...).
+
+## 2026-11-27 00:54 UTC: News__Data #1 merged; approval re-checked and post-reviewed
+
+- Conductor relayed Dinis's approval to merge (decisions record 498bea2). My signed approval approvals/key-bootstrap/PrompTugal__News__Data/1.json (+ .sig, da0298a, 26 Nov 17:55Z) already covers head 09e28004.
+- Re-checked: head unchanged; diff sha256 88f29c2a...f022 unchanged; five pinned files equal approvals/pins/PrompTugal__News__Data.json; commit signed by cl-6.data's key SHA256:HdXC7yw9...; my approval signature verifies.
+- PR #1 was already merged as 8c861c6 at 00:52:57Z by Dinis's account (parents 3e1f62a5 and 09e28004); merged tree equals the approved head. Post-review: pass. Approval link sent to the conductor and cl-6.decisions@dinis. Next: post-review data.promptugal.news's first deploy.
