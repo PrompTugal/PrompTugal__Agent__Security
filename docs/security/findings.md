@@ -1014,3 +1014,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-27 03:39 UTC: website v0.1.2367 post-review: pass
 
 - cl-6.dev's 62d3ab2bd equals the cleared news-flow-gate patch. Release commit 07a519798 touches version files only.
+
+## 2026-11-27 03:46 UTC: cl-6.ontologist news flow per article (home f512f00): pass
+
+- **Checks:** it applies to origin/dev. Tests pass (news-flow 4, article-flow 3), and validate.js is OK.
+- **Reproduced:** derive.mjs regenerates `news-flow.json` byte for byte, and the per-day file is unchanged.
+- **Content:** only slugs, place ids, levels and dates. `builds_on` holds existing slugs only, so the link condition is met by construction. The partial-date "other" bucket closes nit 1.
+- Post-review on release.
