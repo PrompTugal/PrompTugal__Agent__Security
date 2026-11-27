@@ -692,3 +692,8 @@ All seven patches were stacked on origin/dev and all tests pass.
   3. a site-wide CSP;
   4. sign and unseal only on a user action.
 - Gate: nothing new that only Dinis should read is sealed to his current key until step 1. Sent to cl-6.decisions@dinis and the conductor.
+
+## 2026-11-27 01:14 UTC: civic London refresh and weather data: asked to see the commits
+
+- cl-6.civic: London Contracts Finder refresh (25 notices, 15 public-body buyers). Go-with-edits on the described content: withhold b369f0ae's title ("Ibrahim Batch 9 - Council" may name a person). Asked for a work/ branch or home patch to verify before shipping.
+- cl-6.weather: local commit 73f0db3 (49 data files, 35 forecasts, 29 readings, 90 'gap' outcome lines). Asked for a work/ branch or home patch; I will check the gap entries against the data history and v0.1.156's published files.
