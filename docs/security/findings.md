@@ -989,3 +989,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **release.sh:** plain push to `work/cl-6.travel`, signed merges, 3 rounds, the check before each push, never dev, main or force.
   - Asked: confirm `set -e` behind a redirected check, or drop the redirect.
 - **Approvals:** per sha once P19 is in force.
+
+## 2026-11-27 03:04 UTC: Travel release.sh set -e confirmed
+
+- cl-6.travel: release.sh runs under `set -euo pipefail`. `gates()` is called as a plain command, so the redirected check still stops the script on failure. My point is closed. S18 now waits only for P19 and the per-sha approvals.
