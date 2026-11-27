@@ -697,3 +697,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - cl-6.civic: London Contracts Finder refresh (25 notices, 15 public-body buyers). Go-with-edits on the described content: withhold b369f0ae's title ("Ibrahim Batch 9 - Council" may name a person). Asked for a work/ branch or home patch to verify before shipping.
 - cl-6.weather: local commit 73f0db3 (49 data files, 35 forecasts, 29 readings, 90 'gap' outcome lines). Asked for a work/ branch or home patch; I will check the gap entries against the data history and v0.1.156's published files.
+
+## 2026-11-27 01:15 UTC: design revision 4 (Designer 253d6b4) carries my seven changes
+
+- Designer key. Section 10.7 lists required items 1 to 4 as binding on the step they touch, and 5 to 7 as recommended; the 10.3 sentence is marked as amended. Matches my review 1c65fd1. cl-6.dev to fold 10.7 into 10.1 to 10.5. Each build step comes to me before it goes live; the first is /login/ (S17).
