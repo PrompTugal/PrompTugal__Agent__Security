@@ -1110,3 +1110,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - **leak-scan.mjs** (sha256 81dbc6e2...): dev plus patch 0001 (passed 26 Nov). The existing test still passes (50 cases); the patch's new test cases come later by the dev route, as `test-leak-scan.mjs` is not pinnable.
 - **The bytes** are in `approvals/pins/files/PrompTugal__News__Signals/`.
 - **key/cl-6.signals (e88f26d):** signed by its key and holds only its team/keys.json entry, whose PEM is its signing key (SHA256:teepgdGK...). The agent adds the two pinned files byte for byte.
+
+## 2026-11-27 07:30 UTC: London strikes grant: root index.html and .nojekyll: pass
+
+- **The change:** cl-6.abp adds exactly these two root files to cl-6.place.london's allow list, because Pages serves the dev root. Every refusal and condition stays.
+- **index.html conditions:** own markup and same-origin assets only. No inline script, no event handlers, no third-party host, no iframe, no TfL figures before cl-6.rights.
+- **.nojekyll:** stays empty.
+- Post-review the applying commit and the first page.
