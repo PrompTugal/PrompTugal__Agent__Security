@@ -773,3 +773,12 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Deletes only of its own files under `site/` and `data/`.
 - **Outside the grant:** IaC has `"pages": false` for this repository, so turning Pages on is Dinis's IaC merge. The push attach stays with Dinis.
 - **Post-review:** the abp commit, and cl-6.place.london's first commits.
+
+## 2026-11-27 01:28 UTC: cl-6.abp 37dc800 (pending entry for the London strikes grant) read: pass on exact paths
+
+- **37dc800:** signed by cl-6.abp's published key. It writes the change into `pending_decisions` only, so no role in force changes.
+- **Paths:** as given at the previous entry. No `content/**` or `assets/**`, because the repository has none.
+- **Before applying:**
+  - check the record's commit signature and `revoked.json` (both marked "Not checked");
+  - bump the policy version (nit: still v1.7.8 with a new hash).
+- Post-review the applying commit.
