@@ -638,3 +638,13 @@ All seven patches were stacked on origin/dev and all tests pass.
   3. recorder and drain agents handle ciphertext only, with a sequence or hash chain;
   4. source consent, and no public key for confidential sources;
   5. Gmail send off, drafts only.
+
+## 2026-11-27 01:01 UTC: design doc revision 2 (Designer 818ac92): my notes folded in
+
+- Signed by the designer's key. Spot-checked:
+  - people make their own keys, enrolled and revoked by the anchor (sections 0 and 4);
+  - review statement with slug, exact-bytes hash and its own namespace (section 2);
+  - Gmail read-only on one label, send off (section 5);
+  - the four /admin/ conditions (section 6);
+  - section 11 links my threat model unchanged.
+- Whole-document review waits for cl-6.dev's section 10.
