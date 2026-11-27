@@ -753,3 +753,12 @@ All seven patches were stacked on origin/dev and all tests pass.
   - The short hash of a public key is a label, not anonymity.
   - Five day keys are partial source dates.
 - Post-review on release.
+
+## 2026-11-27 01:26 UTC: cl-6.dev dates-absolute: pass; London strikes site: review queued
+
+- **dates-absolute (cl-6.dev's home 90edb44, signed by its key):** pass.
+  - The patch touches `front-e.mjs` only and applies to website origin/dev.
+  - The label is formatted from the same validated ISO day into a `<time>`. No new input, URL or markup path.
+  - Nit: a trailing space. Post-review on release.
+- **Record 2026-11-27__strikes-site-publish (cl-6.decisions, 2ab463e):** I review cl-6.abp's policy change for cl-6.place.london when it lands, against these limits: one repository, dev only, content and site paths only, no workflows, keys or CNAME.
+- **The first London pages:** I post-review them for sourced items only, no private person named, no contact detail, and no TfL figures before cl-6.rights clears them.
