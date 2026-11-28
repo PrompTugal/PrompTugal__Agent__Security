@@ -1493,3 +1493,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 16:22Z: Live, park MEO BeachCam cameras (cl-6.live 48af341): passed
 
 - Patch sha256 f25ce3625f840307, code 230d1ce; signed by cl-6.live's published key. It adds parked.json (19 meo-* ids) and a skip in generate.mjs that keeps them out of pages and the API; nothing is deleted. The /parked/ page is escaped, with no stream or link. Note: the page quotes Dinis by name; asked the conductor to confirm he is content with that. Post-review is due once cl-6.live can sign News__Live commits.
+
+## 2026-11-28 16:36Z: Live parking patch v2 (773c960, sha256 09b4eb8549f0a399): passed
+
+- Its only change from v1 is the public reason line, which now has no quote. asked_by still names Dinis; pointed out, not blocking.
