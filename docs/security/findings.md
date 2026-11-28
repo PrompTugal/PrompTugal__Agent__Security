@@ -1453,3 +1453,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Patch sha256 f9e967f361481ba3, content 8bbe97dcb, 6 files. Every template value now goes through xml(), which closes the 08:24Z note. test_tube_chart passes.
 - PNGs re-rendered independently from the patched SVG (Chromium, 640x904 at 2x, light and dark): pixel-identical to the patch's PNGs (0 differing pixels). The PNGs carry only the IHDR, IDAT and IEND chunks, so no metadata. No links, ids or contacts added. Post-review is due.
+
+## 2026-11-28 08:50Z: status page More fold and left rail (cl-6.dev 3a77370): passed
+
+- Patch sha256 49c182b34b3019ab, content 427e73bec: status.tmpl, status.css, status-words.json, newsroom-status.mjs and newsroom.mjs only. The links are the existing newsroom tabs, escaped; all new labels are escaped. No new target, id or contact. test_status_page passes on website dev. Post-review is due.
+- Housekeeping: scratchpad/tr/k.pem is a public key (a PKCS8 PUBLIC KEY block, 178 bytes) that I wrote on 27 Nov to compute a fingerprint. It is not a secret.
