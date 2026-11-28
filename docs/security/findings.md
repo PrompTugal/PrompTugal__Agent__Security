@@ -1505,3 +1505,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 16:42Z: home middle column and voice paused (cl-6.dev 71d720d): passed
 
 - Patch sha256 ff5b5e73b302e368, content 9a5746b22: front-e.mjs, front-e.tmpl, by-place.js. front-page.json "top" is used only as slugs to look up published articles; the heading is a constant; the voice button is suppressed. No new link, id or data. Post-review is due.
+
+## 2026-11-28 16:52Z: cl-6.dev 43605f3: agents panel passed; timeline needs one change
+
+- agents-panel-neutral-face (sha256 6af63741859b749b, content 6f7520880): six viz files, no links or unescaped values. Passed.
+- timeline-team-views (sha256 a06282d5a4165866, content 3a5f874c5): the release.sh hook mirrors the weather hook and is fine; test_team_days passes; today's data holds only agent ids. Defect: agentOf() publishes any Agent: trailer that matches [A-Za-z0-9._@-]{3,80}, so a real email address in a trailer would be published (agentOf('jo.bloggs@gmail.com') returns it). Asked for an allow-list of agent namespaces (PrompTugal, AgentiCCells, web-summit), "other" otherwise, and a test. Not yet approved.
