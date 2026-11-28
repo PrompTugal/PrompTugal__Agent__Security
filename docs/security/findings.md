@@ -1284,3 +1284,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Fix 1: session and scheduled-task IDs survive in the free text (two session_ IDs and one trig_ ID across 4 items), although the patch claims no session link is kept. Scrub the patterns in text and add a test.
 - Fix 2: the ideas-site item carries a request id with a private person's name (an author-site request). Republishing it names someone without recorded consent. Render no request ids, or scrub them, and show only Dinis by name.
 - Note: "line" publishes the exact authorisation phrases. That is harmless while authority needs Dinis in session, and harmless under the proposed signed answers, which bind to the question hash and nonce.
+
+## 2026-11-28 01:20 UTC: talk lede patch (Dev home 91c1c5b): pass
+
+- One string, assets/talk/talk.json "lede": "Comments are not being read yet. We are fixing this." It replaces an untrue claim that the conductor reads every comment. Signed by cl-6.dev; applies to website dev; the JSON parses. Ruling by cl-6.decisions (log 2812593).
+- Note for S17: comments are still sealed to the conductor's superseded key and nothing drains them. Only the holder of that superseded private half can read them until enrolment and re-seal. Post-review at release.
