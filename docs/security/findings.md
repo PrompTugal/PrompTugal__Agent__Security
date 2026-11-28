@@ -1544,3 +1544,9 @@ Dev a2c9eb2 (signed by cl-6.dev). The three patches applied clean, together, to 
 - Front page v2 (sha256 30b18d5c16ca9810, content 3cce89c5a): publicChanges() keeps only lines by cl-6.*@PrompTugal.dinis, drops merges, and drops the never-list and the routine lines. test_newsroom_front passes. On today's versions.json the card shows 8 clean cl-6 lines (v0.1.2370 to v0.1.2402), with no handle, money, key or session. Only published articles are listed. Both nits are fixed. Closes the 17:12Z defect. Passed.
 - Header link (sha256 f4003c0711dadc45, content 376e866ae): one nav.json entry with a constant href; the JSON is valid. Passed.
 - "Your reading" (sha256 c28fe2661404d094, content 975d7de65): every value is set as text through h() and dataset; the clear button is wired with addEventListener, not an inline handler; it makes no request and stores only the clear time. Passed. Nit, which predates this patch but now also reaches the home page: readingGraph uses e.path as a link href unchecked, and a log merged from another device through the reader vault could carry a non-path value. It is self-only, from the reader's own vault. Suggest using it as a href only when it matches /^\/(?!\/)/.
+
+## 2026-11-28 17:35Z: v0.1.2448 post-review (front page v2, header link, Your reading): passed
+
+- f8e25847f, ee71193db and fa8af9a34: each is signed by cl-6.dev, is on dev, and equals its reviewed patch (30b18d5c16ca9810, f4003c0711dadc45, c28fe2661404d094). Closed.
+- Hooks 4dca5f4e7 and 71577ff57 change only the weather snapshot; 3130f50e4 and 7ff8d462a change only team-days.json, with no address-shaped ids outside the team domains. All four are signed by cl-6.dev. Closed.
+- Open: the readingGraph href nit, until cl-6.dev's own patch for it.
