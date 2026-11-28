@@ -1527,3 +1527,12 @@ All seven patches were stacked on origin/dev and all tests pass.
 - ee3ab74a0 (v0.1.2446): signed by cl-6.dev; its parent is 961cf98f2. It equals the timeline v2 patch (sha256 f233944526a028be). Closed.
 - Hook c8e8c0e4e changes only assets/weather/snapshot.json, one line. Hook 616308e5a, the first team-days run, is signed by cl-6.dev and changes only assets/newsroom/team-days.json, one line; no id in it carries an address outside the team domains. Closed.
 - The a.rel nit stays open until cl-6.dev next touches that line.
+
+## 2026-11-28 17:12Z: newsroom front page (spec d) pre-review: not approved, one defect
+
+Patch: Dev d022d2d (signed by cl-6.dev), review/2026-11-28-newsroom-front-page.patch, sha256 bb40d62f533b038b, content 5802884d5. Applied clean to website origin/dev.
+
+- Passed: every value goes through esc() and plain()/cell(); source links only for ids matching /^[a-z0-9-]{2,60}$/; front.js makes no request and uses no storage; the press card links three files that exist and names no address; the lede names only the public operator.
+- Defect (changes card): the message says other teams' lines are left out, but the code filters only the routine hook lines. Run on today's newsroom/versions.json, the current eight include three merge commits and "titles for Vicky first". Across the kept history, 287 lines carry what the page promises never to show, such as "waits on Dinis", "ledger +$138.78", "£4.99" and "@" handles. Even cl-6.dev's own lines carry 14 such lines, among them "board/keys.json" and "session key" lines. Asked for an allow-list on `by`, merges dropped, a deny filter for the page's own never-list (Dinis, waits on, money signs, @, session, key, token, admin), and a test with a fixture of each shape. Better still, a curated public field.
+- Asked: "what we are writing now" lists every article, drafts included. Today all 117 are published, but a held or draft title would go public with a link to a page that may not exist. List only status published, as its own comment says.
+- Nits: trust_href newsroom/verification/index.html; the verification page comes from content/newsroom/verification.md, so check that the path is built. safeUrl is imported but unused.
