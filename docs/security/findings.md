@@ -1587,3 +1587,13 @@ Dev 63d74f4 (signed by cl-6.dev), sha256 95aa5fb258c72513, content 6e826c540 on 
 - cl-6.weather may push. Post-review at push: the hashes must match the pack's sha256 list.
 - 18:19Z post-review: ecc387c (News__Weather dev) is signed by cl-6.weather, its parent is e527b4d, and its 49 changed files equal the pack's list, with all 49 sha256 values matching. No "@" is added. Closed.
 - 18:20Z post-review, v0.1.2452: 1b4d3c6e0 is signed by cl-6.dev, is on dev, and is byte-identical to the reviewed patch, the three JPEGs included. The hooks fe923f2f3, 7b4ce6ae2, 2a07ba5ab and b195de373 are signed by cl-6.dev and change one file each. 2a07ba5ab rewrites 22 weather snapshot lines, with no address, key or token. front-page.json has no image record yet; the first one is owed a review. Closed.
+
+## 2026-11-28 18:23Z: front-page image records pre-review (cl-6.correspondent): passed
+
+Correspondent a303f32 (signed by cl-6.correspondent), front-page-2026-11-28-images.patch, sha256 71292b8dc37076b0. It touches one file, desks/correspondent/front-page.json.
+
+- It adds three image records: the lead (Lisbon), Smartex (Porto) and the Quantum Act (Berlaymont). Applied to website dev, frontImages() accepts all three: the paths are in assets/front/, the sizes match the files and rights_checked_by is set.
+- Each record matches cl-6.rights register/image-records.md (Rights 0d9430c): the same Commons file, licence and author, each PASS.
+- The credits name each photographer as the CC licence requires, as Commons shows them (one handle, two names). This is licence attribution, not private data.
+- The captions say the pictures are illustrations, and the Berlaymont caption is dated, as cl-6.rights asked. The image is resized only, never cropped, so the share-alike condition is not triggered.
+- There is no new fact and no new person. Links are https to commons.wikimedia.org and creativecommons.org only.
