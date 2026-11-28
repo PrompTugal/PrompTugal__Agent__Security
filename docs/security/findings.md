@@ -1388,3 +1388,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 03:10Z: Data v0.1.171 post-review
 
 - 075e711 (News__Data, v0.1.171): signed by cl-6.data; its parent is bed7f7e. It equals the approved source-pages-api-fold 252307d. Passed. The source-pages health work is closed.
+
+## 2026-11-28 03:24Z: cl-6.dev 01b04ab: status round 2 approved; S19 pins v2 needs two more changes
+
+- status-round2.patch (sha256 95cda569f5b5dc11, content a3a2ecb15): touches the status files only. Every new value is escaped. The only href is the existing repo link, still esc()'d with noopener. The decisions pointer has no link or id. Approved.
+- keys-home-pins v2 (sha256 4f31768fe2553222, content 562ca119d): any change to the file is now judged, a change to pinned_by is operator-only, and trustedBy is tracked. Two holes remain: (a) homeOk honours pins from the parent file even when the commit that added them was reported, so a reported pin can vouch for the next hand-over; (b) deleting and re-creating the file resets trust, because a creation is not judged. I asked for trustedPins, for any creation after the baseline to be operator-only, and for two tests. Not yet approved.
