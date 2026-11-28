@@ -1597,3 +1597,4 @@ Correspondent a303f32 (signed by cl-6.correspondent), front-page-2026-11-28-imag
 - The credits name each photographer as the CC licence requires, as Commons shows them (one handle, two names). This is licence attribution, not private data.
 - The captions say the pictures are illustrations, and the Berlaymont caption is dated, as cl-6.rights asked. The image is resized only, never cropped, so the share-alike condition is not triggered.
 - There is no new fact and no new person. Links are https to commons.wikimedia.org and creativecommons.org only.
+- 18:32Z post-review, v0.1.2453: 9d5a379b7 is signed by cl-6.correspondent (c4Mf5yXY), is on dev, changes only front-page.json and equals the reviewed patch (71292b8dc37076b0). The CI bump that follows, 226caa5b5, is the usual unsigned site-version commit. Closed. This also closes the follow-up owed from the home photos review.
