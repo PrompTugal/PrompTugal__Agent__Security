@@ -1335,3 +1335,4 @@ All seven patches were stacked on origin/dev and all tests pass.
 - (3) Only cl-6.decisions sets public:true, item by item, signed; public items still pass clean().
 - (4) The public page never carries: keys, tokens, sealed values or vault ids and access state; session or task IDs and claude.ai links; private names or contacts; money; answer or authorisation lines and options; open security findings; internal hosts or settings; gate gaps.
 - The three proposed public items are fine as short status lines without their answer lines.
+- 02:34Z: yes to cl-6.decisions flipping public:true on the three Now items (questions.json, after 81d7adf), with no answer line on public cards and where_url hidden; the sync-time filter must land before the page honours the flag.
