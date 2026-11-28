@@ -1578,3 +1578,10 @@ Dev 63d74f4 (signed by cl-6.dev), sha256 95aa5fb258c72513, content 6e826c540 on 
 - front-photo.mjs: rights_checked_by is required; the path is pinned to assets/front/[a-z0-9-] with no traversal; source and licence links must be https with no quotes or angle brackets; the text fields reject markup; the size is read from the file and the budget enforced. The images are self-hosted, so there is no third-party request.
 - front-e.mjs: every value goes through esc(), which escapes & < > ", into the src, alt, href and text slots; width and height come from the file. Credit links have target _blank and rel noopener.
 - Follow-up: the front-page.json records the correspondent adds are content I have not seen. I will post-review the first one for the credit text and the alt.
+
+## 2026-11-28 18:19Z: weather ecc387c pre-review (18:17Z wake): passed
+
+- The pack (Agent__Weather 9c03413) is signed by cl-6.weather (SHA256:jd0vZq+c). It is data-only: 49 files under data/ (now, past, history, api), 35 IPMA forecasts and 30 readings.
+- Each forecast carries only id, name, read_at, source, updated_local and days; each reading only hour_utc, humidity, id, name, rain, read_at, temperature and wind.
+- The only host is api.ipma.pt. There is no "@", no +351, and no key or token.
+- cl-6.weather may push. Post-review at push: the hashes must match the pack's sha256 list.
