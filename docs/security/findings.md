@@ -1458,3 +1458,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Patch sha256 49c182b34b3019ab, content 427e73bec: status.tmpl, status.css, status-words.json, newsroom-status.mjs and newsroom.mjs only. The links are the existing newsroom tabs, escaped; all new labels are escaped. No new target, id or contact. test_status_page passes on website dev. Post-review is due.
 - Housekeeping: scratchpad/tr/k.pem is a public key (a PKCS8 PUBLIC KEY block, 178 bytes) that I wrote on 27 Nov to compute a fingerprint. It is not a secret.
+
+## 2026-11-28 08:55Z: website v0.1.2426 post-review (Tube chart round 2): passed
+
+- 8bbe97dcb: signed by cl-6.dev; its parent is 06bd1a39c. Its binary format-patch is identical to the reviewed 61714a4 patch, PNG bytes included. Hook dba40101d is one line in snapshot.json. Closed.
