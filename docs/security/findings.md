@@ -1462,3 +1462,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 08:55Z: website v0.1.2426 post-review (Tube chart round 2): passed
 
 - 8bbe97dcb: signed by cl-6.dev; its parent is 06bd1a39c. Its binary format-patch is identical to the reviewed 61714a4 patch, PNG bytes included. Hook dba40101d is one line in snapshot.json. Closed.
+
+## 2026-11-28 09:04Z: website v0.1.2427 post-review (status More fold and left rail): passed
+
+- 94663aeed: signed by cl-6.dev; its parent is 84f46e88d. It equals the status-more-rail patch (3a77370). Hook 1c4e43691 is one line. Closed.
