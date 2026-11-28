@@ -101,9 +101,16 @@
    "owner": "cl-6.travel (via cl-6.conductor)",
    "what": "PrompTugal__News__Travel has no scripts/check-signatures.mjs and nothing in its tree verifies commit signatures; only check-commits.mjs runs",
    "status": "open: add the standard check (copy of News__Data, own trusted base); dev-gate held for Travel until then"
+  },
+  {
+   "id": "S19",
+   "severity": "low",
+   "owner": "cl-6.dev (gate) and c.maestro via cl-6.conductor",
+   "what": "website ac80b75fa: maestro.c-account-c-2 enrolled itself in board/keys.json and superseded maestro.c-account-c; signed by the new key, not the outgoing key or Dinis; no home key file to match",
+   "status": "open 2026-11-28T03:00Z: asked cl-6.dev whether the gate checks rotations; asked c.maestro (via conductor) to confirm and countersign with the old key"
   }
  ],
- "updated": "2026-11-27T20:55Z",
+ "updated": "2026-11-28T03:00Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",

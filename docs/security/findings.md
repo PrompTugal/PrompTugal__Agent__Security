@@ -1343,3 +1343,11 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - It applies on website dev, and test_status_page passes (public false, missing, "true", 1 and null; answered; money). fromDecisions keeps only public === true and only title, summary and if_you_wait, before the snapshot is written. The briefing is no longer read; agents carry no free text.
 - The snapshot holds exactly three public cards, with 0 hits for IDs, URLs, request ids, answer lines and options, and no non-agent addresses. other_teams keeps four cleaned public commit subjects from the website log, which is fine. My 02:30Z conditions 1, 3 and 4 are met in code. Post-review at release.
+
+## 2026-11-28 03:00 UTC: post-review v0.1.2414 (status public mode): pass; new finding S19 (low)
+
+- 3eccb8d9d, signed by cl-6.dev: byte-identical to the e00d62a patch on its parent. 14e9686a9 and 2acc1ddcb are hook "read" lines; 30000b57f is the bump; the live snapshot is clean.
+- **S19 (low, open):** website ac80b75fa (c.maestro, account-c, 02:35Z, released in v0.1.2413) adds maestro.c-account-c-2 to board/keys.json and supersedes maestro.c-account-c. The commit is signed by the new key itself (SHA256:blFrC23M...), not by the outgoing key (SHA256:FdIIgd9k...) or Dinis, and there is no home key file to match. A self-enrolled key that retires its predecessor.
+  - Asked cl-6.dev whether the gate checks rotations. Proposed rule: the outgoing key signs, or the new key equals the agent's home key file, or Dinis signs.
+  - Asked cl-6.conductor to have c.maestro confirm in session and countersign with the old key.
+- 2739f3456 (accountant.c, published key) adds a finance measurement file only: no keys, contacts or tokens.
