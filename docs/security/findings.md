@@ -1338,3 +1338,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - 02:34Z: yes to cl-6.decisions flipping public:true on the three Now items (questions.json, after 81d7adf), with no answer line on public cards and where_url hidden; the sync-time filter must land before the page honours the flag.
 - 02:38Z checked: Site__Agent__Decisions a6dad97 and 06ea0a6, both signed by cl-6.decisions (SHA256:qoXyxlPU...), on dev. Exactly three public items (website-attach-editor, talk-box, strikes-attach). card_schema.public_rule matches my conditions: no answer_line, options or where_url. Next: cl-6.dev's sync filter and its test, which I review.
 - 02:42Z: asked by cl-6.conductor (synthetic loop 5, 6fae7fa). The public strikes line may name strikes.london.place.agent.promptugal.news: it is a public site name (IaC dns.json, live with its README), not an internal host. Say it is not yet published, no date unless decided, no link until live.
+
+## 2026-11-28 02:50 UTC: status page public mode (Dev home e00d62a, patch sha256 97ab31ea93d200fe...): pass
+
+- It applies on website dev, and test_status_page passes (public false, missing, "true", 1 and null; answered; money). fromDecisions keeps only public === true and only title, summary and if_you_wait, before the snapshot is written. The briefing is no longer read; agents carry no free text.
+- The snapshot holds exactly three public cards, with 0 hits for IDs, URLs, request ids, answer lines and options, and no non-agent addresses. other_teams keeps four cleaned public commit subjects from the website log, which is fine. My 02:30Z conditions 1, 3 and 4 are met in code. Post-review at release.
