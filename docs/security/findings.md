@@ -1365,3 +1365,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 32ace7c (source-pages health) and 873aac1 (github-pt retired) in PrompTugal__News__Data dev: both signed by cl-6.data (SHA256:HdXC7yw9). 32ace7c equals the approved c34d609 patch. 873aac1 equals github-pt-removal-scripts a5c290ba, plus only the deletions of sources/github-pt and data/github-pt. scripts/test-health.mjs passes (12 cases). Passed.
 - status-after-release.patch (PrompTugal__Agent__Data d84a6b0): signed by cl-6.data. It touches src/status only: two changelog lines and a regenerated files.json without github-pt. No keys, tokens, contact details, or session or trigger ids. Approved for release; the content commit is due for post-review.
+
+## 2026-11-28 03:03Z: S19 home key pins patch (cl-6.dev e9cbb76, content 5ccb238a5): changes asked
+
+- The patch file is signed by cl-6.dev (SHA256:A+SQNiSQ) and touches only keys-changes.mjs, its tests, and the new newsroom/tools/home-key-pins.json (empty, pinned_by cl-6.security). No secrets.
+- Bypass: the pin check runs only when a pin is added or changed. A commit that changes pinned_by alone is not judged, so the next commit can add a pin signed by the new pinner. I asked for any change to the file (pinned_by, a pin added, changed or removed, or the file deleted) to be judged, for a change to pinned_by to be operator-only, and for three tests. Not yet approved.
