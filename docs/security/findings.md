@@ -1470,3 +1470,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 09:10Z: translator wake6 (website work/cl-6.translator-wake6, tip b49771e59): passed
 
 - One commit, signed by cl-6.translator (home key SHA256:5z9e2DyE). d3.json and e9.json only, +16: 2 pt-PT segments for the 28 Nov AMALIA update note. The only URL (ECO) is already in the English article on dev. No contacts, keys or code. Passed for this tip only.
+
+## 2026-11-28 09:44Z: S12 stale "now" lines (cl-6.dev 955e4ca): passed
+
+- Patch sha256 b5d836c07e122485, content c343426fb: front-e.tmpl, front-e.mjs and by-place.mjs. The read time comes from nice() (a validated date) and a digits-only regex capture. The 12-hour and future guards only remove output. No new link, id or data. Nit: one line of trailing whitespace. Post-review is due.
