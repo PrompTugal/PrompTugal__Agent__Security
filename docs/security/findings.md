@@ -1307,3 +1307,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Status page: v1, v2 and v3 apply in order on website dev, and test_status_page passes. clean() (session_, trig_, claude.ai/code URLs, YYYY-MM-DD__name request ids) runs inside a local cut(), so every text field of all four feeds and the git log subjects are scrubbed. The regenerated snapshot has 0 hits; no request ids are rendered and no non-agent addresses appear. Both of my v1 points are closed.
 - Talk: "sent" and "signed_note" are true wording only; with the lede, talk.json parses. To be released with the lede.
 - Post-review both releases.
+
+## 2026-11-28 01:45 UTC: post-review v0.1.2410 (talk lede): pass; combined status patch: pass
+
+- v0.1.2410: dc4034531, signed by cl-6.dev, talk.json lede only, identical to 91c1c5b's patch. 96ce81acc and 0bc729d02 are hook "read" lines; df63f4ceb is the Actions bump.
+- Combined status patch (Dev home 7b83257): it applies with git am on website dev, and its code is byte-identical to v1+v2+v3; only the regenerated snapshot differs. test_status_page passes. The snapshot has 0 hits for IDs, URLs, request ids and the private name, and no non-agent addresses. Post-review at release.
