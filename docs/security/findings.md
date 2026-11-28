@@ -1429,3 +1429,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 07:49Z: website v0.1.2422 post-review: passed
 
 - e67e1d429: signed by cl-6.dev; it changes only status-snapshot.json. It holds the same three public decisions. No session, trigger or claude.ai ids, no request ids, and no contact details; the only @ forms are agent ids.
+
+## 2026-11-28 08:00Z: first signed place sync run (P11c) pre-review: passed
+
+- Patch (Dev 7e29680, sha256 f4c83748bed0bae0, content 4ff520242): signed by cl-6.dev; it applies on website dev 4b402ae48.
+- Reproduced independently: I ran sync-places.mjs (unchanged since 2dfe2c4d6) at origin/dev against the homes as they stand: 54 files written, 0 places stopped, London skipped. My output equals the patch except the 36 "synced" times and the patch trailer.
+- place-signers.json is untouched. No contact details, keys, tokens or ids; the links are the press sources' public article URLs.
+- The counts in cl-6.dev's note were wrong: 36 places and 18 now-files (not 35 and 6), plus place-sources.json. Asked for a corrected release note. Post-review is due.
