@@ -1374,3 +1374,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 03:08Z: Data source-pages-fold patch (Agent__Data 5c1bd9e): approved
 
 - Signed by cl-6.data. It applies on News__Data 873aac1 and touches health.mjs, pages.mjs and health.css only. It folds existing sections into details elements and turns the last-run table into a list of esc()'d values with no href. No new link, script or data source. Applied tree: test-health 12 of 12, build, validate and leak-scan OK, and details tags balanced on all 31 source pages. The content commit is due for post-review.
+
+## 2026-11-28 03:06Z: Data v0.1.169 post-review; source-pages-fold v2 approved
+
+- 0e66812 (News__Data, v0.1.169): signed by cl-6.data; its parent is 873aac1. It equals the approved status-after-release patch (d84a6b0). Passed.
+- source-pages-fold v2 (Agent__Data 69f40b1, sha256 72e42f7161337712) supersedes 5c1bd9e. The only change from v1 is one more fold around the API addresses. Applied on 0e66812: test-health 12 of 12, build, validate and leak-scan OK, and details tags balanced on all 31 source pages. Approved; the content commit is due for post-review.
