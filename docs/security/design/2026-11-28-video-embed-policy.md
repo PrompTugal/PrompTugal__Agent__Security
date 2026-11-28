@@ -1,6 +1,6 @@
 # Video embed policy for promptugal.news (YouTube, Instagram)
 
-cl-6.security@PrompTugal.dinis, 28 Nov 2026 16:15Z. For cl-6.conductor and cl-6.dev. cl-6.rights rules on the terms separately; nothing here grants a right to embed a given video.
+cl-6.security@PrompTugal.dinis, 28 Nov 2026 16:15Z, amended 16:30Z after cl-6.rights' ruling (PrompTugal__Agent__Rights register/video-embeds.md, 1ba4810). For cl-6.conductor and cl-6.dev. cl-6.rights rules on the terms separately; nothing here grants a right to embed a given video.
 
 ## 1. No third-party request before the reader asks (click-to-load)
 
@@ -14,38 +14,36 @@ cl-6.security@PrompTugal.dinis, 28 Nov 2026 16:15Z. For cl-6.conductor and cl-6.
 - Host: https://www.youtube-nocookie.com/embed/<id> only, never youtube.com/embed.
 - The id must match /^[A-Za-z0-9_-]{11}$/. Build the URL from the id alone, never from a stored URL. Allowed query parameters: rel=0 and, if wanted, start=<seconds as an integer>. Nothing else.
 - iframe attributes:
-  - sandbox="allow-scripts allow-same-origin allow-presentation". The player needs scripts and its own origin. allow-same-origin applies to youtube-nocookie.com's origin, never to ours. Do not add allow-top-navigation, allow-forms, allow-modals, allow-popups-to-escape-sandbox or allow-downloads. Add allow-popups only if the "Watch on YouTube" link must work; I would leave it out.
+  - sandbox="allow-scripts allow-same-origin allow-presentation". The player needs scripts and its own origin. allow-same-origin applies to youtube-nocookie.com's origin, never to ours. Do not add allow-top-navigation, allow-forms, allow-modals, allow-popups-to-escape-sandbox or allow-downloads. allow-popups is permitted, so the player's "Watch on YouTube" link works (cl-6.videos' plan). Any popup it opens inherits the sandbox, and allow-popups-to-escape-sandbox stays forbidden.
   - allow="encrypted-media; picture-in-picture; fullscreen". No autoplay, camera, microphone, geolocation, clipboard-write or payment.
-  - referrerpolicy="no-referrer" as the starting point. To be verified: the player may refuse to play without a referrer. If it does, use "strict-origin", which sends only https://promptugal.news, and record that choice. Never use the default policy, which sends the full page URL.
+  - referrerpolicy="strict-origin-when-cross-origin" on the YouTube iframe, as the rule. YouTube's required minimum functionality requires identification through the Referer header and forbids suppressing it (cl-6.rights). For this cross-origin frame the policy sends only the origin, https://promptugal.news, never the page path. no-referrer is not allowed on the YouTube iframe. The page-level meta stays no-referrer for everything else.
   - loading="lazy" (it matters little once the iframe is created on click), plus a title attribute naming the video, and fixed width, height or aspect-ratio.
 - No YouTube IFrame API script (www.youtube.com/iframe_api). No postMessage listener on our page.
 
 ## 3. Instagram
 
-- Do not use Instagram's embed.js. It is third-party script running with our page's rights.
-- Without it: after the click, an iframe to https://www.instagram.com/p/<shortcode>/embed/ (or /reel/<shortcode>/embed/). The shortcode must match /^[A-Za-z0-9_-]{5,40}$/, and the URL is built from the shortcode only.
-  - The same sandbox and allow rules apply, and the same referrer rule, with the same caveat to verify.
-  - It needs a fixed height, because auto-resize relies on embed.js. Accept the fixed box.
-- To be verified by cl-6.dev in a browser, before building: that the /embed/ URL plays inside the sandbox above without embed.js. If it does not, Instagram items are link-out cards only (placeholder plus link), with no iframe. Do not widen the sandbox or add the script to make it work.
+- Not cleared on terms (cl-6.rights: Meta's terms have not been read; that needs a person and Dinis's yes). Until then, an Instagram item is a link-out card only, with no iframe and no script. The card shows title, account, date, and "Post by <account>, on Instagram" linked with an https-only href, plus rel="noopener noreferrer" and target="_blank".
+- Instagram's embed.js stays forbidden even after clearance: it is third-party script on our origin. If Dinis clears Instagram, I review a frame-only design separately before anything is built.
 
 ## 4. Content-Security-Policy (per page, by meta tag, as pair.mjs, payments.mjs and principles.mjs do)
 
 The videos page, and any page that carries a video slot, sets:
 
-    default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-src https://www.youtube-nocookie.com https://www.instagram.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'
+    default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-src https://www.youtube-nocookie.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'
 
-- frame-src lists exactly the two hosts. youtube.com, instagram.com (without www), cdninstagram.com and wildcards are not allowed.
+- frame-src lists exactly one host. youtube.com, any Instagram or Meta host, and wildcards are not allowed.
 - No third-party host goes into script-src, img-src or connect-src.
 - frame-ancestors cannot be set by a meta tag. Note it for the day the site has response headers.
-- Add <meta name="referrer" content="no-referrer"> for the page itself.
+- Add <meta name="referrer" content="no-referrer"> for the page itself; the YouTube iframe's own referrerpolicy attribute overrides it for that frame only.
+- Preview images: option (a), no preview, keeps this CSP. Option (b), YouTube's i.ytimg.com image, would add i.ytimg.com to img-src and make a request to Google before any click; that breaks section 1 and needs Dinis's explicit choice. Option (c), our own copy, needs cl-6.rights.
 
 ## 5. Data and build
 
-- Videos live in a reviewed data file (platform, id or shortcode, title, channel, date, region, source of the choice). The build rejects any entry whose id fails the patterns above, or whose platform is not "youtube" or "instagram".
+- Videos live in a reviewed data file (platform, id or shortcode, title, channel, date, region, source of the choice). The build rejects any entry whose id fails the patterns above, or whose platform is not "youtube". "instagram" entries render only as link-out cards.
 - Every text field is escaped. Any link out goes through the same https-only href guard used elsewhere.
 - Tests:
   - a bad id is rejected;
-  - no third-party URL appears in the built HTML outside the click script's two templates;
+  - no third-party URL appears in the built HTML outside the click script's one YouTube template;
   - the CSP meta is present;
   - the sandbox and allow strings are exact.
 
