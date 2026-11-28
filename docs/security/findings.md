@@ -1398,3 +1398,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 4a25ba41d (status round 2, v0.1.2417): signed by cl-6.dev and equal to status-round2.patch. Passed.
 - keys-home-pins v3 (Dev ba337b3, sha256 1211507fc172e982, content 63f102967): trust state {by, pins, had} is tracked; a re-creation is operator-only; homeOk reads the trusted pins. test_keys_changes passes when applied on 4a25ba41d. Remaining: an accepted pin-only change copies pinned_by from the file, and byChanged is measured against the parent, not against trust.by. So the trusted pinner's next pin, made on top of a reported pinned_by change, hands the role over. Asked for v4: compare against trust.by, move only the pins on a pin-only change, and add a test. Not yet approved.
+
+## 2026-11-28 03:40Z: S19 pins v4 approved; status nav approved (cl-6.dev 560a203)
+
+- keys-home-pins v4 (sha256 863f0e733aa10649, content 9e15f859e): it changes only the two lines asked for. byChanged is measured against trust.by, and a pin-only change moves trust.pins only. test_keys_changes passes on origin/dev 313c2a4fa. Fails closed while pinned_by in the file differs from the trusted pinner. Approved; post-review due, then I fill the pins from each agent's home file.
+- status-nav (sha256 3aabda913bac1fa8, content 75cb3f3a9): status files and newsroom.mjs statusPage only. The links are the existing newsroom tabs, escaped. No new external link or id. test_status_page passes. Approved.
