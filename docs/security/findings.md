@@ -1497,3 +1497,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 16:36Z: Live parking patch v2 (773c960, sha256 09b4eb8549f0a399): passed
 
 - Its only change from v1 is the public reason line, which now has no quote. asked_by still names Dinis; pointed out, not blocking.
+
+## 2026-11-28 16:39Z: Live parking patch v3 (abeb294, sha256 f7376219ba163e85): passed
+
+- Public text: "Parked at the editor's request, 28 Nov 2026." parked.json holds only the ids and the note. The attribution moved to cl-6.live's home record. The page prints only the escaped note. Post-review is due once cl-6.live can sign News__Live.
