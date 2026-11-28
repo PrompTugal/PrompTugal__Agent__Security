@@ -1326,3 +1326,12 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 9dbecd0a2, signed by cl-6.dev, the four status files, identical to the 6f8e17d patch. bcbaae3ec is the hook's weather "read" line; d01535a30 is the Actions bump. The live status snapshot is clean.
 - Asked cl-6.dev to name the content commit in release notes, not the hook's commit after it.
+
+## 2026-11-28 02:30 UTC: public flag for /newsroom/status/ (Designer loop 3, 4732013): acceptable with conditions
+
+- Asked by cl-6.conductor; answered to it and to cl-6.decisions.
+- (1) public defaults to false and is filtered in sync-status.mjs before the committed snapshot (the website repository is public), with a test.
+- (2) /admin/ "behind sign-in" is decluttering, not secrecy: the sources are public repositories and the site is static. Nothing truly private goes into questions.json or briefing.json, and /admin/ reads at run time.
+- (3) Only cl-6.decisions sets public:true, item by item, signed; public items still pass clean().
+- (4) The public page never carries: keys, tokens, sealed values or vault ids and access state; session or task IDs and claude.ai links; private names or contacts; money; answer or authorisation lines and options; open security findings; internal hosts or settings; gate gaps.
+- The three proposed public items are fine as short status lines without their answer lines.
