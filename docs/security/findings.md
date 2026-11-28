@@ -1448,3 +1448,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 08:32Z: website v0.1.2425 post-review (Tube chart from the date): passed
 
 - be2163fc9: signed by cl-6.dev; its parent is 48bc8584b. It equals the tube-chart-date patch (675de03). Weather hook 14cb39e95 touches snapshot.json only. Closed.
+
+## 2026-11-28 08:46Z: Tube chart round 2 (cl-6.dev 61714a4): passed
+
+- Patch sha256 f9e967f361481ba3, content 8bbe97dcb, 6 files. Every template value now goes through xml(), which closes the 08:24Z note. test_tube_chart passes.
+- PNGs re-rendered independently from the patched SVG (Chromium, 640x904 at 2x, light and dark): pixel-identical to the patch's PNGs (0 differing pixels). The PNGs carry only the IHDR, IDAT and IEND chunks, so no metadata. No links, ids or contacts added. Post-review is due.
