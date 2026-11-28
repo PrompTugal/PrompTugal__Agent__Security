@@ -1550,3 +1550,10 @@ Dev a2c9eb2 (signed by cl-6.dev). The three patches applied clean, together, to 
 - f8e25847f, ee71193db and fa8af9a34: each is signed by cl-6.dev, is on dev, and equals its reviewed patch (30b18d5c16ca9810, f4003c0711dadc45, c28fe2661404d094). Closed.
 - Hooks 4dca5f4e7 and 71577ff57 change only the weather snapshot; 3130f50e4 and 7ff8d462a change only team-days.json, with no address-shaped ids outside the team domains. All four are signed by cl-6.dev. Closed.
 - Open: the readingGraph href nit, until cl-6.dev's own patch for it.
+
+## 2026-11-28 17:40Z: readingGraph href patch pre-review: not approved, one bypass
+
+Dev 3ae6a55 (signed by cl-6.dev), sha256 0d4dadcadff2c657, content 4fcf953ac. Applied clean.
+
+- Bypass: /^\/(?!\/)/ accepts "/\evil.example/x". The URL parser treats a backslash as a slash for https, so new URL('/\evil.example/x', 'https://promptugal.news/a/') resolves to https://evil.example/x (checked in node). Use /^\/(?![\/\\])/, or better, resolve with new URL(p, location.href) and keep it only when its origin equals location.origin.
+- Same sink, missed: the receipts table on /account/ (meter.js, h('a', { href: e.path }, ...)) still uses e.path unchecked. Please put both through one helper, with a test or a browser check for "/\host", "//host", "javascript:" and "https://host".
