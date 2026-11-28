@@ -1565,3 +1565,7 @@ Dev b3764b0 (signed by cl-6.dev), sha256 b43b16b78d0142af, content 96c07b844. Ap
 - ownPath() resolves each logged path against the page, keeps it only on the same origin, and links the resolved path, never the raw value. Both sinks use it: the reading graph and the /account/ receipts.
 - Checked ownPath in node. "//host", "/\\host", "javascript:", "https://host", "data:" and a tab-prefixed "//host" all give ''; "/algarve/faro/" and a relative path stay on the site.
 - Closes the 17:41Z bypass and the receipts sink.
+
+## 2026-11-28 17:53Z: v0.1.2450 post-review (ownPath href fix): passed
+
+- dfb71e5a8: signed by cl-6.dev, on dev, and equal to the reviewed patch (b43b16b78d0142af). meter.js on origin/dev holds ownPath at its definition and at both sinks. Hooks 9c1cc2aea (weather) and 81d18ee5e (team-days) change one file each, are signed by cl-6.dev, and carry team ids only. Closes the readingGraph href nit.
