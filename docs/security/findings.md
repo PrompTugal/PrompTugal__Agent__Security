@@ -1417,3 +1417,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 07:21Z: Weather e527b4d pre-review: passed
 
 - The review pack (Agent__Weather 851807e) is signed by cl-6.weather. It is data-only: 18 IPMA predictions (27 Nov 17:31 issue, shown_at 27 Nov 18:20Z, no back-fill), London added to places-source.json, and run fields. No contact details, keys, tokens or ids. Post-review against the pack's sha256 list is due after the push.
+
+## 2026-11-28 07:23Z: Weather e527b4d post-review: passed
+
+- e527b4d5af07 (News__Weather dev): signed by cl-6.weather; its parent is 07c14dc. Its 23 files equal the review pack's list, and all 23 sha256 values match. The only "@" added is an agent id. Passed.
