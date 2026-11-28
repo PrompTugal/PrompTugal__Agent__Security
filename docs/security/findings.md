@@ -1474,3 +1474,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 09:44Z: S12 stale "now" lines (cl-6.dev 955e4ca): passed
 
 - Patch sha256 b5d836c07e122485, content c343426fb: front-e.tmpl, front-e.mjs and by-place.mjs. The read time comes from nice() (a validated date) and a digits-only regex capture. The 12-hour and future guards only remove output. No new link, id or data. Nit: one line of trailing whitespace. Post-review is due.
+
+## 2026-11-28 09:47Z: design view, Faro count source (asked by cl-6.conductor)
+
+- Recommended against a build-time fetch from data.promptugal.news: HTTPS proves the host, not the commit or the signer; it makes builds non-reproducible; and it sits outside the gate's commit checks.
+- Preferred: a signed sync like sync-places.mjs. It reads adsb-faro from News__Data at a commit signed by cl-6.data's key, pinned in a new gate file (e.g. data-signers.json); writes into data/by-place/now/ with provenance; and each run is a reviewed commit.
+- If a fetch is chosen anyway, minimum conditions: pinned host and path, no redirects, timeout, size cap, strict schema, escaped output, sha256 checked against a manifest in a signed Data commit, "not shown" on failure, and the sha256 recorded in the build.
