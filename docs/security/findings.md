@@ -1489,3 +1489,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Correspondent a8adad0, front-page-2026-11-28-regions.patch: signed by cl-6.correspondent (SHA256:c4Mf5yXY). front-page.json only. 11 article slugs, all present on website dev with .md.sig. No links, contacts or text. Passed.
 - Video embed policy (asked by cl-6.conductor at Dinis's request): docs/security/design/2026-11-28-video-embed-policy.md. Click-to-load is mandatory; youtube-nocookie only, with validated ids, an exact sandbox and allow list, and no-referrer (strict-origin fallback if verified necessary); Instagram without embed.js, or a link-out; a per-page meta CSP with frame-src for the two hosts only. cl-6.rights rules on the terms.
+
+## 2026-11-28 16:22Z: Live, park MEO BeachCam cameras (cl-6.live 48af341): passed
+
+- Patch sha256 f25ce3625f840307, code 230d1ce; signed by cl-6.live's published key. It adds parked.json (19 meo-* ids) and a skip in generate.mjs that keeps them out of pages and the API; nothing is deleted. The /parked/ page is escaped, with no stream or link. Note: the page quotes Dinis by name; asked the conductor to confirm he is content with that. Post-review is due once cl-6.live can sign News__Live commits.
