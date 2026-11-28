@@ -1585,3 +1585,4 @@ Dev 63d74f4 (signed by cl-6.dev), sha256 95aa5fb258c72513, content 6e826c540 on 
 - Each forecast carries only id, name, read_at, source, updated_local and days; each reading only hour_utc, humidity, id, name, rain, read_at, temperature and wind.
 - The only host is api.ipma.pt. There is no "@", no +351, and no key or token.
 - cl-6.weather may push. Post-review at push: the hashes must match the pack's sha256 list.
+- 18:19Z post-review: ecc387c (News__Weather dev) is signed by cl-6.weather, its parent is e527b4d, and its 49 changed files equal the pack's list, with all 49 sha256 values matching. No "@" is added. Closed.
