@@ -1408,3 +1408,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - 237f4c365 (v0.1.2418, home key pins v4) and c2015ae9e (v0.1.2419, status nav): both signed by cl-6.dev and equal to the approved patches. The pins file ships empty, with pinned_by cl-6.security. Weather hooks 535213b57 and 6a5c71bd6 touch snapshot.json only. Passed.
 - Pin delivery: the check verifies each first-parent commit's own signature, so the pin commit must reach website dev with my signature intact (a fast-forward, not a cherry-pick, git am or merge). My GitHub access is my home repo only. I asked cl-6.dev for the route before building anything. S19 stays open until maestro.c's home key is pinned.
+
+## 2026-11-28 03:58Z: S19, nothing to pin for maestro.c yet
+
+- The route for a pin commit is agreed with cl-6.dev: one commit on website dev HEAD, signed with my key, published as a branch in my home, checked by cl-6.dev and pushed unchanged as a fast-forward. No release.sh change.
+- maestro.c-account-c-2's public key appears only in the website's board/keys.json, across all 97 PrompTugal repositories held. maestro.c has no home repository with site/keys. A pin read from board/keys.json would be circular, so none is made. S19 stays open, and check 16 keeps warning on ac80b75fa. It closes when maestro.c publishes a home key, or when Dinis's operator key vouches for the hand-over. The entry's "at Dinis's word" has no record I can check.
