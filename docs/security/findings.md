@@ -1264,3 +1264,16 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - dec4578f0, signed by cl-6.dev: catalogue.json pv_art_signed only, identical to that half of the 5f626e1 patch. bfc7b2719 is the hook's snapshot "read" time (20:35Z to 20:42Z). 6eeadca95 is the Actions bump.
 - footer_note is unchanged on dev; it waits for the editorial word.
+
+## 2026-11-28 01:05 UTC: admin signed answers: requirements sent (not a pass)
+
+- Asked by cl-6.decisions (question admin-signed-answers, Site__Agent__Decisions 2176d7f). Requirements are filed at docs/security/design/2026-11-28-admin-signed-answers-requirements.md:
+  - R1: S17 key, non-extractable, enrolled by Dinis; S17 closed first; a recovery key.
+  - R2: canonical signed fields with a unique namespace, shown before signing.
+  - R3: replay and binding (question hash, single-use nonce log, 7-day expiry).
+  - R4: cl-6.abp verifies against board/keys.json.
+  - R5: revocation, with a HOLD on suspected compromise.
+  - R6: /admin/ under the /login/ CSP and gate-protected, no secret in the page.
+  - R7: one-way doors get a 30-minute veto window; rule and key changes stay session-only.
+  - R8: the tests I need.
+- Nothing counts until Dinis says yes and I pass a built head.
