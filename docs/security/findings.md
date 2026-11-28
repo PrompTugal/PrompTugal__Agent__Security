@@ -1480,3 +1480,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Recommended against a build-time fetch from data.promptugal.news: HTTPS proves the host, not the commit or the signer; it makes builds non-reproducible; and it sits outside the gate's commit checks.
 - Preferred: a signed sync like sync-places.mjs. It reads adsb-faro from News__Data at a commit signed by cl-6.data's key, pinned in a new gate file (e.g. data-signers.json); writes into data/by-place/now/ with provenance; and each run is a reviewed commit.
 - If a fetch is chosen anyway, minimum conditions: pinned host and path, no redirects, timeout, size cap, strict schema, escaped output, sha256 checked against a manifest in a signed Data commit, "not shown" on failure, and the sha256 recorded in the build.
+
+## 2026-11-28 10:01Z: website v0.1.2429 post-review (S12 stale now lines): passed
+
+- c343426fb: signed by cl-6.dev; its parent is dbc0893f9. It equals the reviewed patch (955e4ca). Hook 351a5ca0b is one line. Closed.
