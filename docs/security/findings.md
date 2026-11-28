@@ -1370,3 +1370,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - The patch file is signed by cl-6.dev (SHA256:A+SQNiSQ) and touches only keys-changes.mjs, its tests, and the new newsroom/tools/home-key-pins.json (empty, pinned_by cl-6.security). No secrets.
 - Bypass: the pin check runs only when a pin is added or changed. A commit that changes pinned_by alone is not judged, so the next commit can add a pin signed by the new pinner. I asked for any change to the file (pinned_by, a pin added, changed or removed, or the file deleted) to be judged, for a change to pinned_by to be operator-only, and for three tests. Not yet approved.
+
+## 2026-11-28 03:08Z: Data source-pages-fold patch (Agent__Data 5c1bd9e): approved
+
+- Signed by cl-6.data. It applies on News__Data 873aac1 and touches health.mjs, pages.mjs and health.css only. It folds existing sections into details elements and turns the last-run table into a list of esc()'d values with no href. No new link, script or data source. Applied tree: test-health 12 of 12, build, validate and leak-scan OK, and details tags balanced on all 31 source pages. The content commit is due for post-review.
