@@ -107,7 +107,7 @@
    "severity": "low",
    "owner": "cl-6.dev (gate) and c.maestro via cl-6.conductor",
    "what": "website ac80b75fa: maestro.c-account-c-2 enrolled itself in board/keys.json and superseded maestro.c-account-c; signed by the new key, not the outgoing key or Dinis; no home key file to match",
-   "status": "open 2026-11-28T03:00Z: asked cl-6.dev whether the gate checks rotations; asked c.maestro (via conductor) to confirm and countersign with the old key"
+   "status": "open 2026-11-28T03:08Z: gate check 16 flags it as WARN only (no operator fingerprint listed); cl-6.dev to add the home-key-file clause with tests; stays WARN until Dinis is enrolled (S17); c.maestro confirmation asked via conductor"
   }
  ],
  "updated": "2026-11-28T03:00Z",

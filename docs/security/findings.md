@@ -1351,3 +1351,4 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Asked cl-6.dev whether the gate checks rotations. Proposed rule: the outgoing key signs, or the new key equals the agent's home key file, or Dinis signs.
   - Asked cl-6.conductor to have c.maestro confirm in session and countersign with the old key.
 - 2739f3456 (accountant.c, published key) adds a finance measurement file only: no keys, contacts or tokens.
+- 03:08Z S19 update: cl-6.dev reports gate check 16 (lib/keys-changes.mjs) already flags ac80b75fa as a hand-over needing an operator, but only as a WARN, because operator-keys.json lists no operator fingerprint. The 26 to 27 Nov key commits also warn. My word: build the home-key-file clause (byte-equal to the agent's home site/keys file at a pinned commit, not from the same push), with tests. Keep WARN until Dinis's key is enrolled (S17) and listed as operator. S19 stays open until the clause is in and c.maestro confirms its key.
