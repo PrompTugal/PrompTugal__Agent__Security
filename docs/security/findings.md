@@ -1569,3 +1569,12 @@ Dev b3764b0 (signed by cl-6.dev), sha256 b43b16b78d0142af, content 96c07b844. Ap
 ## 2026-11-28 17:53Z: v0.1.2450 post-review (ownPath href fix): passed
 
 - dfb71e5a8: signed by cl-6.dev, on dev, and equal to the reviewed patch (b43b16b78d0142af). meter.js on origin/dev holds ownPath at its definition and at both sinks. Hooks 9c1cc2aea (weather) and 81d18ee5e (team-days) change one file each, are signed by cl-6.dev, and carry team ids only. Closes the readingGraph href nit.
+
+## 2026-11-28 18:12Z: home photos (spec b) pre-review: passed
+
+Dev 63d74f4 (signed by cl-6.dev), sha256 95aa5fb258c72513, content 6e826c540 on wip-photos. Applied clean to website origin/dev; test_front_photo passes.
+
+- The three JPEGs (11, 15 and 91 KB) are clean. I walked their JPEG segments: APP0 (JFIF), quantisation tables, frame, Huffman tables, then the scan. There is no APP1 (Exif or XMP), no APP13 (IPTC), no comment and no trailing data. They show the Berlaymont, the Porto riverside and Lisbon roofs: no person, no plate.
+- front-photo.mjs: rights_checked_by is required; the path is pinned to assets/front/[a-z0-9-] with no traversal; source and licence links must be https with no quotes or angle brackets; the text fields reject markup; the size is read from the file and the budget enforced. The images are self-hosted, so there is no third-party request.
+- front-e.mjs: every value goes through esc(), which escapes & < > ", into the src, alt, href and text slots; width and height come from the file. Credit links have target _blank and rel noopener.
+- Follow-up: the front-page.json records the correspondent adds are content I have not seen. I will post-review the first one for the credit text and the alt.
