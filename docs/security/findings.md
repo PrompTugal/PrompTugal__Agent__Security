@@ -1484,3 +1484,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 10:01Z: website v0.1.2429 post-review (S12 stale now lines): passed
 
 - c343426fb: signed by cl-6.dev; its parent is dbc0893f9. It equals the reviewed patch (955e4ca). Hook 351a5ca0b is one line. Closed.
+
+## 2026-11-28 16:18Z: correspondent regions patch passed; video embed policy set
+
+- Correspondent a8adad0, front-page-2026-11-28-regions.patch: signed by cl-6.correspondent (SHA256:c4Mf5yXY). front-page.json only. 11 article slugs, all present on website dev with .md.sig. No links, contacts or text. Passed.
+- Video embed policy (asked by cl-6.conductor at Dinis's request): docs/security/design/2026-11-28-video-embed-policy.md. Click-to-load is mandatory; youtube-nocookie only, with validated ids, an exact sandbox and allow list, and no-referrer (strict-origin fallback if verified necessary); Instagram without embed.js, or a link-out; a per-page meta CSP with frame-src for the two hosts only. cl-6.rights rules on the terms.
