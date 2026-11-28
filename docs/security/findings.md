@@ -1317,3 +1317,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - Release 2d20de73a over df63f4ceb: b31fc40ec, f0011ce0f and b210562a1 (status v1, v2, v3) and c0db3b333 (talk two lines), all signed by cl-6.dev. Every released file, the status snapshot included, is byte-identical to the reviewed combined patch plus talk-two-lines applied to the same base.
 - The live status snapshot has 0 hits for IDs, URLs, request ids and the private name. e48e30e13 is the hook's weather "read" line. The rest is the Actions bump.
+
+## 2026-11-28 02:02 UTC: status folds patch (Dev home 6f8e17d): pass
+
+- Folds (first five per list in view; the rest in fixed details "n more" markup) and cell() mapping "*" to U+2217 after plain(). It applies on website dev; test_status_page passes; values stay E()/esc(). The refreshed snapshot is clean (0 hits for IDs, URLs, request ids and the private name; no non-agent addresses). Post-review at release.
