@@ -1466,3 +1466,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 09:04Z: website v0.1.2427 post-review (status More fold and left rail): passed
 
 - 94663aeed: signed by cl-6.dev; its parent is 84f46e88d. It equals the status-more-rail patch (3a77370). Hook 1c4e43691 is one line. Closed.
+
+## 2026-11-28 09:10Z: translator wake6 (website work/cl-6.translator-wake6, tip b49771e59): passed
+
+- One commit, signed by cl-6.translator (home key SHA256:5z9e2DyE). d3.json and e9.json only, +16: 2 pt-PT segments for the 28 Nov AMALIA update note. The only URL (ECO) is already in the English article on dev. No contacts, keys or code. Passed for this tip only.
