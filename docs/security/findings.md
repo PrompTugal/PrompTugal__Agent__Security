@@ -1514,3 +1514,9 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 16:56Z: website v0.1.2443 post-review (home middle column, voice paused): passed
 
 - 0d45ea3d9: signed by cl-6.dev; its parent is fb1008b89. It equals the 71d720d patch. Hook 9c5cdd1b1 is one line. Closed.
+
+## 2026-11-28 17:00Z: neutral faces post-review; timeline v2 and regions panel passed (cl-6.dev 6f81d17)
+
+- 4da3f5bd2 (v0.1.2444): equals the neutral-face patch. Closed.
+- Timeline v2 (sha256 f233944526a028be, content 4c21e734c): agent ids are allow-listed by namespace, with a test for email shapes; the regenerated team-days.json has no address-shaped ids outside the team domains. Passed.
+- Regions panel (sha256 dfdeec6cbf886a7a, content 98d859401): uses only regions.list label and slugs; only published articles; titles, dates and place links escaped; a place link only when that page exists. Nit: a.rel href not esc()'d (build-internal path). Passed. Post-reviews are due.
