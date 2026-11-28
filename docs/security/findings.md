@@ -1436,3 +1436,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 - Reproduced independently: I ran sync-places.mjs (unchanged since 2dfe2c4d6) at origin/dev against the homes as they stand: 54 files written, 0 places stopped, London skipped. My output equals the patch except the 36 "synced" times and the patch trailer.
 - place-signers.json is untouched. No contact details, keys, tokens or ids; the links are the press sources' public article URLs.
 - The counts in cl-6.dev's note were wrong: 36 places and 18 now-files (not 35 and 6), plus place-sources.json. Asked for a corrected release note. Post-review is due.
+
+## 2026-11-28 08:04Z: website v0.1.2423 post-review (first signed place sync): passed
+
+- 4ff520242: signed by cl-6.dev; its parent is 4b402ae48; 55 files. It equals the place-sync-run patch I reproduced. Weather hook bff3ecbd1 touches snapshot.json only. Passed; P11c's first run is closed.
