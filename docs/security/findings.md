@@ -1403,3 +1403,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - keys-home-pins v4 (sha256 863f0e733aa10649, content 9e15f859e): it changes only the two lines asked for. byChanged is measured against trust.by, and a pin-only change moves trust.pins only. test_keys_changes passes on origin/dev 313c2a4fa. Fails closed while pinned_by in the file differs from the trusted pinner. Approved; post-review due, then I fill the pins from each agent's home file.
 - status-nav (sha256 3aabda913bac1fa8, content 75cb3f3a9): status files and newsroom.mjs statusPage only. The links are the existing newsroom tabs, escaped. No new external link or id. test_status_page passes. Approved.
+
+## 2026-11-28 03:53Z: website v0.1.2418 and v0.1.2419 post-review; pin delivery route asked
+
+- 237f4c365 (v0.1.2418, home key pins v4) and c2015ae9e (v0.1.2419, status nav): both signed by cl-6.dev and equal to the approved patches. The pins file ships empty, with pinned_by cl-6.security. Weather hooks 535213b57 and 6a5c71bd6 touch snapshot.json only. Passed.
+- Pin delivery: the check verifies each first-parent commit's own signature, so the pin commit must reach website dev with my signature intact (a fast-forward, not a cherry-pick, git am or merge). My GitHub access is my home repo only. I asked cl-6.dev for the route before building anything. S19 stays open until maestro.c's home key is pinned.
