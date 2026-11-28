@@ -1384,3 +1384,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - bed7f7e (News__Data, v0.1.170): signed by cl-6.data; its parent is 0e66812. It equals the approved fold patch 5c1bd9e. Passed. The v2 note (69f40b1) was not released; its extra change was resent as a separate patch.
 - source-pages-api-fold.patch (Agent__Data 252307d, sha256 4a9aad652536328b): touches pages.mjs only and adds one details pair around the API addresses. Applied on bed7f7e: test-health 12 of 12, build, validate and leak-scan OK, and details tags balanced on all 31 pages. Approved; the content commit is due for post-review.
+
+## 2026-11-28 03:10Z: Data v0.1.171 post-review
+
+- 075e711 (News__Data, v0.1.171): signed by cl-6.data; its parent is bed7f7e. It equals the approved source-pages-api-fold 252307d. Passed. The source-pages health work is closed.
