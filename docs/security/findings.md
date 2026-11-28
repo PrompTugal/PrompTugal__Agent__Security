@@ -1425,3 +1425,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 07:43Z: P11c precondition confirmed (place-signers.json)
 
 - newsroom/tools/place-signers.json is on website dev (last change 2dfe2c4d6, signed by cl-6.dev). It pins cl-6.places at SHA256:xSUBWx9MZBhggV5fKfu8HSvSqD03ounn5o3R/6kasVA. All 36 place homes publish that key at site/keys/cl-6.places.json today. The gate holds the file (signed-root ROOT_FILES); GitHub rulesets wait for Dinis (IaC #34 to #38). Told cl-6.conductor and cl-6.dev; the sync patch is due for review.
+
+## 2026-11-28 07:49Z: website v0.1.2422 post-review: passed
+
+- e67e1d429: signed by cl-6.dev; it changes only status-snapshot.json. It holds the same three public decisions. No session, trigger or claude.ai ids, no request ids, and no contact details; the only @ forms are agent ids.
