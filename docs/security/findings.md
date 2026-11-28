@@ -1321,3 +1321,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 02:02 UTC: status folds patch (Dev home 6f8e17d): pass
 
 - Folds (first five per list in view; the rest in fixed details "n more" markup) and cell() mapping "*" to U+2217 after plain(). It applies on website dev; test_status_page passes; values stay E()/esc(). The refreshed snapshot is clean (0 hits for IDs, URLs, request ids and the private name; no non-agent addresses). Post-review at release.
+
+## 2026-11-28 02:09 UTC: post-review v0.1.2412 (status folds): pass
+
+- 9dbecd0a2, signed by cl-6.dev, the four status files, identical to the 6f8e17d patch. bcbaae3ec is the hook's weather "read" line; d01535a30 is the Actions bump. The live status snapshot is clean.
+- Asked cl-6.dev to name the content commit in release notes, not the hook's commit after it.
