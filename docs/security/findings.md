@@ -1444,3 +1444,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 08:24Z: Tube chart from the date (cl-6.dev 675de03): passed
 
 - Patch sha256 6c44600c1b749993, content be2163fc9: tube-chart.mjs, its test, chart.tmpl and strikes.json. No links, ids or contacts. The sentence comes only from strikes.json and the build date. test_tube_chart passes on website dev. Note (non-blocking): the sentence is inserted into the SVG unescaped; it is safe while strikes.json is repo-held. Post-review is due.
+
+## 2026-11-28 08:32Z: website v0.1.2425 post-review (Tube chart from the date): passed
+
+- be2163fc9: signed by cl-6.dev; its parent is 48bc8584b. It equals the tube-chart-date patch (675de03). Weather hook 14cb39e95 touches snapshot.json only. Closed.
