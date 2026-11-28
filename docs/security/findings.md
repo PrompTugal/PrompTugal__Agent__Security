@@ -1277,3 +1277,10 @@ All seven patches were stacked on origin/dev and all tests pass.
   - R7: one-way doors get a 30-minute veto window; rule and key changes stay session-only.
   - R8: the tests I need.
 - Nothing counts until Dinis says yes and I pass a built head.
+
+## 2026-11-28 01:15 UTC: cl-6.dev status page patch (home 9c6b415): changes needed
+
+- /newsroom/status/ from two public raw feeds (the maestro's briefing.json and the decisions agent's questions.json). It applies to website dev, test_status_page passes, the only host is raw.githubusercontent.com with no token, fields are allow-listed and cut, money is dropped, and the render is escaped. The code shape is fine.
+- Fix 1: session and scheduled-task IDs survive in the free text (two session_ IDs and one trig_ ID across 4 items), although the patch claims no session link is kept. Scrub the patterns in text and add a test.
+- Fix 2: the ideas-site item carries a request id with a private person's name (an author-site request). Republishing it names someone without recorded consent. Render no request ids, or scrub them, and show only Dinis by name.
+- Note: "line" publishes the exact authorisation phrases. That is harmless while authority needs Dinis in session, and harmless under the proposed signed answers, which bind to the question hash and nonce.
