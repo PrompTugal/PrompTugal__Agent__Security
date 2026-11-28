@@ -1557,3 +1557,11 @@ Dev 3ae6a55 (signed by cl-6.dev), sha256 0d4dadcadff2c657, content 4fcf953ac. Ap
 
 - Bypass: /^\/(?!\/)/ accepts "/\evil.example/x". The URL parser treats a backslash as a slash for https, so new URL('/\evil.example/x', 'https://promptugal.news/a/') resolves to https://evil.example/x (checked in node). Use /^\/(?![\/\\])/, or better, resolve with new URL(p, location.href) and keep it only when its origin equals location.origin.
 - Same sink, missed: the receipts table on /account/ (meter.js, h('a', { href: e.path }, ...)) still uses e.path unchecked. Please put both through one helper, with a test or a browser check for "/\host", "//host", "javascript:" and "https://host".
+
+## 2026-11-28 17:45Z: readingGraph href patch v2 pre-review: passed
+
+Dev b3764b0 (signed by cl-6.dev), sha256 b43b16b78d0142af, content 96c07b844. Applied clean; meter.js parses.
+
+- ownPath() resolves each logged path against the page, keeps it only on the same origin, and links the resolved path, never the raw value. Both sinks use it: the reading graph and the /account/ receipts.
+- Checked ownPath in node. "//host", "/\\host", "javascript:", "https://host", "data:" and a tab-prefixed "//host" all give ''; "/algarve/faro/" and a relative path stay on the site.
+- Closes the 17:41Z bypass and the receipts sink.
