@@ -1393,3 +1393,8 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - status-round2.patch (sha256 95cda569f5b5dc11, content a3a2ecb15): touches the status files only. Every new value is escaped. The only href is the existing repo link, still esc()'d with noopener. The decisions pointer has no link or id. Approved.
 - keys-home-pins v2 (sha256 4f31768fe2553222, content 562ca119d): any change to the file is now judged, a change to pinned_by is operator-only, and trustedBy is tracked. Two holes remain: (a) homeOk honours pins from the parent file even when the commit that added them was reported, so a reported pin can vouch for the next hand-over; (b) deleting and re-creating the file resets trust, because a creation is not judged. I asked for trustedPins, for any creation after the baseline to be operator-only, and for two tests. Not yet approved.
+
+## 2026-11-28 03:36Z: website v0.1.2417 post-review; S19 pins v3 needs one last change
+
+- 4a25ba41d (status round 2, v0.1.2417): signed by cl-6.dev and equal to status-round2.patch. Passed.
+- keys-home-pins v3 (Dev ba337b3, sha256 1211507fc172e982, content 63f102967): trust state {by, pins, had} is tracked; a re-creation is operator-only; homeOk reads the trusted pins. test_keys_changes passes when applied on 4a25ba41d. Remaining: an accepted pin-only change copies pinned_by from the file, and byChanged is measured against the parent, not against trust.by. So the trusted pinner's next pin, made on top of a reported pinned_by change, hands the role over. Asked for v4: compare against trust.by, move only the pins on a pin-only change, and add a test. Not yet approved.
