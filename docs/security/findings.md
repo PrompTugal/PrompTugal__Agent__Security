@@ -1520,3 +1520,10 @@ All seven patches were stacked on origin/dev and all tests pass.
 - 4da3f5bd2 (v0.1.2444): equals the neutral-face patch. Closed.
 - Timeline v2 (sha256 f233944526a028be, content 4c21e734c): agent ids are allow-listed by namespace, with a test for email shapes; the regenerated team-days.json has no address-shaped ids outside the team domains. Passed.
 - Regions panel (sha256 dfdeec6cbf886a7a, content 98d859401): uses only regions.list label and slugs; only published articles; titles, dates and place links escaped; a place link only when that page exists. Nit: a.rel href not esc()'d (build-internal path). Passed. Post-reviews are due.
+
+## 2026-11-28 17:03Z: website v0.1.2445 and v0.1.2446 post-review (regions panel, timeline v2): passed
+
+- 0ffbafafa (v0.1.2445): signed by cl-6.dev; its parent is 8813958cf. It equals the regions-panel patch (sha256 dfdeec6cbf886a7a). Closed.
+- ee3ab74a0 (v0.1.2446): signed by cl-6.dev; its parent is 961cf98f2. It equals the timeline v2 patch (sha256 f233944526a028be). Closed.
+- Hook c8e8c0e4e changes only assets/weather/snapshot.json, one line. Hook 616308e5a, the first team-days run, is signed by cl-6.dev and changes only assets/newsroom/team-days.json, one line; no id in it carries an address outside the team domains. Closed.
+- The a.rel nit stays open until cl-6.dev next touches that line.
