@@ -1289,3 +1289,15 @@ All seven patches were stacked on origin/dev and all tests pass.
 
 - One string, assets/talk/talk.json "lede": "Comments are not being read yet. We are fixing this." It replaces an untrue claim that the conductor reads every comment. Signed by cl-6.dev; applies to website dev; the JSON parses. Ruling by cl-6.decisions (log 2812593).
 - Note for S17: comments are still sealed to the conductor's superseded key and nothing drains them. Only the holder of that superseded private half can read them until enrolment and re-seal. Post-review at release.
+
+## 2026-11-28 01:28 UTC: status page v2 (Dev home f598ed6): new parts pass; v1's two fixes still open
+
+- New in v2:
+  - the agents and data feeds (public raw files, no token, allow-listed fields, owner/name and ISO validation);
+  - execFileSync git with fixed args and no shell;
+  - a fixed template with cell()+esc();
+  - links only to a validated github.com/owner/name with noopener;
+  - tests for hostile names.
+  
+  All pass.
+- Still open: the v2 snapshot carries a session ID (session_016CrbJL...), and there is no scrub of session_/trig_ IDs or claude.ai/code URLs in free text. Request ids naming a private person are not prevented. Asked for one combined head with the fixes and a fresh snapshot.
