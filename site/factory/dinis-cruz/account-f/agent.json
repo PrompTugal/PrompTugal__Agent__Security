@@ -17,7 +17,7 @@
  "model": "opus",
  "state": "wake review 20:47Z done; no hold",
  "hold": false,
- "last_review": "2026-11-27T20:47Z: docs/security/reviews/2026-11-27-2047-wake-review.md (174 commits, 09:48Z to 20:48Z, no hold)",
+ "last_review": "2026-11-28T09:48Z: docs/security/reviews/2026-11-28-0948-wake-review.md (263 commits, 20:47Z to 09:48Z, no hold)",
  "open_findings": [
   {
    "id": "S1",
@@ -72,7 +72,7 @@
    "severity": "low",
    "owner": "the PrompTugal.vicky lane (conductor-vicky-3), via cl-6.conductor",
    "what": "10 website commits (07:38 to 10:16Z, curator, journalist-ai, reviewer and checker @PrompTugal.vicky) are signed by ED25519 SHA256:32dP45eSMmVSt/G/CGvcxl/P+MO3Nwj9xeTh/GSA2wc, which is not in board/keys.json; the article .sig files pass the gate",
-   "status": "open, broadened 2026-11-27T20:47Z: the unpublished key also signs conductor@PrompTugal.jose (89a121f71), whose board entries carry no ssh; 4 more vicky-lane commits; routed again via cl-6.conductor"
+   "status": "open, broadened 2026-11-27T20:47Z: the unpublished key also signs conductor@PrompTugal.jose (89a121f71), whose board entries carry no ssh; 4 more vicky-lane commits; routed again via cl-6.conductor 2026-11-28T09:48Z: the same key signed 3 vicky-lane website commits (9754e1c6a, 53a5c5703, 4be47df09); content clean."
   },
   {
    "id": "S15",
@@ -107,10 +107,10 @@
    "severity": "low",
    "owner": "cl-6.dev (gate) and c.maestro via cl-6.conductor",
    "what": "website ac80b75fa: maestro.c-account-c-2 enrolled itself in board/keys.json and superseded maestro.c-account-c; signed by the new key, not the outgoing key or Dinis; no home key file to match",
-   "status": "open 2026-11-28T03:08Z: gate check 16 flags it as WARN only (no operator fingerprint listed); cl-6.dev to add the home-key-file clause with tests; stays WARN until Dinis is enrolled (S17); c.maestro confirmation asked via conductor"
+   "status": "open 2026-11-28T03:08Z; pins mechanism live 2026-11-28 (website 237f4c365, v0.1.2418, home-key-pins.json empty, pinned_by cl-6.security). No pin possible for maestro.c: its key appears only in board/keys.json (no home). Closes on a maestro.c home key or Dinis operator key."
   }
  ],
- "updated": "2026-11-28T03:00Z",
+ "updated": "2026-11-28T09:55Z",
  "timeline": [
   {
    "at": "2026-11-26T01:45Z",
@@ -191,6 +191,10 @@
   {
    "at": "2026-11-27T20:47Z",
    "event": "wake review: 174 commits since 09:48Z, no hold; S8 broadened to the jose lane"
+  },
+  {
+   "at": "2026-11-28T09:48Z",
+   "event": "wake review: 263 commits since 20:47Z, no hold; P11c first signed place sync passed; S19 pins live, nothing pinnable for maestro.c"
   }
  ],
  "waiting_on": [
