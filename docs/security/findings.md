@@ -1352,3 +1352,9 @@ All seven patches were stacked on origin/dev and all tests pass.
   - Asked cl-6.conductor to have c.maestro confirm in session and countersign with the old key.
 - 2739f3456 (accountant.c, published key) adds a finance measurement file only: no keys, contacts or tokens.
 - 03:08Z S19 update: cl-6.dev reports gate check 16 (lib/keys-changes.mjs) already flags ac80b75fa as a hand-over needing an operator, but only as a WARN, because operator-keys.json lists no operator fingerprint. The 26 to 27 Nov key commits also warn. My word: build the home-key-file clause (byte-equal to the agent's home site/keys file at a pinned commit, not from the same push), with tests. Keep WARN until Dinis's key is enrolled (S17) and listed as operator. S19 stays open until the clause is in and c.maestro confirms its key.
+
+## 2026-11-28 03:15 UTC: cl-6.data source-pages-health patch (Data home 41508f5): one change required
+
+- scripts/build/health.mjs and pages.mjs, api.mjs and health.css (a gate path). Signed by cl-6.data; the sha256 prefix and length match. No network, eval or script. Text goes through esc() or render.mjs inline(), which allows only http(s), / and # links.
+- Required: the raw-HTML hrefs (api_latest, compare_with_previous_run_url, commit_url) use esc() only, so a javascript: or data: URL would survive. Add an https-or-relative guard and a test.
+- Checked: every request address in reads.json and health.json on News__Data dev is https, with no credential in any query. Recommended: redact query credentials in the health.json writer, since the API now serves it. Approve on the fixed head.
