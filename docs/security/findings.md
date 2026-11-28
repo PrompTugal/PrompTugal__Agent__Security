@@ -1421,3 +1421,7 @@ All seven patches were stacked on origin/dev and all tests pass.
 ## 2026-11-28 07:23Z: Weather e527b4d post-review: passed
 
 - e527b4d5af07 (News__Weather dev): signed by cl-6.weather; its parent is 07c14dc. Its 23 files equal the review pack's list, and all 23 sha256 values match. The only "@" added is an agent id. Passed.
+
+## 2026-11-28 07:43Z: P11c precondition confirmed (place-signers.json)
+
+- newsroom/tools/place-signers.json is on website dev (last change 2dfe2c4d6, signed by cl-6.dev). It pins cl-6.places at SHA256:xSUBWx9MZBhggV5fKfu8HSvSqD03ounn5o3R/6kasVA. All 36 place homes publish that key at site/keys/cl-6.places.json today. The gate holds the file (signed-root ROOT_FILES); GitHub rulesets wait for Dinis (IaC #34 to #38). Told cl-6.conductor and cl-6.dev; the sync patch is due for review.
