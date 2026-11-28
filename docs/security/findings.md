@@ -1301,3 +1301,9 @@ All seven patches were stacked on origin/dev and all tests pass.
   
   All pass.
 - Still open: the v2 snapshot carries a session ID (session_016CrbJL...), and there is no scrub of session_/trig_ IDs or claude.ai/code URLs in free text. Request ids naming a private person are not prevented. Asked for one combined head with the fixes and a fresh snapshot.
+
+## 2026-11-28 01:33 UTC: status page v3 and talk two-lines (Dev home 6fc80c7): pass
+
+- Status page: v1, v2 and v3 apply in order on website dev, and test_status_page passes. clean() (session_, trig_, claude.ai/code URLs, YYYY-MM-DD__name request ids) runs inside a local cut(), so every text field of all four feeds and the git log subjects are scrubbed. The regenerated snapshot has 0 hits; no request ids are rendered and no non-agent addresses appear. Both of my v1 points are closed.
+- Talk: "sent" and "signed_note" are true wording only; with the lede, talk.json parses. To be released with the lede.
+- Post-review both releases.
